@@ -1,0 +1,87 @@
+---
+author:
+  - name: Stuart Lee
+    affiliation: Monash University
+    # use this syntax to add text on several lines
+    address: |
+      | Department of Econometrics and Business Statistics,
+      | Monash University
+    email: stuart.a.lee@monash.edu
+  - name: Ursula Laa 
+    affiliation: Monash University
+    address: |
+      | Department of Econometrics and Business Statistics,
+      | Monash University
+  - name: Dianne Cook
+    address: |
+      | Department of Econometrics and Business Statistics,
+      | Monash University
+    affiliation: Monash University
+title:
+  formatted: "An Overview of Tours for Dynamic Visualisation of High-dimensional Data"
+  type: "Advanced Review"
+abstract: > 
+  Abstract goes here.
+keywords:
+  formatted: ["tours", "data visualisation"]
+output: 
+  bookdown::pdf_document2:
+    template: template/wires_template_rmd.tex
+    keep_tex: true
+    toc: false
+    citation_package: natbib
+bibliography: references.bib
+biblio-style: apalike
+---
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  echo = FALSE,
+  message = FALSE,
+  warning = FALSE,
+  fig.align = "center",
+  fig.show = 'hold',
+  dpi = 300 #,
+  # out.width = "\\textwidth",
+  # fig.path = here::here('img/')
+)
+```
+
+# Introduction
+
+- Purpose/why and what is high-d data
+- Original tours
+- Dataviewer, XGobi, GGobi, cranvas (XLispStat, Orca, mmvz) (Di)
+- Alternatives (Stuart)
+
+# Tours for high dimensional visualization
+
+- Bases notation
+- Display
+- Choosing targets, inc pp indexes
+- Geodesic interpolation
+- Slices vs projections
+- Transformations on projections 
+
+# Ways of interacting
+
+- Stop/start/reverse
+- Manual (Nick)
+- Linked brushing (Earo)
+- Spin-and-brush 
+    
+# Software
+
+- tourr
+- liminal
+- python
+
+# Application
+
+- Model vis (from Hadley, removing the blidnfold)
+- Physics (Ursula)
+- Bioinformatics (Stuart)
+- High-d shapes/distributions
+
+# Discussion
+
+# References {-}

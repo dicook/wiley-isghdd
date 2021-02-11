@@ -1,0 +1,402 @@
+\documentclass[10pt]{article}
+
+\usepackage{fullpage}
+\usepackage{setspace}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage[section]{placeins}
+\usepackage{xcolor}
+\usepackage{breakcites}
+\usepackage{lineno}
+\usepackage{hyphenat}
+
+
+
+\renewcommand{\familydefault}{\sfdefault}
+
+
+\PassOptionsToPackage{hyphens}{url}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\usepackage{etoolbox}
+\makeatletter
+%\patchcmd\@combinedblfloats{\box\@outputbox}{\unvbox\@outputbox}{}{%
+%  \errmessage{\noexpand\@combinedblfloats could not be patched}%
+%}%
+\makeatother
+
+
+\usepackage{natbib}
+
+
+
+
+\renewenvironment{abstract}
+  {{\bfseries\noindent{\abstractname}\par\nobreak}\footnotesize}
+  {\bigskip}
+
+\titlespacing{\section}{0pt}{*3}{*1}
+\titlespacing{\subsection}{0pt}{*2}{*0.5}
+\titlespacing{\subsubsection}{0pt}{*1.5}{0pt}
+
+
+\usepackage{authblk}
+
+
+\usepackage{graphicx}
+\usepackage[space]{grffile}
+\usepackage{latexsym}
+\usepackage{textcomp}
+\usepackage{longtable}
+\usepackage{tabulary}
+\usepackage{booktabs,array,multirow}
+\usepackage{amsfonts,amsmath,amssymb}
+\providecommand\citet{\cite}
+\providecommand\citep{\cite}
+\providecommand\citealt{\cite}
+% You can conditionalize code for latexml or normal latex using this.
+\newif\iflatexml\latexmlfalse
+\providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}%
+
+\AtBeginDocument{\DeclareGraphicsExtensions{.pdf,.PDF,.eps,.EPS,.png,.PNG,.tif,.TIF,.jpg,.JPG,.jpeg,.JPEG}}
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+
+
+
+\usepackage{float}
+
+
+
+\usepackage[margin=1.5in]{geometry}
+
+
+
+
+
+
+\begin{document}
+
+\title{Wiley Interdisciplinary Reviews (WIREs)}
+
+
+
+\author[1]{Alberto Pepe}%
+\affil[1]{Authorea Team}%
+
+
+\vspace{-1em}
+
+
+
+  \date{}
+
+
+\begingroup
+\let\center\flushleft
+\let\endcenter\endflushleft
+\maketitle
+\endgroup
+
+
+
+
+
+\selectlanguage{english}
+\begin{abstract}
+The abstract should be a concise (less than 250 words) description of
+the article and its implications. It should include all keywords
+associated with your article, as keywords increase its discoverability.
+Please do not include generic phrases such as ``This article discusses
+\ldots{}'' or ``Here we review,'' or references to other articles. Note:
+You will be required to copy this abstract into the submission system
+when uploading your article.%
+\end{abstract}%
+
+
+
+\sloppy
+
+
+\textbf{Remember that you are writing for an interdisciplinary audience.
+Please be sure to discuss interdisciplinary themes, issues, debates,
+etc. where appropriate.} Note that the WIREs are forums for review
+articles, rather than primary literature describing the results of
+original research.
+
+\section*{Article Title}
+
+{\label{350486}}
+
+The title should not exceed 20 words. Please be original and try to
+include keywords, especially before a colon if applicable, as they will
+increase the discoverability of your
+article.~\href{https://authorservices.wiley.com/author-resources/Journal-Authors/Prepare/writing-for-seo.html}{Tips
+on Search Engine Optimization}
+
+\section*{Article Type}
+
+{\label{925764}}
+
+The \href{http://wires.wiley.com/go/forauthors\#ArticleTypes}{Article
+Type} denotes the intended level of readership for your article. Please
+select one of the below article type options. An Editor may have
+mentioned a specific Article Type in your invitation letter; if so,
+please let them know if you think a different Article Type better suits
+your topic.~
+
+\begin{itemize}
+\tightlist
+\item
+  Opinion
+\item
+  Primer
+\item
+  Overview
+\item
+  Advanced Review
+\item
+  Focus Article
+\item
+  Software Focus
+\end{itemize}
+
+\section*{Authors}
+
+{\label{290010}}
+
+List each person's full name, ORCID iD, affiliation, email address, and
+any conflicts of interest. Please use an asterisk (*) to indicate the
+corresponding author.
+
+The preferred (but optional) format for author names is First Name,
+Middle Initial, Last Name.~~
+
+The submitting author is required to provide
+an~\href{https://authorservices.wiley.com/author-resources/Journal-Authors/Submission/orcid.html}{ORCID
+iD}, and all other authors are encouraged to do so.~
+
+Wiley requires that all authors disclose any potential conflicts of
+interest. Any interest or relationship, financial or otherwise, that
+might be perceived as influencing an author's objectivity is considered
+a potential conflict of interest. The existence of a conflict of
+interest does not preclude publication.
+
+\section*{Abstract}
+
+{\label{468816}}
+
+The abstract should be a concise (less than 250 words) description of
+the article and its implications. It should include all keywords
+associated with your article, as keywords increase its discoverability
+(\href{https://authorservices.wiley.com/author-resources/Journal-Authors/Prepare/writing-for-seo.html}{Tips
+on Search Engine Optimization}). Please try not to include generic
+phrases such as ``This article discusses \ldots{}'' or ``Here we
+review,'' or references to other articles. Note: You will be required to
+copy this abstract into the submission system when uploading your
+article.
+
+Optional: If you would like to submit your abstract in an additional
+language,~\href{http://wires.wiley.com/go/forauthors\#Resources}{read
+more}.
+
+\section*{Graphical/Visual Abstract and
+Caption}
+
+{\label{750712}}
+
+Include an attractive full color image to go under the text abstract and
+in the online Table of Contents.~\textbf{You will also need to upload
+this as a separate file during submission.~}It may be a figure or panel
+from the article or may be specifically designed as a visual summary.
+While original images are preferred, if you need to look for a
+thematically appropriate stock image, you can go
+to~\href{http://pixabay.com/}{pixabay.com}~(not affiliated with Wiley)
+to find a free stock image with a CC0 license. Another option you have
+is to utilize professional illustrators with
+Wiley's~\href{https://wileyeditingservices.com/en/article-preparation/graphical-abstract-design}{Graphical
+Abstract Design service}.
+
+Size: The minimum resolution is 300 dpi. Please keep the image as simple
+as possible because it will be displayed in multiple sizes. Multiple
+panels and text other than labels are strongly discouraged.
+
+Caption: This is a narrative sentence to convey the article's essence
+and wider implications to a non-specialist audience. The maximum length
+is 50 words, but consider using 280 characters or less to facilitate
+social media sharing, which can increase the discoverability of your
+article.
+
+\par\null
+
+\section*{1. Introduction}
+
+{\label{252565}}
+
+Introduce your topic in \textasciitilde{}2 paragraphs,
+\textasciitilde{}750 words.
+
+While Wiley does consider articles on preprint servers (ArXiv, bioRxiv,
+psyArXiv, SocArXiv, engrXiv, etc.) for submission to primary research
+journals, preprint articles should not be cited in WIREs manuscripts as
+review articles should discuss and draw conclusions only from
+peer-reviewed research. Remember that original research/unpublished work
+should also not be included as it has not yet been peer-reviewed and
+could put the work in jeopardy of getting published in the primary
+press.
+
+Citations are automatically generated by Authorea. Select~\textbf{cite}
+to find and cite bibliographic resources. The citations will
+automatically be generated for you in APA format, the style used by most
+WIREs titles. If you are writing for~\emph{WIREs Computational Molecular
+Science} (WCMS), you will need to use the Vancouver reference and
+citation style, so before exporting click Export-\textgreater{} Options
+and select a Vancouver export style.
+
+A sample citation:~~\hyperref[csl:1]{(Murphy et al., 2019)}
+
+\section*{2. First Level Heading}
+
+{\label{350277}}
+
+Begin the main body of the text here, using a maximum of 3 levels of
+headings (style as shown below and numbered). Try to create headings
+that:
+
+\begin{itemize}
+\tightlist
+\item
+  help the reader find information quickly;~
+\item
+  are descriptive yet specific;
+\item
+  are compatible in phrasing and style; and~
+\item
+  are concise (less than 50 characters)
+\end{itemize}
+
+\subsection*{2.1 Second level heading}
+
+{\label{733281}}
+
+Text
+
+\subsubsection*{2.1.1 Third level heading}
+
+{\label{824595}}
+
+Text
+
+\par\null
+
+\section*{Figures and Tables}
+
+{\label{432859}}
+
+Figures and tables should be numbered separately, in the order in which
+they appear in the manuscript. Please embed them in the correct places
+in the text to facilitate peer review. Permission to \textbf{reuse or
+adapt} previously published materials must be submitted before article
+acceptance.
+\href{http://wires.wiley.com/go/forauthors\#Resources}{Resources}
+
+Production quality figure files with captions are still to be submitted
+separately.
+\href{https://authorservices.wiley.com/asset/photos/electronic_artwork_guidelines.pdf}{Figure
+preparation and formatting}
+
+\textbf{Captions should stand alone} and be informative outside of the
+context of the article. This will help educators who may want to use a
+PowerPoint slide of your figure. Explain any abbreviations or symbols
+that appear in the figure and make sure to include \textbf{credit lines}
+for any previously published materials.
+
+\section*{Conclusion}
+
+{\label{880788}}
+
+Sum up the key conclusions of your review, highlighting the most
+promising scientific developments, directions for future research,
+applications, etc. The conclusion should be \textasciitilde{}2
+paragraphs, \textasciitilde{}750 words total.
+
+\section*{Funding Information}
+
+{\label{974317}}
+
+You will be required to enter your funding information into the
+submission system so that we can apply proper IDs to your funders and
+help you comply with any funder mandates.
+
+\section*{Research Resources}
+
+{\label{808103}}
+
+List sources of non-monetary support such as supercomputing time at a
+recognized facility, special collections or specimens, or access to
+equipment or services.
+\href{https://orcid.org/organizations/research-orgs/resources}{Research
+Resources} can also be added to ORCiD profiles. For biomedical
+researchers, the \href{https://scicrunch.org/resources}{Resource
+Identification Portal} supports NIH's new guidelines for Rigor and
+Transparency in biomedical publications.
+
+\section*{Acknowledgments}
+
+{\label{749861}}
+
+List contributions from individuals who do not meet the criteria for
+authorship (for example, to recognize people who provided technical
+help, collation of data, writing assistance, acquisition of funding, or
+a department chairperson who provided general support), \textbf{with
+permission} from the individual. Thanks to anonymous reviewers are not
+appropriate.
+
+\section*{Notes}
+
+{\label{390481}}
+
+Authors writing from a humanities or social sciences perspective may use
+notes if a \textbf{comment or additional information} is needed to
+expand on a citation. (Notes only containing citations should be
+converted to references. Conversely, any references containing comments,
+such as ``For an excellent summary of\ldots{},'' should be converted to
+notes.) Notes should be indicated by \textbf{superscript letters}, both
+in the text and in the notes list. Citations within notes should be
+included in the reference section, as indicated below.
+
+\section*{Further Reading}
+
+{\label{153582}}
+
+For readers who may want more information on concepts in your article,
+provide full references and/or links to additional recommended resources
+(books, articles, websites, videos, datasets, etc.) that are not
+included in the reference section. Please do not include links to
+non-academic sites, such as Wikipedia, or to impermanent websites.
+
+\section*{\texorpdfstring{{Note About
+References}}{Note About References}}
+
+{\label{514168}}
+
+References are automatically generated by Authorea.
+Select~\textbf{cite~}to find and cite bibliographic resources. The
+bibliography will automatically be generated for you in APA format, the
+style used by most WIREs titles. If you are writing for~\emph{WIREs
+Computational Molecular Science}~ (WCMS), you will need to use
+the~Vancouver reference style, so before exporting click
+Export-\textgreater{} Options and select a Vancouver export style.~
+
+\selectlanguage{english}
+\FloatBarrier
+\section*{References}\sloppy
+\phantomsection
+\label{csl:1}{Understanding institutions for water allocation and exchange: Insights from dynamic agent-based modeling}. (2019). \textit{Wiley Interdisciplinary Reviews: Water}, \textit{6}(6). \url{https://doi.org/10.1002/wat2.1384}
+
+\end{document}
+
