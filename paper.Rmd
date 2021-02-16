@@ -8,15 +8,16 @@ author:
       | Monash University
     email: stuart.a.lee@monash.edu
   - name: Ursula Laa 
-    affiliation: Monash University
+    affiliation: 
     address: |
-      | Department of Econometrics and Business Statistics,
-      | Monash University
+      | Department of  ,
+      |  University
   - name: Dianne Cook
     address: |
       | Department of Econometrics and Business Statistics,
       | Monash University
     affiliation: Monash University
+    email: dicook@monash.edu
 title:
   formatted: "An Overview of Tours for Dynamic Visualisation of High-dimensional Data"
   type: "Advanced Review"
@@ -46,41 +47,45 @@ knitr::opts_chunk$set(
 )
 ```
 
+<!--
+Writing style: third person (it was done, ...)
+-->
+
 # Introduction
 
-- Purpose/why and what is high-d data
-- Original tours
+- Purpose/why and what is high-d data (Di)
+- Original tours (Di)
 - Dataviewer, XGobi, GGobi, cranvas (XLispStat, Orca, mmvz) (Di)
 - Alternatives (Stuart)
 
-# Tours for high dimensional visualization
+# Tours for high dimensional visualization 
 
-- Bases notation
-- Display
-- Choosing targets, inc pp indexes
-- Geodesic interpolation
-- Slices vs projections
-- Transformations on projections 
+- Bases notation (Sherry)
+- Display (Sherry)
+- Choosing targets, inc pp indexes (Sherry)
+- Geodesic interpolation (Ursula)
+- Slices vs projections (Ursula)
+- Transformations on projections (Ursula)
 
 # Ways of interacting
 
 - Stop/start/reverse
 - Manual (Nick)
 - Linked brushing (Earo)
-- Spin-and-brush 
+- Spin-and-brush  (Ursula)
     
 # Software
 
-- tourr
-- liminal
-- python
+- tourr (Di) and spinifex (Nick)
+- liminal (Stuart)
+- python (Di to follow up with Csaba)
 
 # Application
 
-- Model vis (from Hadley, removing the blidnfold)
+- Model vis examples eg random forest (from Hadley, removing the blindfold) (Natalia)
 - Physics (Ursula)
 - Bioinformatics (Stuart)
-- High-d shapes/distributions
+- High-d shapes/distributions: normal, skewed, outliers, (Di from tutorial notes)
 
 # Discussion
 
