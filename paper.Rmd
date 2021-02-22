@@ -12,6 +12,12 @@ author:
     address: |
       | Department of  ,
       |  University
+  - name: Natalia da Silva
+    address: |
+      | Instituto de Estadística (IESTA), 
+      | Universidad de la República
+    affiliation: Universidad de la República
+    email: natalia@iesta.edu.uy
   - name: Dianne Cook
     address: |
       | Department of Econometrics and Business Statistics,
