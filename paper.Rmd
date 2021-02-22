@@ -62,8 +62,9 @@ A tour can be considered to be a dynamic graphic, because it shows a smooth sequ
 
 
 
-- Original tours (Di)
+<!-- Original tours (Di)
 - Dataviewer, XGobi, GGobi, cranvas (XLispStat, Orca, mmvz) (Di)
+-->
 - Alternatives (Stuart)
 
 # Tours for high dimensional visualization 
