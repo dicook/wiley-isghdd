@@ -20,7 +20,6 @@ author:
     email: dicook@monash.edu
 title:
   formatted: "An Overview of Tours for Dynamic Visualisation of High-dimensional Data"
-  type: "Advanced Review"
 abstract: > 
   Abstract goes here.
 keywords:
@@ -53,7 +52,11 @@ Writing style: third person (it was done, ...)
 
 # Introduction
 
-- Purpose/why and what is high-d data (Di)
+<!-- Purpose/why and what is high-d data (Di)-->
+
+Data commonly arrives with more than two measured variables, which makes it more complicated to plot on a page. With multiple variables, especially if there is some association between variables, this would be called multivariate or high-dimensional data. When the variables are all numeric, or quantitative, visualisation often relies on some form of dimension reduction. This can be done by taking linear projections, for example, principal component analysis [@Hotelling1933-of] or linear discriminant analysis [@Fisher1936], or nonlinear if one considers techniques like multidimensional scaling (MDS) [@Kruskal1964-do] or t-Distributed Stochastic Neighbour Embedding (t-SNE) [@Van_der_Maaten2008-qa]. For the purposes here, the focus is on linear projections, in particular as provided by the grand tour [@Asimov1985-xr; @Buja2005-cx]. Interactive and dynamic displays can provide information beyond what can be achieved in a static display. The grand tour shows a smooth sequence of interpolated low dimensional projections, and allows the viewer to extrapolate from the low-dimensional shapes to the multidimensional distribution. It is particularly useful for detecting clusters, outliers and non-linear dependence. 
+
+
 - Original tours (Di)
 - Dataviewer, XGobi, GGobi, cranvas (XLispStat, Orca, mmvz) (Di)
 - Alternatives (Stuart)
