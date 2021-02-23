@@ -8,10 +8,11 @@ author:
       | Monash University
     email: stuart.a.lee@monash.edu
   - name: Ursula Laa 
-    affiliation: 
-    address: |
-      | Department of  ,
-      |  University
+    affiliation: University of Natural Resources and Life Sciences
+    address:  |
+      | Institute of Statistics,
+      | University of Natural Resources and Life Sciences
+    email:  ursula.laa@boku.ac.at
   - name: Natalia da Silva
     address: |
       | Instituto de Estadística (IESTA), 
