@@ -41,7 +41,6 @@ output:
     template: template/wires_template_rmd.tex
     keep_tex: true
     toc: false
-    citation_package: natbib
 bibliography: references.bib
 biblio-style: apalike
 ---
