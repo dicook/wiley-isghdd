@@ -73,11 +73,13 @@ The focus of this review will be on linear projections, in particular, as provid
 A tour can be considered to be a dynamic graphic, because it shows a smooth sequence of projections over time, ideally with controls that allow stopping, reversing, changing direction, or going forward again. It can be useful to embed a tour into an interactive graphics system, where plots can be queried and elements highlighted (see for e.g. @Swayne2003-cc or @Tierney1991). To create the smooth sequence, a geodesic interpolation is computed between consecutive frames.  It allows the viewer to extrapolate from the low-dimensional to  shapes corresponding to multivariate distribution, and is particularly useful for detecting clusters, outliers and non-linear dependence. 
 
 
-
 <!-- Original tours (Di)
 - Dataviewer, XGobi, GGobi, cranvas (XLispStat, Orca, mmvz) (Di)
+(picture of the cluster data from Stuart's thesis)
 -->
-- Alternatives (Stuart)
+- Alternatives (Stuart) 
+
+(parallel coordinates, sploms, what tours are not)
 
 # Tours for high dimensional visualization 
 
