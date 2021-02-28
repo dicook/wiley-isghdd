@@ -31,6 +31,12 @@ author:
       | Monash University
     affiliation: Monash University
     email: dicook@monash.edu
+  - name: Earo Wang
+    address: |
+      | Department of Statistics,
+      | The University of Auckland
+    affiliation: The University of Auckland
+    email: earo.wang@auckland.ac.nz
 title:
   formatted: "An Overview of Tours for Dynamic Visualisation of High-dimensional Data"
 abstract: > 
