@@ -108,6 +108,10 @@ Similarly, parallel coordinates plots (PCP) can be used to explore correlation a
 
 - tourr (Di) and spinifex (Nick)
 - liminal (Stuart)
+
+The liminal R package uses the tour to explore the quality of non-linear dimensionality reduction algorithms. The interface consists of two side by side views consisting of a scatter plot displaying a reduced form of the data, and an interactive tour. Controls such as play/stop/restart are implemented allowing a user to pause on interesting projections and return them to their R session for further analysis. Linked brushing is implemented on both views - if a users brush on the scatter plot view they can see if and how an algorithm like t-SNE has distorted distances in higher dimensional space, while if they brush on the tour view, the tour is paused and structure like cluster separation can be ascertained.      
+
+
 - python (Di to follow up with Csaba)
 
 # Application
