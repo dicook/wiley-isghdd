@@ -97,8 +97,34 @@ Similarly, parallel coordinates plots (PCP) can be used to explore correlation a
 # Tours for high dimensional visualization 
 
 - Bases notation (Sherry)
+
+$d$-dimensional projection in $p$-dimensional space
+
+Data: $X_{{n \times p}$, 
+Basis: $A_{p \times d}$, commonly 1d or 2d projection, orthonormality, more displays in the next section - can display a matrix A, Link to geometry properties.
+projection: $Y = X \cdot A$
+
 - Display (Sherry)
+
+[@Wickham2011-uz]
+
+1D: `display_hist`: histogram
+2D: `display_xy`, recent development `display_sage()` - will be detailed in the last section @Transformations on projections (Ursula)
+
+
 - Choosing targets, inc pp indexes (Sherry)
+
+grand tour, random, may miss interesting, take long to rotate to that specific angle, guided tour, along with projection pursuit, by generating target bases, interestingness
+
+interesting, index function, $f: \mathbb{R}^{n \times d} \mapsto \mathbb{R}$, normality, theoretical result: [@Diaconis1984-mv], aslo peter huber projection pursuit
+
+index: 
+  - initial idea from Friedman, orthonormal function expansion (Do we need to review these old index contruction?)
+  - holes, central mass, PDA, LDA
+  - scagnostic indices
+  - skewness & kurtosis index loperfido (moment)
+  - chi-square @posse for detect spiral
+
 - Geodesic interpolation (Ursula)
 - Slices vs projections (Ursula)
 - Transformations on projections (Ursula)
