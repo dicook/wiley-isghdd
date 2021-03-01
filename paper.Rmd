@@ -37,6 +37,12 @@ author:
       | The University of Auckland
     affiliation: The University of Auckland
     email: earo.wang@auckland.ac.nz
+  - name: H. Sherry Zhang
+    address: |
+      | Department of Econometrics and Business Statistics,
+      | Monash University
+    affiliation: Monash University
+    email: huize.zhang@monash.edu
 title:
   formatted: "An Overview of Tours for Dynamic Visualisation of High-dimensional Data"
 abstract: > 
