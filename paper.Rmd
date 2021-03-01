@@ -119,8 +119,6 @@ The liminal R package uses the tour to explore the quality of non-linear dimensi
 - Model vis examples eg random forest (from Hadley, removing the blindfold) (Natalia)
 - Physics (Ursula)
 - Bioinformatics (Stuart)
-
-
 - High-d shapes/distributions: normal, skewed, outliers, (Di from tutorial notes)
 
 # Discussion
