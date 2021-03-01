@@ -100,7 +100,7 @@ Similarly, parallel coordinates plots (PCP) can be used to explore correlation a
 
 $d$-dimensional projection in $p$-dimensional space
 
-Data: $X_{{n \times p}$, 
+Data: $X_{n \times p}$, 
 Basis: $A_{p \times d}$, commonly 1d or 2d projection, orthonormality, more displays in the next section - can display a matrix A, Link to geometry properties.
 projection: $Y = X \cdot A$
 
