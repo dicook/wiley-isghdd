@@ -83,6 +83,9 @@ Data commonly arrives with more than two measured variables, which makes it more
 The focus of this review will be on linear projections, in particular, as provided by the grand tour [@Asimov1985-xr; @Buja2005-cx]. The reason being that it is not feasible to adequately the very large area of visualising high-dimensions, and there have been numerous developments in tours recently.  An overview of the technique, and new modifications is provided, along with how these techniques can be used in a variety of applications, and to help understand nonlinear dimension reduction results.  
 
 A tour can be considered to be a dynamic graphic, because it shows a smooth sequence of projections over time, ideally with controls that allow stopping, reversing, changing direction, or going forward again. It can be useful to embed a tour into an interactive graphics system, where plots can be queried and elements highlighted (see for e.g. @Swayne2003-cc or @Tierney1991). To create the smooth sequence, a geodesic interpolation is computed between consecutive frames.  It allows the viewer to extrapolate from the low-dimensional to  shapes corresponding to multivariate distribution, and is particularly useful for detecting clusters, outliers and non-linear dependence. 
+
+> figure 1 illustrating tour views vs nonlinear dimension reduction for Stuart's cluster example
+
 While tours are invaluable for assessing the geometry of data, they are by no means the only technique available for visualising structure in high dimensional data. An early technique proposed for assessing pairwise relationships between variables is the scatter plot matrix (SPLOM) [@Tukey1983-fj] <!-- there might be others here(?) -->. In this graphic, the canvas is split into a matrix where each off-diagonal element is a scatter plot of variable pairs, while the diagonal elements are either left blank or represent univariate structure. The SPLOM allows the viewer to assess correlation structure but does not scale to large numbers of variables. 
 
 Similarly, parallel coordinates plots (PCP) can be used to explore correlation and co-linearities in multivariate data [@Inselberg1985-kf]. In PCPs, variables are arranged along the (vertical) horizontal axis with vertical (horizontal) axes drawn representing the range of values for each variable. Points (observations) of the data are represented by drawing lines between each variables axis. If there is positive correlation between two variables the lines will be parallel, while for negative correlation the lines will cross. By placing multiple variables side by side in a PCP higher order structure like clustering or lower dimensional embeddings is revealed, however the ordering of variables is important to reveal these features. <!-- anything else? Andrew's curves etc.? -->
@@ -104,6 +107,8 @@ Data: $X_{n \times p}$,
 Basis: $A_{p \times d}$, commonly 1d or 2d projection, orthonormality, more displays in the next section - can display a matrix A, Link to geometry properties.
 projection: $Y = X \cdot A$
 
+> figure 2 diagram illustrating a projection
+
 - Display (Sherry)
 
 [@Wickham2011-uz]
@@ -111,6 +116,7 @@ projection: $Y = X \cdot A$
 1D: `display_hist`: histogram
 2D: `display_xy`, recent development `display_sage()` - will be detailed in the last section @Transformations on projections (Ursula)
 
+> figure 3 diagram illustrating different displays for different d
 
 - Choosing targets, inc pp indexes (Sherry)
 
@@ -125,17 +131,42 @@ index:
   - skewness & kurtosis index loperfido (moment)
   - chi-square @posse for detect spiral
 
+> figure 4 diagram illustrating different types of target generation
+
 - Geodesic interpolation (Ursula)
+
+> figure 5 diagram illustrating geodesic interpolation
+
 - Slices vs projections (Ursula)
+
+> figure 6 diagram illustrating projection vs slice
+
 - Transformations on projections (Ursula)
+
+> figure 7 diagram of burning sage transformation
 
 # Ways of interacting
 
 - Stop/start/reverse
+
+> pull something from ggobi book?
+> figure 8 illustration
+
 - Manual (Nick)
+
+> something from nick's paper
+> figure 9 illustration
+
 - Linked brushing (Earo)
+
+> something from ggobi book
+> > figure 10: plots showing example
+
 - Spin-and-brush  (Ursula)
     
+> something from ggobi book
+> figure 11: plots showing example
+
 # Software
 
 - tourr (Di) 
@@ -153,12 +184,26 @@ The liminal R package uses the tour to explore the quality of non-linear dimensi
 # Application
 
 - Model vis examples eg random forest (from Hadley, removing the blindfold) (Natalia)
+
+> figure 12 tour plot(s) of vote matrix and tour plot(s) of variables, with some annotation of cases?
+
 - Physics (Ursula)
+
+> figure 13 
+
 - Bioinformatics (Stuart)
 
 In single cell RNA sequencing, scientists are interested in identifying novel cell types and understanding the relationships between cells or their developmental trajectory. To achieve this they perform cluster analysis on a counts matrix or principal components and embed the results via t-SNE and label points according the cluster label. One of the main advantages of t-SNE is the avoidance of over-plotting so clusters can be clearly identified on a scatter plot, however, this can come at the cost of interpretability as global distances are distorted.  In @Laa2020-uv, we used radial transformations of the tour projections as an alternative to t-SNE that better preserves global structure while still retaining cluster topology.
 
+> figure 14
+
 - High-d shapes/distributions: normal, skewed, outliers, (Di from tutorial notes)
+
+> figure 15
+
+- neural networks (from Scheidegger - Stuart)
+
+> figure 16
 
 # Discussion
 
