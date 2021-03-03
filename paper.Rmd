@@ -155,6 +155,9 @@ The liminal R package uses the tour to explore the quality of non-linear dimensi
 - Model vis examples eg random forest (from Hadley, removing the blindfold) (Natalia)
 - Physics (Ursula)
 - Bioinformatics (Stuart)
+
+In single cell RNA sequencing, scientists are interested in identifying novel cell types and understanding the relationships between cells or their developmental trajectory. To achieve this they perform cluster analysis on a counts matrix or principal components and embed the results via t-SNE and label points according the cluster label. One of the main advantages of t-SNE is the avoidance of over-plotting so clusters can be clearly identified on a scatter plot, however, this can come at the cost of interpretability as global distances are distorted.  In @Laa2020-uv, we used radial transformations of the tour projections as an alternative to t-SNE that better preserves global structure while still retaining cluster topology.
+
 - High-d shapes/distributions: normal, skewed, outliers, (Di from tutorial notes)
 
 # Discussion
