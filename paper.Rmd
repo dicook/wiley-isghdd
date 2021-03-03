@@ -205,6 +205,10 @@ In single cell RNA sequencing, scientists are interested in identifying novel ce
 
 > figure 16
 
+- umap (Mingwei Li paper - Stuart)
+
+> figure 17
+
 # Discussion
 
 # References {-}
