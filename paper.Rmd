@@ -107,11 +107,7 @@ Similarly, parallel coordinates plots (PCP) can be used to explore correlation a
 
 - Bases notation (Sherry)
 
-$d$-dimensional projection in $p$-dimensional space
-
-Data: $X_{n \times p}$, 
-Basis: $A_{p \times d}$, commonly 1d or 2d projection, orthonormality, more displays in the next section - can display a matrix A, Link to geometry properties.
-projection: $Y = X \cdot A$
+Some notations are defined for describing $d$-dimensional projections in $p$-dimensional space. Let $X_{n \times p}$ be the original data whose projections are of our interest. A projection basis, $A_{p \times d}$, characterises the direction from which the high-dimensional data are projected. A constraint that projection bases needs to satisfy is the orthonormality condition (which requires each axis to be unit vector and perpendicular to each other). This gives the basis space a geometrical structure of a Stiefel manifold. The projection of the original data on a basis hence can be defined as $Y = X \cdot A$. The projection is usually in 1D or 2D for the purpose of visual display. 
 
 > figure 2 diagram illustrating a projection
 
