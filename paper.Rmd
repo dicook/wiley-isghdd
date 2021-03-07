@@ -118,20 +118,15 @@ Some notations are defined for describing $d$-dimensional projections in $p$-dim
 1D: `display_hist`: histogram
 2D: `display_xy`, recent development `display_sage()` - will be detailed in the last section Transformations on projections (Ursula)
 
+[grand/ guided / manual tour or 1D/ 2D display in tourr???]
+
+grand tour, random, may miss interesting, take long to rotate to that specific angle, guided tour, along with projection pursuit, by generating target bases, interestingness
+
 > figure 3 diagram illustrating different displays for different d
 
 - Choosing targets, inc pp indexes (Sherry)
 
-grand tour, random, may miss interesting, take long to rotate to that specific angle, guided tour, along with projection pursuit, by generating target bases, interestingness
-
-interesting, index function, $f: \mathbb{R}^{n \times d} \mapsto \mathbb{R}$, normality, theoretical result: [@Diaconis1984-mv], aslo peter huber projection pursuit
-
-index: 
-  - initial idea from Friedman, orthonormal function expansion (Do we need to review these old index contruction?)
-  - holes, central mass, PDA, LDA
-  - scagnostic indices
-  - skewness & kurtosis index loperfido (moment)
-  - chi-square @posse for detect spiral
+To define whether a projection is interesting or not in the guided tour, an index function is used. An index function defines a surjection function from the projection $Y$ in $ \mathbb{R}^{n \times d}$ to a scalar in $\mathbb{R}$. For the high-dimensional data, an interesting projection is the one that deviates from normality, as discussed in @Diaconis1984-mv and @Huber1985-zq [expand more here]. Numerous index functions have been developed since the initial index proposed by @Friedman1974-ck: <!-- entropy-based index? --> holes and central mass index [@Cook2008-nl] computes the deviation of the projected data from a normal distribution; @Posse1995-ih proposed a chi-square index for detecting the spiral structure in the data;  kurtosis and skewness indices are raised in @Loperfido2020-xj and @Loperfido2018-ga to detect outliers in financial time series; and most recently, scagnostic indices [@Laa2020-zj] provides eight measures for summarising information between pairs of variables in scatter plot matrices. 
 
 > figure 4 diagram illustrating different types of target generation
 
