@@ -157,6 +157,10 @@ To define whether a projection is interesting or not in the guided tour, an inde
 - Linked brushing (Earo)
 
 > something from ggobi book
+* Brushing as database query
+* Brushing as conditioning
+* Brushing as geometric sectioning
+* Persistent vs. transient 
 > > figure 10: plots showing example
 
 - Spin-and-brush  (Ursula)
