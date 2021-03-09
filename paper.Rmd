@@ -48,7 +48,7 @@ title:
 abstract: > 
   Abstract goes here.
 keywords:
-  formatted: ["tours", "data visualisation"]
+  formatted: ["tours", "data visualisation", "high-dimensional data", "data science", "exploratory data analysis"]
 output: 
   bookdown::pdf_document2:
     template: template/wires_template_rmd.tex
@@ -84,7 +84,19 @@ The focus of this review will be on linear projections, in particular, as provid
 
 A tour can be considered to be a dynamic graphic, because it shows a smooth sequence of projections over time, ideally with controls that allow stopping, reversing, changing direction, or going forward again. It can be useful to embed a tour into an interactive graphics system, where plots can be queried and elements highlighted (see for e.g. @Swayne2003-cc or @Tierney1991). To create the smooth sequence, a geodesic interpolation is computed between consecutive frames.  It allows the viewer to extrapolate from the low-dimensional to  shapes corresponding to multivariate distribution, and is particularly useful for detecting clusters, outliers and non-linear dependence. 
 
-> figure 1 illustrating tour views vs nonlinear dimension reduction for Stuart's cluster example
+\begin{figure*}[htp]
+         \includegraphics[width=0.5\textwidth]{figures/cluster_example_r.pdf}
+     \vfill
+   \begin{minipage}{\linewidth}     
+   \centering
+         \includegraphics[width=0.24\textwidth]{figures/cluster_example_tour1_r.pdf}
+         \includegraphics[width=0.24\textwidth]{figures/cluster_example_tour2_r.pdf}
+         \includegraphics[width=0.24\textwidth]{figures/cluster_example_tour3_r.pdf}
+         \includegraphics[width=0.24\textwidth]{figures/cluster_example_tour4_r.pdf}
+   \end{minipage}%
+\caption{Comparison of structure perception between nonlinear dimension reduction using t-SNE (A) and projections seen during a tour (B.1-4). There are six clusters, as seen in the t-SNE view, but the relative distance between the clusters is extremely varied. This can be seen in the tour projections. The two green clusters are spherical in shape, and very distance from the brown clusters. Three of the brown clusters are very close to each other (just visible in B.1), and all brown clusters are elliptical. The tour provides a more accurate rendering of the clusters in the high-dimensional space, and complements what is learned from the dimension reduction.}
+\label{fig:tsne-tour}
+\end{figure*}
 
 While tours are invaluable for assessing the geometry of data, they are by no means the only technique available for visualising structure in high dimensional data. An early technique proposed for assessing pairwise relationships between variables is the scatter plot matrix (SPLOM) [@Tukey1983-fj] <!-- there might be others here(?) -->. In this graphic, the canvas is split into a matrix where each off-diagonal element is a scatter plot of variable pairs, while the diagonal elements are either left blank or represent univariate structure. The SPLOM allows the viewer to assess correlation structure but does not scale to large numbers of variables. 
 

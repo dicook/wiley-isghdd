@@ -52,7 +52,7 @@ multi <- read_tsv(url, col_names = FALSE) %>%
     key = rep(1:5, each = 200L)
   ) %>%
   filter(key %in% c(1, 4)) %>% 
-  mutate(group = rep(c("hierachical", "flat"), each = 200L)) %>% 
+  mutate(group = rep(c("hierarchical", "flat"), each = 200L)) %>% 
   select(group, X1:X10)
 
 
@@ -65,4 +65,25 @@ tsne_multi_df <- tibble(tsneX = tsne_multi$Y[,1],
                   tsneY = tsne_multi$Y[,2], 
                   cluster = multi$group)
 ggplot(tsne_multi_df, aes(x=tsneX, y=tsneY, colour=cluster)) +
-  geom_point() + coord_equal()
+  geom_point() + coord_equal() +
+  scale_colour_brewer("", palette="Dark2")
+
+# tourr
+library(tourr)
+library(RColorBrewer)
+animate_xy(multi[,2:11], col=multi$group)
+clrs = brewer.pal(3, "Dark2")[as.numeric(factor(multi$group))]
+render_gif(multi[,2:11], 
+           grand_tour(),
+           display_xy(col=clrs, axes="bottomleft"), 
+           frames = 200,
+           "figures/cluster_example.gif")
+
+render_gif(multi[,2:11], 
+           grand_tour(),
+           display_xy(col=clrs, axes="bottomleft", half_range = 0.5, center = TRUE), 
+           frames = 200,
+           "figures/cluster_example_zoom.gif")
+
+
+
