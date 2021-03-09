@@ -28,10 +28,14 @@ tour_tbl <- dplyr::bind_cols(as.data.frame(Y),
 
 
 tsne_y <- Rtsne::Rtsne(Y)
-embed_tbl <- tidy_tsne(tsne_y, 
-                       list(cluster = factor(X_tbl[["cluster"]])))
-colnames(embed_tbl) <- c("tsneX", "tsneY", "cluster")
-
+#embed_tbl <- tidy_tsne(tsne_y, 
+#                       list(cluster = factor(X_tbl[["cluster"]])))
+#colnames(embed_tbl) <- c("tsneX", "tsneY", "cluster")
+tsne_df <- tibble(tsneX = tsne_y$Y[,1], 
+                    tsneY = tsne_y$Y[,2], 
+                    cluster = X_tbl$cluster)
+ggplot(tsne_df, aes(x=tsneX, y=tsneY, colour=cluster)) +
+  geom_point() + coord_equal()
 
 # multichallenge data set
 url <- "http://ifs.tuwien.ac.at/dm/download/multiChallenge-matrix.txt"
@@ -50,3 +54,8 @@ tsne_multi <- Rtsne::Rtsne(multi[, -1])
 embed_multi <- tidy_tsne(tsne_multi, list(group = multi[["group"]]))
 colnames(embed_multi) <- c("tsneX", "tsneY", "group")
 
+tsne_multi_df <- tibble(tsneX = tsne_multi$Y[,1], 
+                  tsneY = tsne_multi$Y[,2], 
+                  cluster = multi$group)
+ggplot(tsne_multi_df, aes(x=tsneX, y=tsneY, colour=cluster)) +
+  geom_point() + coord_equal()
