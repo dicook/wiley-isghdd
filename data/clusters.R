@@ -6,6 +6,13 @@ library(Rtsne)
 library(dplyr)
 library(readr)
 
+tidy_tsne <- function(model, data) {
+  enframe <- as.data.frame(model[["Y"]])
+  colnames(enframe) <- c("tsneX", "tsneY", "tsneZ")[seq_len(ncol(enframe))]
+  dplyr::bind_cols(enframe, data)
+}
+
+
 # 5 gaussian clusters with equal covariance
 set.seed(63968)
 m <- 500
