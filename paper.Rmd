@@ -171,7 +171,17 @@ To define whether a projection is interesting or not in the guided tour, an inde
 
 Example fig ref: see figure \ref{fig:manual-tour}.
 
-```{r manual-tour, out.width="100%", fig.show='asis', fig.cap='Manual tour of flea data. We initalise the start basis to the Linear Discriminant Analysis and select the variable with the largest contribution separating the cluster shown as green circles. By controlling the contribution of the variable we see that it is quite sensitive to the sepration of this cluster.'}
+\begin{figure*}[!h]
+   \centering
+         \includegraphics[width=0.32\textwidth]{figures/penguins_manual_bl1_r.pdf}
+         \includegraphics[width=0.32\textwidth]{figures/penguins_manual_bl3_r.pdf}
+         \includegraphics[width=0.32\textwidth]{figures/penguins_manual_bl4_r.pdf}
+\caption{Four projections from a manual tour where variable "bl" is being rotated out of the projection (orange line). When this variable is removed the two light green clusters merge, which informs us that "bl" is an important variable for distinguishing between these two groups.}
+\label{fig:manual-tour}
+\end{figure*}
+
+
+```{r manual-tour, out.width="100%", fig.show='asis', fig.cap='Manual tour of flea data. We initalise the start basis to the Linear Discriminant Analysis and select the variable with the largest contribution separating the cluster shown as green circles. By controlling the contribution of the variable we see that it is quite sensitive to the sepration of this cluster.', eval=FALSE}
 
 if(F) ## Creation and saving figure at:
   file.edit("./R/make_radial_tour_fig.r")
