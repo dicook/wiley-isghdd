@@ -1,8 +1,6 @@
 ### Nicholas Spyrison 08 March 2021
 ### Recreate figure 3 from spinifex paper. Silo'd, with minimal dependencies.
 
-#```{r step3, echo=F, warning=F, out.width='100%', fig.width=8, fig.height=2, fig.cap="Snapshots of a radial manual tour manipulating aede2: (1) original projection, (2) full contribution, (3) zero contribution, (4) back to original. "}
-# install.packages("spinifex") ## Made with Cran spinifex_0.2.7
 require("spinifex")
 require("tourr")
 require("ggplot2")
@@ -10,32 +8,13 @@ require("magrittr")
 my_theme <- list(scale_color_brewer(palette = "Dark2"),
                  theme_void(), 
                  theme(legend.position ="none"))
-# ## Testing a slight change to scale to see if that works better as framse change
-# scale_axes <-
-#   function (x, position = "center", to = data.frame(x = c(-1L, 1L), y = c(-1L, 1L))){
-#     if(is.null(to)) to <- data.frame(x = c(-1L, 1L), y = c(-1L, 1L))
-#     x_to <- c(min(to[, 1L]), max(to[, 1L]))
-#     y_to <- c(min(to[, 2L]), max(to[, 2L]))
-#     xdiff <- diff(x_to)
-#     ydiff <- diff(y_to)
-#     xcenter <- mean(x_to)
-#     ycenter <- mean(y_to)
-#     if(position == "center") {
-#       scale <- 0.3 * max(ydiff, xdiff)
-#       xoff <- xcenter
-#       yoff <- ycenter
-#     }
-#     x[, 1L] <- scale * x[, 1L] + xoff
-#     x[, 2L] <- scale * x[, 2L] + yoff
-#     return(x)
-#   }
-## Doesn't seem to make the change I expected. may want tyo test in dev version.
 
+### Create the 
 make_radial_tour_fig <- function(){
   dat  <- scale_sd(flea[, 1:6])
   clas <- factor(flea$species)
   bas  <- MASS::lda(dat, grouping = clas)$scaling %>% tourr::orthonormalise()
-  mvar <- which(abs(bas[, 1]) == max(abs(bas[, 1])))
+  mvar <- 4 ## aede1, primary disting of 1 cluster.
   
   if(F) ## Manual check the starting LDA basis
     view_frame(bas, dat, mvar,
@@ -52,22 +31,30 @@ make_radial_tour_fig <- function(){
       print(msg)
     }
   }
-  ## Show frames: 1, 4, 10, 16
+  ## Show frames: 1, 4, 10, 15
   
-  cn_label <- colnames(dat)
   p1 <- view_frame(mtour[,, 1], dat, mvar,
-                   aes_args = list(color = clas, shape = clas)) +
-    ggtitle("1) norm = 0.91") + my_theme
+                   aes_args = list(color = clas, shape = clas)) + my_theme
   p2 <- view_frame(mtour[,, 4], dat, mvar,
-                   aes_args = list(color = clas, shape = clas)) +
-    ggtitle("2) norm = 1") + my_theme
+                   aes_args = list(color = clas, shape = clas)) + my_theme
   p3 <- view_frame(mtour[,, 10], dat, mvar,
-                   aes_args = list(color = clas, shape = clas)) +
-    ggtitle("3) norm = 0") + my_theme
-  p4 <- view_frame(mtour[,, 16], dat, mvar,
-                   aes_args = list(color = clas, shape = clas)) +
-    ggtitle("4) norm = 0.91") + my_theme
+                   aes_args = list(color = clas, shape = clas)) + my_theme
+  p4 <- view_frame(mtour[,, 15], dat, mvar,
+                   aes_args = list(color = clas, shape = clas)) + my_theme
   
   ## Return ggplot figure.
-  gridExtra::grid.arrange(p1, p2, p3, p4, ncol = 4)
+  # gridExtra::grid.arrange(p1, p2, p3, p4, ncol = 4)
+  cowplot::plot_grid(p1, p2, p3, p4, ncol = 4,
+                     scale = c(1, 1, .75, 1), hjust = -.1,
+                     label_fontface = "plain",
+                     labels = c("1) norm = 0.86", "2) norm = 1", "3) norm = 0", "4) norm = 0.86")
+  )
 }
+
+fig <- make_radial_tour_fig()
+ggsave(filename = "fig_radial_manual_tour.png",
+       plot = fig,
+       device = "png", path = "./figures", 
+       dpi = 300,
+       width = 6, height = 1.5, units = "in"
+)

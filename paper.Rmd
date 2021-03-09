@@ -167,10 +167,14 @@ To define whether a projection is interesting or not in the guided tour, an inde
 > NS: something like figure 3, exlpaining radial tour on lda.
 > figure 9 illustration
 
-```{r}
-##TODO, need to make caption, tag, and optimize figure width/height
-source("./R/make_radial_tour_fig.r")
-make_radial_tour_fig()
+Example fig ref: see figure \ref{fig:manual-tour}.
+
+```{r manual-tour, out.width="100%", fig.show='asis', fig.cap='Manual tour of flea data. We initalise the start basis to the Linear Discriminant Analysis and select the variable with the largest contribution separating the cluster shown as green circles. By controlling the contribution of the variable we see that it is quite sensitive to the sepration of this cluster.'}
+
+if(F) ## Creation and saving figure at:
+  file.edit("./R/make_radial_tour_fig.r")
+
+knitr::include_graphics("./figures/fig_radial_manual_tour.png")
 ```
 
 
