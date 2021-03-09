@@ -126,7 +126,7 @@ grand tour, random, may miss interesting, take long to rotate to that specific a
 
 - Choosing targets, inc pp indexes (Sherry)
 
-To define whether a projection is interesting or not in the guided tour, an index function is used. An index function defines a surjection function from the projection $Y$ in $ \mathbb{R}^{n \times d}$ to a scalar in $\mathbb{R}$. For the high-dimensional data, an interesting projection is the one that deviates from normality, as discussed in @Diaconis1984-mv and @Huber1985-zq [expand more here]. Numerous index functions have been developed since the initial index proposed by @Friedman1974-ck: <!-- entropy-based index? --> holes and central mass index [@Cook2008-nl] computes the deviation of the projected data from a normal distribution; @Posse1995-ih proposed a chi-square index for detecting the spiral structure in the data;  kurtosis and skewness indices are raised in @Loperfido2020-xj and @Loperfido2018-ga to detect outliers in financial time series; and most recently, scagnostic indices [@Laa2020-zj] provides eight measures for summarising information between pairs of variables in scatter plot matrices. 
+To define whether a projection is interesting or not in the guided tour, an index function is used. An index function defines a surjection function from the projection $Y$ in $\mathbb{R}^{n \times d}$ to a scalar in $\mathbb{R}$. For the high-dimensional data, an interesting projection is the one that deviates from normality, as discussed in @Diaconis1984-mv and @Huber1985-zq [expand more here]. Numerous index functions have been developed since the initial index proposed by @Friedman1974-ck: <!-- entropy-based index? --> holes and central mass index [@Cook2008-nl] computes the deviation of the projected data from a normal distribution; @Posse1995-ih proposed a chi-square index for detecting the spiral structure in the data;  kurtosis and skewness indices are raised in @Loperfido2020-xj and @Loperfido2018-ga to detect outliers in financial time series; and most recently, scagnostic indices [@Laa2020-zj] provides eight measures for summarising information between pairs of variables in scatter plot matrices. 
 
 > figure 4 diagram illustrating different types of target generation
 
@@ -151,8 +151,16 @@ To define whether a projection is interesting or not in the guided tour, an inde
 
 - Manual (Nick)
 
-> something from nick's paper
+> something from nick's paper.
+> NS: something like figure 3, exlpaining radial tour on lda.
 > figure 9 illustration
+
+```{r}
+##TODO, need to make caption, tag, and optimize figure width/height
+source("./R/make_radial_tour_fig.r")
+make_radial_tour_fig()
+```
+
 
 - Linked brushing (Earo)
 
