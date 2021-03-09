@@ -51,8 +51,8 @@ multi <- read_tsv(url, col_names = FALSE) %>%
 
 set.seed(143280)
 tsne_multi <- Rtsne::Rtsne(multi[, -1])
-embed_multi <- tidy_tsne(tsne_multi, list(group = multi[["group"]]))
-colnames(embed_multi) <- c("tsneX", "tsneY", "group")
+#embed_multi <- tidy_tsne(tsne_multi, list(group = multi[["group"]]))
+#colnames(embed_multi) <- c("tsneX", "tsneY", "group")
 
 tsne_multi_df <- tibble(tsneX = tsne_multi$Y[,1], 
                   tsneY = tsne_multi$Y[,2], 
