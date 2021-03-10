@@ -80,6 +80,8 @@ Writing style: third person (it was done, ...)
 
 Data commonly arrives with more than two measured variables, which makes it more complicated to plot on a page. With multiple variables, especially if there is some association between variables, this would be called multivariate or high-dimensional data. When the variables are all numeric, or quantitative, visualisation often relies on some form of dimension reduction. This can be done by taking linear projections, for example, principal component analysis [@Hotelling1933-of] or linear discriminant analysis [@Fisher1936]. It is also common to reduce dimension nonlinearly with techniques like multidimensional scaling (MDS) [@Kruskal1964-do] or t-Distributed Stochastic Neighbour Embedding (t-SNE) [@Van_der_Maaten2008-qa]. 
 
+> Maybe we should clarify What is high-dimensional data? here
+
 The focus of this review will be on linear projections, in particular, as provided by the grand tour [@Asimov1985-xr; @Buja2005-cx]. The reason being that it is not feasible to adequately the very large area of visualising high-dimensions, and there have been numerous developments in tours recently.  An overview of the technique, and new modifications is provided, along with how these techniques can be used in a variety of applications, and to help understand nonlinear dimension reduction results.  
 
 A tour can be considered to be a dynamic graphic, because it shows a smooth sequence of projections over time, ideally with controls that allow stopping, reversing, changing direction, or going forward again. It can be useful to embed a tour into an interactive graphics system, where plots can be queried and elements highlighted (see for e.g. @Swayne2003-cc or @Tierney1991). To create the smooth sequence, a geodesic interpolation is computed between consecutive frames.  It allows the viewer to extrapolate from the low-dimensional to  shapes corresponding to multivariate distribution, and is particularly useful for detecting clusters, outliers and non-linear dependence. 
@@ -123,7 +125,7 @@ Similarly, parallel coordinates plots (PCP) can be used to explore correlation a
 
 Some notations are defined for describing $d$-dimensional projections in $p$-dimensional space. Let $X_{n \times p}$ be the original data whose projections are of our interest. A projection basis, $A_{p \times d}$, characterises the direction from which the high-dimensional data are projected. A constraint that projection bases needs to satisfy is the orthonormality condition (which requires each axis to be unit vector and perpendicular to each other). This gives the basis space a geometrical structure of a Stiefel manifold. The projection of the original data on a basis hence can be defined as $Y = X \cdot A$. The projection is usually in 1D or 2D for the purpose of visual display. 
 
-> figure 2 diagram illustrating a projection
+> figure 2 diagram illustrating a projection: Di thinks making a Huber plot (2D data - 1D projection) here with projected data on a couple of directions is ideal
 
 - Display (Sherry)
 
@@ -137,6 +139,8 @@ Some notations are defined for describing $d$-dimensional projections in $p$-dim
 grand tour, random, may miss interesting, take long to rotate to that specific angle, guided tour, along with projection pursuit, by generating target bases, interestingness
 
 > figure 3 diagram illustrating different displays for different d
+
+
 
 - Choosing targets, inc pp indexes (Sherry)
 
