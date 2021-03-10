@@ -201,7 +201,7 @@ __Steps:__
 
 Figure \ref{fig:manual-tour} illustrates the manual tour, by radially manipulating the contribution of variable that is crucial, to explain the separation of a particular cluster. To start we first identify a basis by orthonormalising the linear discriminant. We select a variable that has a large contribution in the basis, and watch a continuous animation as this variable is rotated fully into the projection, compeletely out of the projection, and then returned to it's original contribution.
 
-```{r manual-tour, out.width="100%", fig.show='asis', fig.cap='Manual tour of flea data. We initalise the start basis to the linear discriminant analysis and select the variable with the largest contribution separating the cluster shown as green circles. By controlling the contribution of the variable we see that it is quite sensitive to the sepration of this cluster.'}
+```{r manual-tour, out.width="100%", fig.show='asis', fig.cap='Manual tour of flea data. We initalise the start basis to the linear discriminant analysis and select the variable with the largest contribution separating the cluster shown as green circles. By controlling the contribution of the variable we see that it is quite sensitive to the sepration of this cluster.', eval=FALSE}
 if(F) ## Creation and saving figure at:
   file.edit("./R/make_radial_tour_fig.r")
 knitr::include_graphics("./figures/fig_radial_manual_tour.png")
