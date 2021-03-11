@@ -28,9 +28,8 @@ jobs:
         run: |
           RMD_PATH=($(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '[.]Rmd$'))
           Rscript -e 'for (f in commandArgs(TRUE)) if (file.exists(f)) rmarkdown::render(f)' ${RMD_PATH[*]} 
-      - name: Commit results
-        run: |
-          git config --local user.email "actions@github.com"
-          git config --local user.name "GitHub Actions"
-          git commit ${RMD_PATH[*]/.Rmd/.md/.pdf/.tex} -m 'Re-build Rmarkdown files' || echo "No changes to commit"
-          git push origin || echo "No changes to commit"
+      - uses: actions/upload-artifact@v2
+        with:
+          name: manuscript
+          path: ${RMD_PATH[*]/.pdf/.tex}
+          if-no-files-found: error
