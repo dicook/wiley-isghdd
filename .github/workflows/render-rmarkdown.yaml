@@ -22,7 +22,6 @@ jobs:
       - name: Install rmarkdown, remotes, and the local package
         run: |
           install.packages("remotes")
-          remotes::install_local(".")
           remotes::install_cran(c("rmarkdown", "bookdown"))
         shell: Rscript {0}
       - name: Render Rmarkdown files
