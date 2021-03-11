@@ -186,6 +186,13 @@ XXX I would like Fig 5 of @Laa2020-uv as an illustration here
 
 - Stop/start/reverse
 
+\begin{figure*}[!h]
+   \centering
+         \includegraphics[width=0.5\textwidth]{figures/liminal-stop-pause-refresh.png}
+\caption{The clustering example in figure \ref{fig:tsne-tour} using the liminal interface. Here a grand tour is displayed on the right hand side, with buttons allowing users to play, pause and refresh the tour animation.}
+\label{fig:manual-tour}
+\end{figure*}
+
 > pull something from ggobi book?
 > figure 8 illustration
 
@@ -274,15 +281,16 @@ XXX need to select plots, also based on how much space we want to use
 
 In single cell RNA sequencing, scientists are interested in identifying novel cell types and understanding the relationships between cells or their developmental trajectory. To achieve this they perform cluster analysis on a counts matrix or principal components and embed the results via t-SNE and label points according the cluster label. One of the main advantages of t-SNE is the avoidance of over-plotting so clusters can be clearly identified on a scatter plot, however, this can come at the cost of interpretability as global distances are distorted.  In @Laa2020-uv, we used radial transformations of the tour projections as an alternative to t-SNE that better preserves global structure while still retaining cluster topology.
 
-\begin{figure}
-         \includegraphics[width=0.24\textwidth]{figures/mouse_sage_2c_gam3-001.png}
+\begin{figure*}[!h]
+  \centering
+           \includegraphics[width=0.24\textwidth]{figures/mouse_sage_2c_gam3-001.png}
          \includegraphics[width=0.24\textwidth]{figures/mouse_sage_2c_gam3-016.png}
          \includegraphics[width=0.24\textwidth]{figures/mouse_sage_2c_gam3-038.png}
          \includegraphics[width=0.24\textwidth]{figures/mouse_sage_2c_gam3-074.png}
 
-}
-\caption{Selected frames from using a grand tour of mouse retina single cell RNA-seq data with the radial transformation described in @Laa2020-uv. Here the sage display was used to identify and verify cluster sepearation between the three highlighted clusters estimated from a clustering algorithm.}\label{fig:mouse-cluster}
-\end{figure}
+\caption{Selected frames from using a grand tour of mouse retina single cell RNA-seq data with the radial transformation described in @Laa2020-uv. Here the sage display was used to identify and verify cluster sepearation between the three highlighted clusters estimated from a clustering algorithm.}
+\label{fig:mouse-cluster}
+\end{figure*}
 
 - High-d shapes/distributions: normal, skewed, outliers, (Di from tutorial notes)
 

@@ -19,12 +19,12 @@ jobs:
       - uses: r-lib/actions/setup-pandoc@v1
       - uses: r-lib/actions/setup-tinytex@v1
       - run: tlmgr --version
-      - name: Install rmarkdown, remotes, and the local package
+      - name: Install rmarkdown, remotes, and bookdown
         run: |
           install.packages("remotes")
           remotes::install_cran(c("rmarkdown", "bookdown"))
         shell: Rscript {0}
-      - name: Render Rmarkdown files
+      - name: Render manuscript files
         run: |
           RMD_PATH=($(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '[.]Rmd$'))
           Rscript -e 'for (f in commandArgs(TRUE)) if (file.exists(f)) rmarkdown::render(f)' ${RMD_PATH[*]} 
