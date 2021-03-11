@@ -118,6 +118,7 @@ Similarly, parallel coordinates plots (PCP) can be used to explore correlation a
 - subplots trellis literature
 -->
 
+The rest of the paper is structured as follows...
 
 # Tours for high dimensional visualization 
 
