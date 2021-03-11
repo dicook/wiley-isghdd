@@ -184,7 +184,9 @@ XXX I would like Fig 5 of @Laa2020-uv as an illustration here
 
 # Ways of interacting
 
-- Stop/start/reverse
+## Basic Interactions
+
+-Stop/start/reverse
 
 \begin{figure*}
    \centering
@@ -192,9 +194,6 @@ XXX I would like Fig 5 of @Laa2020-uv as an illustration here
 \caption{The clustering example in figure \ref{fig:tsne-tour} using the liminal interface. Here a grand tour is displayed on the right hand side, with buttons allowing users to play, pause and refresh the tour animation.}
 \label{fig:tour-controls}
 \end{figure*}
-
-> pull something from ggobi book?
-> figure 8 illustration
 
 ## Manual tour (Nick)
 
