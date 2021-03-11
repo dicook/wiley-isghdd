@@ -31,5 +31,5 @@ jobs:
       - uses: actions/upload-artifact@v2
         with:
           name: manuscript
-          path: ${RMD_PATH[*]/.pdf/.tex}
+          path: paper.pdf
           if-no-files-found: error

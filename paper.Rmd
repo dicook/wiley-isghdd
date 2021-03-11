@@ -186,7 +186,7 @@ XXX I would like Fig 5 of @Laa2020-uv as an illustration here
 
 ## Basic Interactions
 
--Stop/start/reverse
+- Stop/start/reverse (Stuart)
 
 \begin{figure*}
    \centering
