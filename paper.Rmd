@@ -287,7 +287,7 @@ In single cell RNA sequencing, scientists are interested in identifying novel ce
          \includegraphics[width=0.24\textwidth]{figures/mouse_sage_2c_gam3-038.png}
          \includegraphics[width=0.24\textwidth]{figures/mouse_sage_2c_gam3-074.png}
 
-\caption{Selected frames from using a grand tour of mouse retina single cell RNA-seq data with the radial transformation described in \cite{Laa2020-uv}. Here the sage display was used to identify and verify cluster sepearation between the three highlighted clusters estimated from a clustering algorithm.}
+\caption{Selected frames from using a grand tour of mouse retina single cell RNA-seq data with the radial transformation. The sage display was used to identify and verify cluster sepearation between the three highlighted clusters estimated from a clustering algorithm.}
 \label{fig:mouse-cluster}
 \end{figure*}
 
