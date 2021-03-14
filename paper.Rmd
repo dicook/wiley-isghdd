@@ -191,8 +191,8 @@ XXX I would like Fig 5 of @Laa2020-uv as an illustration here
 
 \begin{figure*}
    \centering
-         \includegraphics[width=0.5\textwidth]{figures/liminal-stop-pause-refresh.png}
-\caption{The clustering example in figure \ref{fig:tsne-tour} using the liminal interface. Here a grand tour is displayed on the right hand side, with buttons allowing users to play, pause and refresh the tour animation.}
+         \includegraphics[width=0.9\textwidth]{figures/liminal-stop-pause-refresh.png}
+\caption{The clustering example from Figure \ref{fig:tsne-tour} using the liminal interface. Here a grand tour is displayed on the right hand side, with buttons allowing users to play, pause and refresh the tour animation.}
 \label{fig:tour-controls}
 \end{figure*}
 
