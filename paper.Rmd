@@ -176,13 +176,10 @@ Slice tour approach: use distance from the projection plane (through a selected 
 Summary of applications: viewing geometric shapes, model visualization
 Connection with projection pursuit: section pursuit @Laa2020-ni
 
-XXX figure should probably be combination of Fig 1 and 2 in @Laa2020-js
-
-
 \begin{figure*}
    \centering
-         \includegraphics[width=0.9\textwidth]{figures/slice_tour_left.pdf}
-         \includegraphics[width=0.9\textwidth]{figures/slice_tour_right.pdf}
+         \includegraphics[width=0.9\textwidth]{figures/slice_tour_left.jpg}
+         \includegraphics[width=0.9\textwidth]{figures/slice_tour_right.jpg}
 \caption{Ursula to write}
 \label{fig:tour-slice}
 \end{figure*}
@@ -321,8 +318,8 @@ The grand tour along with direct interaction techniques has been proposed as a t
 
 \begin{figure*}
    \centering
-         \includegraphics[width=0.5\textwidth]{figures/scheidigger_nn_tour.png}
-          \includegraphics[width=0.5\textwidth]{figures/scheidigger_umap_tour.png}
+         \includegraphics[width=0.45\textwidth]{figures/scheidigger_nn_tour.png}
+          \includegraphics[width=0.45\textwidth]{figures/scheidigger_umap_tour.png}
 \caption{Left: A grand tour run on the output of a deep neural network model for classification. Right: A grand tour on UMAP components of a layer of deep neural network.}
 \label{fig:tour-nn}
 \end{figure*}
