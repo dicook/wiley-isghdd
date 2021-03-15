@@ -178,7 +178,15 @@ Connection with projection pursuit: section pursuit @Laa2020-ni
 
 XXX figure should probably be combination of Fig 1 and 2 in @Laa2020-js
 
-> figure 6 diagram illustrating projection vs slice
+
+\begin{figure*}
+   \centering
+         \includegraphics[width=0.9\textwidth]{figures/slice_tour_left.pdf}
+         \includegraphics[width=0.9\textwidth]{figures/slice_tour_right.pdf}
+\caption{Ursula to write}
+\label{fig:tour-slice}
+\end{figure*}
+
 
 - Transformations on projections (Ursula)
 
