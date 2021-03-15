@@ -76,6 +76,18 @@
 \title{$title.formatted$\\
 $if(title.type)$$title.type$$endif$}
 
+\author{
+$for(author)$ 
+  $author.name$\\
+  % $author.affiliation$ \\
+  $author.address$ \\
+  $if(author.email)$$author.email$\\$endif$
+  $if(author.orcid)$ORCiD: $author.orcid$\\$endif$
+  ~\\ \and 
+$endfor$
+}
+
+\date{}
 
 $if(csl-refs)$
 \newlength{\cslhangindent}
@@ -111,17 +123,9 @@ $preamble$
 
 \maketitle
 
-$for(author)$
-  \author{$author.name$} \\
-  $author.affiliation$ \\
-  $author.address$ \\
-  $if(author.email)$E-mail: $author.email$ \\$endif$
-  $if(author.orcid)$ORCiD: $author.orcid$\\~\\$endif$
-$endfor$
-
 \vspace{-1em}
 
-\date{}
+
 
 \begin{abstract}
 $abstract$
