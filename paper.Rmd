@@ -114,7 +114,7 @@ While tours are invaluable for assessing the geometry of data, they are by no me
 
 Similarly, parallel coordinates plots (PCP) can be used to explore correlation and co-linearities in multivariate data [@Inselberg1985-kf]. In PCPs, variables are arranged along the (vertical) horizontal axis with vertical (horizontal) axes drawn representing the range of values for each variable. Points (observations) of the data are represented by drawing lines between each variables axis. If there is positive correlation between two variables the lines will be parallel, while for negative correlation the lines will cross. By placing multiple variables side by side in a PCP higher order structure like clustering or lower dimensional embeddings is revealed, however the ordering of variables is important to reveal these features. 
 
-- cluster heatmaps 
+The heatmap display is widely used to visualise cluster structure in bioinformatics. In a heatmap each element of a numeric matrix is displayed as a single colored square pixel on the canvas. The hue of the color is mapped to the magnitude of the element's values. A subtlety of using the heatmap is determining how to order the rows and columns of the matrix called seriation. In practice, two way hierarchical clustering  or singular value decomposition is used to order rows and columns. See @Wilkinson2009-pj for a comprehensive history.
 
 - subplots trellis literature
 
@@ -126,7 +126,7 @@ Similarly, parallel coordinates plots (PCP) can be used to explore correlation a
 - multivariate categorical vis, tree maps etc.
 -->
 
-The rest of the review is structured as follows: in section \@ref(notation) we define the notation and components of a tour display, in section \@ref(we review the importance of interactive user ..
+The rest of the review is structured as follows: in section \@ref(notation) we define the notation and components of a tour display. By its nature a tour is most effective to analyst when combined with interactivity; in section \@ref(interaction) we review the components of user interfaces for manipulating tour views. The implementation of tour paths in statistical software is reviewed in section \@ref(software), where we discuss the history and state of the art packages for computing them. Section \@ref(applications) shows the diverse applications of the tour in the natural sciences, machine learning and applied statistics. Finally, in section \@ref(discussion) we point to future research directions for tours. 
 
 # Tours for high dimensional visualization {#notation}
 
