@@ -321,7 +321,8 @@ The grand tour along with direct interaction techniques has been proposed as a t
 
 # Discussion {#discussion}
 
-* why tours are useful and what we learn from them?
+* why tours are useful and what do we learn from them?
+* what research is needed?
 
 
 # References {-}
