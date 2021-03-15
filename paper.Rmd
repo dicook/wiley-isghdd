@@ -308,8 +308,13 @@ In single cell RNA sequencing, scientists are interested in identifying novel ce
 
 The grand tour along with direct interaction techniques has been proposed as a technique for understanding the training of deep neural network models [@Li2020-kg]. They proposed a novel method for aligning the output of different layers by interpolating the output of different layers of a deep neural network via the the grand tour. They also apply the grand tour to explore the changes in single layers of the network for each training epoch. For example, by the running tour over the softmax layer outputs of a classification model, an analyst may understand where in the training confusion between classes occur and gain a view of model performance. Similarly, the difference between training and test sets can be assessed through side by side linked tours of layer outputs. @li_toward_2020 extends this idea by first reducing the dimensionality of output layers with UMAP and then using the grand tour with manual controls over 15 dimensional embeddings to understand layer topology.
 
-> figure 16 panel a and b
-
+\begin{figure*}
+   \centering
+         \includegraphics[width=0.5\textwidth]{figures/scheidigger_nn_tour.png}
+          \includegraphics[width=0.5\textwidth]{figures/scheidigger_umap_tour.png}
+\caption{Left: A grand tour run on the output of a deep neural network model for classification. Right: A grand tour on UMAP components of a layer of deep neural network.}
+\label{fig:tour-nn}
+\end{figure*}
 
 # Discussion
 
