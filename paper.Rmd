@@ -187,9 +187,12 @@ Example would be to address piling effects that are a result of projecting form 
 A solution to this problem was presented in the sage display @Laa2020-uv and is using a radial transformation of the projected data to avoid piling near the center
 Summary of applications: better understanding of clustering in high-dimensional space (discussed below), resolving small features near the center
 
-XXX I would like Fig 5 of @Laa2020-uv as an illustration here
-
-> figure 7 diagram of burning sage transformation
+\begin{figure*}
+   \centering
+         \includegraphics[width=0.9\textwidth]{figures/laa_radial_transformation.pdf}
+\caption{An illustration of the radial transformation. Each panel represents linear projections of $p$ dimensional equidistant circles. As $p$ increases the circles get pushed further to the edge.}
+\label{fig:tour-transformation}
+\end{figure*}
 
 # Ways of interacting
 
