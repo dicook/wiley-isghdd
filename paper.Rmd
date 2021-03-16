@@ -83,7 +83,7 @@ The term "high-dimensional" here means Euclidean space. Figure \ref{fig:cubes} s
 \label{fig:cubes}
 \end{figure*}
 
-The focus of this review will be on visualising high-dimensional data using linear projections, in particular, as provided by the grand tour [@Asimov1985-xr; @Buja2005-cx]. The reason being that it is not feasible to adequately the very large area of visualising high-dimensions, and there have been numerous developments in tours recently.  An overview of the technique, and new modifications is provided, along with how these techniques can be used in a variety of applications, and to help understand nonlinear dimension reduction results.  
+The focus of this review will be on visualising high-dimensional numerical data using linear projections, in particular, as provided by the grand tour [@Asimov1985-xr; @Buja2005-cx]. The reason being that it is not feasible to adequately review the very large area of visualising high-dimensions, and there have been numerous developments in tours recently. An overview of the technique, and new modifications is provided, along with how these techniques can be used in a variety of applications, and to help understand nonlinear dimension reduction results.  
 
 A tour can be considered to be a dynamic graphic, because it shows a smooth sequence of projections over time, ideally with controls that allow stopping, reversing, changing direction, or going forward again. It can be useful to embed a tour into an interactive graphics system, where plots can be queried and elements highlighted (see for e.g. @Swayne2003-cc or @Tierney1991). To create the smooth sequence, a geodesic interpolation is computed between consecutive frames.  It allows the viewer to extrapolate from the low-dimensional to  shapes corresponding to multivariate distribution, and is particularly useful for detecting clusters, outliers and non-linear dependence. 
 
@@ -109,9 +109,10 @@ Similarly, parallel coordinates plots (PCP) can be used to explore correlation a
 
 The heatmap display is widely used to visualise cluster structure in bioinformatics. In a heatmap each element of a numeric matrix is displayed as a single colored square pixel on the canvas. The hue of the color is mapped to the magnitude of the element's values. A subtlety of using the heatmap is determining how to order the rows and columns of the matrix called seriation. In practice, two way hierarchical clustering  or singular value decomposition is used to order rows and columns. See @Wilkinson2009-pj for a comprehensive history.
 
+<!-- above paragraphs could be shortened into a single paragraph? -->
 
 
-<!-- Original tours (Di)
+<!-- 
 Not sure how much of this wee need to go into...
 - subplots trellis literature
 - data pipelines (?)
@@ -128,10 +129,9 @@ The rest of the review is structured as follows: in section \@ref(notation) we d
 Some notations are defined for describing $d$-dimensional projections in $p$-dimensional space. Let $X_{n \times p}$ be the original data whose projections are of our interest. A projection basis, $A_{p \times d}$, characterises the direction from which the high-dimensional data are projected. Projection bases needs to satisfy an orthonormality condition, which requires each axis to be unit vector and perpendicular to each other, and this gives the basis space a geometrical structure of a Stiefel manifold. With a data matrix and a projection basis, a projection can be defined as $Y = X \cdot A$ for visual inspection.
 
 > figure 2 diagram illustrating a projection: Di thinks making a Huber plot (2D data - 1D projection) here with projected data on a couple of directions is ideal
-
-# ```{r}
-# PPtreeViz::Huberplot(iris[,1:2],iris[,5],PPmethod="LDA")
-# ```
+```{r, eval = FALSE}
+PPtreeViz::Huberplot(iris[,1:2],iris[,5],PPmethod="LDA")
+```
 
 - Display (Sherry)
 
@@ -218,7 +218,7 @@ Transformations of the data are common in the preprocessing, examples would be s
 
 ## Basic Interactions
 
-- Stop/start/reverse (Stuart)
+Due to the dynamic nature of the tour, user interfaces can enhance the interpretability of the resulting visualisation. Often one will want to pause on a particularly interesting projection and return it for use in a downstream analysis or static plot.  Basic controls can be implemented so a tour display can be paused, refreshed and replayed over and over, as shown in figure \ref{fig:tour-controls}.
 
 \begin{figure*}
    \centering
@@ -227,7 +227,9 @@ Transformations of the data are common in the preprocessing, examples would be s
 \label{fig:tour-controls}
 \end{figure*}
 
-## Manual tour (Nick)
+## Manual tour 
+
+<!-- needs to be shortend -->
 
 Manual tours [@cook_manual_1997; @spyrison_spinifex_2020] offer a means to interactively control the contribution of a single variable on the projection plane. This is particularly useful for exploring a projection once a feature of interest has been identified. Manual tours can then be employed to explore local area of, or test the structure of the feature, with respect to a selected variable.
 
@@ -241,7 +243,7 @@ __Steps:__
 2. Post-multiply the space, by a rotation matrix, as solved for in application of Rodrigues’ formula [@rodrigues_lois_1840].
 3. Truncate the manipulation dimension.
 
-Figure \ref{fig:manual-tour} illustrates the manual tour, by radially manipulating the contribution of variable that is crucial, to explain the separation of a particular cluster. To start we first identify a basis by orthonormalising the linear discriminant. We select a variable that has a large contribution in the basis, and watch a continuous animation as this variable is rotated fully into the projection, compeletely out of the projection, and then returned to it's original contribution.
+Figure \ref{fig:manual-tour} illustrates the manual tour, by radially manipulating the contribution of variable that is crucial, to explain the separation of a particular cluster. To start we first identify a basis by orthonormalising the linear discriminant. We select a variable that has a large contribution in the basis, and watch a continuous animation as this variable is rotated fully into the projection, completely out of the projection, and then returned to it's original contribution.
 
 ```{r manual-tour, out.width="100%", fig.show='asis', fig.cap='Manual tour of flea data. We initalise the start basis to the linear discriminant analysis and select the variable with the largest contribution separating the cluster shown as green circles. By controlling the contribution of the variable we see that it is quite sensitive to the sepration of this cluster.', eval=FALSE}
 if(F) ## Creation and saving figure at:
@@ -296,6 +298,7 @@ Tasks such as the identification of outlying points or cluster analysis can be p
 - Dataviewer, XGobi, GGobi, cranvas (XLispStat, Orca, mmvz) (Di)
 
 - tourr (Di) 
+
 - spinifex (Nick)
 
 The R package spinifex [@spyrison_spinifex_2020] has 3 primary features: it produces manual tours (predefined path or interactive manipulation, identifies orthonormal global feature bases with the use of the Rdimtools [@you_rdimtools_2020] package, renders (manual or other) tours as animations exportable to static .gif (gganimate [@pedersen_gganimate_2020] package) or interactive .html widgets (plotly [@sievert_interactive_2020] package), lastly it offers interactive shiny application that offers an graphical user interface to quickly sample tour features.
