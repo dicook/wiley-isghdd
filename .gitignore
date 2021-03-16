@@ -42,3 +42,6 @@ vignettes/*.pdf
 *.out
 *.log
 *.aux
+
+# mac junk
+*.DS_Store
