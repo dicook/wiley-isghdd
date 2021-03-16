@@ -194,17 +194,25 @@ The slice tour can reveal concave or non-linear structures obscured in projectio
 
 - Transformations on projections (Ursula)
 
-Transformations of the data are common in the preprocessing, but sometimes we want to transform the data after projecting onto lower dimensions
-Example would be to address piling effects that are a result of projecting form high-dimensional space down to low-dimensions
-A solution to this problem was presented in the sage display @Laa2020-uv and is using a radial transformation of the projected data to avoid piling near the center
-Summary of applications: better understanding of clustering in high-dimensional space (discussed below), resolving small features near the center
+Transformations of the data are common in the preprocessing, examples would be scaling, sphering, or a logarithmic transformation for skewed distributions. However, we may also want to transform the data after projecting onto lower dimensions, to correct for unwanted effects of the projections. One example is the piling effect that is observed when projecting a high-dimensional distribution [@Diaconis1984-mv]: projected points are approximately Gaussian in most views, and increasingly concentrating near the center as dimensionality increases. The sage display [@Laa2020-uv] proposes a solution to this issue, via a radial transformation of the projected data. This non-linear transformation is defined in each point of the projection plane and is sensitive to the overall scale of the data as well as the original dimensionality $p$. In addition, tuning parameters can be used to obtain a more (or less) aggressive redistribution of the points. This is illustrated in Fig. \ref{fig:pollen} showing the application of the sage transformation to the classical pollen dataset [@Coleman1986-so]. The projection without any rescaling looks similar to what is found when rescaling with default options (left), and we can use either of the two tuning parameters to better resolve the distribution near the center and reveal the hidden structure (middle and right).
 
+\begin{figure}
+\centering
+\includegraphics[width=0.3\textwidth]{figures/pollen_sage-088.png}
+\includegraphics[width=0.3\textwidth]{figures/pollen_sage_R1-088.png}
+\includegraphics[width=0.3\textwidth]{figures/pollen_sage_gam20-088.png}
+\caption{Snapshots of the same projection from the sage tour on the pollen data, illustrating the different tuning options. Left: using the default settins for the transformation results in a similar view as found in projections without the sage transformation. Middle: using the tuning parameter $R$ for better resolution near the center reveals the word "EUREKA". Right: using the $\gamma$ tuning parameter can also reveal the structure.}
+\label{fig:pollen}
+\end{figure}
+
+<!--
 \begin{figure*}
    \centering
          \includegraphics[width=0.9\textwidth]{figures/laa_radial_transformation.pdf}
 \caption{An illustration of the radial transformation. Each panel represents linear projections of $p$ dimensional equidistant circles. As $p$ increases the circles get pushed further to the edge.}
 \label{fig:tour-transformation}
 \end{figure*}
+-->
 
 # Ways of interacting {#interaction}
 
