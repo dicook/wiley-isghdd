@@ -273,9 +273,7 @@ knitr::include_graphics("./figures/fig_radial_manual_tour.png")
 
 - Spin-and-brush  (Ursula)
 
-Tour for visual cluster analysis, identification of outlying points
-Maybe the physics example from the ggobi book: find group in one view, highlight, restart tour, and so on, in the end we can review the tour with groups highlighted in colour to get an overview of how the data clusters
-Requires persistent brushing with multiple groups
+Tasks such as the identification of outlying points or cluster analysis can be performed visually using the tour. Here, a "spin-and-brush" approach works well, since different views will reveal different features and a persistent brush helps us to connect this to the previously observed information. As an example we briefly summarize an analysis from @Cook2007-be that explores clustering of the physics data previously used to in the context of projection pursuit [@Friedman1974-ck; @Cook1995-ae]. This data is well described by its geometric structure: a two-dimensional triangle with two one-dimensional strands linearly extending in different directions from each vertex. These strands can sequentially be identified as clusters using the spin-and-brush approach, as shown in Fig. \ref{prim7-tour}. We stop the tour each time a cluster is clearly separate from the main distribution in the current projection and brush the points in a new color. In the end the full structure becomes apparent and can be visualized by replaying the tour with all clusters highlighted in different colors.
 
 \begin{figure}[htp]
 \centerline{{\includegraphics[width=0.32\textwidth]{figures/ggobi_book/prim7-pp1.pdf}}
@@ -288,7 +286,7 @@ Requires persistent brushing with multiple groups
 \centerline{{\includegraphics[width=0.32\textwidth]{figures/ggobi_book/prim7-pp10.pdf}}
   {\includegraphics[width=0.32\textwidth]{figures/ggobi_book/prim7-pp11.pdf}}
   {\includegraphics[width=0.32\textwidth]{figures/ggobi_book/prim7-pp13.pdf}}}
-\caption{Spin and brush reprinted from ggobi book}
+\caption{Stepwise identification of clusters in the physics data. Each time a cluster is clearely separated we stop the tour and brush the points, followed by another spin of the data, until we can capture the full distribution.}
 \label{prim7-tour}
 \end{figure}
 
