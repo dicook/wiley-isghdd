@@ -39,7 +39,7 @@ author:
 title:
   formatted: "An Overview of Tours for Dynamic Visualisation of High-dimensional Data"
 abstract: > 
-  This article discusses a high-dimensional visualization technique called the tour, which can be used to view data in more than three dimensions. We review the theory and history behind the technique, as well as modern developments and applications of the tour that are being found across the natural sciences and machine learning. 
+  This article discusses a high-dimensional visualization technique called the tour, which can be used to view data in more than three dimensions. We review the theory and history behind the technique, as well as modern software developments and applications of the tour that are being found across the sciences and machine learning. 
 keywords:
   formatted: ["tours", "data visualization", "high-dimensional data", "data science", "exploratory data analysis"]
 output: 
