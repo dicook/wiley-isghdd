@@ -149,11 +149,11 @@ To define whether a projection is interesting or not in the guided tour, an inde
 
 - Geodesic interpolation (Ursula)
 
-Interpolation is either between frames, or between planes
-Interpolation between planes is preferred to avoid distracting effects (rotation in the plane), exception would be projection pursuit indexes that are sensitive to rotation (but that should be avoided when possible)
-Geodesic interpolation uses SVD to interpolate along the shortest path between planes
+The smooth animation between the selected target frame is generated via a step-wise rotation in the high-dimensional space. Different methods to derive this rotation were described in @Buja2005-cx, and we can distinguish two types of interpolation. When interpolating between frames we rotate the starting basis onto the exact basis representation selected as a basis, and @Buja2005-cx describes three different methods to achieve this (based on decompositions of orthogonal matrices, Givens decompositions, or Householder decompositions). Alternatively, when interpolating between planes the rotation is constructed towards any basis that represents the plane corresponding to the target frame, such that it follows the shortest path, i.e. the geodesic, avoiding any in-plane rotation. The geodesic interpolation is derived using singular value decomposition and is implemented in the `tourr` package.
 
-XXX need to decide how much math to put in, if/which picture to use (probably something from @Buja2005-cx)
+Typically the geodesic interpolation is preferred, since within-plane rotation is distracting and does not provide new information. An exception might be the case of a projection pursuit guided tour with an index function that is sensitive to these rotations [@Laa2020-zj].
+
+For any method we need to ensure that each projection along the interpolated path is still orthonormal. In the case of one-dimensional projections, the set of bases traces a path along the surface of a hypersphere of radius one, as illustrated in Figure (XXX adding an illustration using ferrn). For higher-dimensional projections this is generalised and we find the path along the surface of a torus instead (need to check about this with Sherry).
 
 > figure 5 diagram illustrating geodesic interpolation
 
