@@ -125,24 +125,21 @@ The rest of the review is structured as follows: in section \@ref(notation) we d
 
 - Bases notation (Sherry)
 
-Some notations are defined for describing $d$-dimensional projections in $p$-dimensional space. Let $X_{n \times p}$ be the original data whose projections are of our interest. A projection basis, $A_{p \times d}$, characterises the direction from which the high-dimensional data are projected. A constraint that projection bases needs to satisfy is the orthonormality condition (which requires each axis to be unit vector and perpendicular to each other). This gives the basis space a geometrical structure of a Stiefel manifold. The projection of the original data on a basis hence can be defined as $Y = X \cdot A$. The projection is usually in 1D or 2D for the purpose of visual display. 
+Some notations are defined for describing $d$-dimensional projections in $p$-dimensional space. Let $X_{n \times p}$ be the original data whose projections are of our interest. A projection basis, $A_{p \times d}$, characterises the direction from which the high-dimensional data are projected. Projection bases needs to satisfy an orthonormality condition, which requires each axis to be unit vector and perpendicular to each other, and this gives the basis space a geometrical structure of a Stiefel manifold. With a data matrix and a projection basis, a projection can be defined as $Y = X \cdot A$ for visual inspection.
 
 > figure 2 diagram illustrating a projection: Di thinks making a Huber plot (2D data - 1D projection) here with projected data on a couple of directions is ideal
 
+# ```{r}
+# PPtreeViz::Huberplot(iris[,1:2],iris[,5],PPmethod="LDA")
+# ```
+
 - Display (Sherry)
 
-[@Wickham2011-uz]
-
-1D: `display_hist`: histogram
-2D: `display_xy`, recent development `display_sage()` - will be detailed in the last section Transformations on projections (Ursula)
-
-[grand/ guided / manual tour or 1D/ 2D display in tourr???]
+Various displays are available to show projections in 1D, 2D, or higher dimensions. A 1D projection shows the data in a histogram as if a hand shadow being projected onto a wall. Two-d projections are usually displayed with scatterplot since it is the most common plot for showing bivariate relationship. Higher dimensional projections can be shown with multivariate display like scatterplot matrix or parallel coordinates plot. Figure <!--figure 3 --> shows a 1D display with histogram, a 2D display with scatterplot, and a 5D display with a parallel coordinates plot. More display methods can be found in [@Wickham2011-uz].
 
 grand tour, random, may miss interesting, take long to rotate to that specific angle, guided tour, along with projection pursuit, by generating target bases, interestingness
 
 > figure 3 diagram illustrating different displays for different d
-
-
 
 - Choosing targets, inc pp indexes (Sherry)
 
