@@ -276,8 +276,6 @@ Brushing is an interaction that results in a region being drawn onto the view of
 
 ## Spin-and-brush 
 
-Tasks such as the identification of outlying points or cluster analysis can be performed visually using the tour. Here, a "spin-and-brush" approach works well, since different views will reveal different features and a persistent brush helps us to connect this to the previously observed information. As an example we briefly summarize an analysis from @Cook2007-be that explores clustering of the physics data previously used to in the context of projection pursuit [@Friedman1974-ck; @Cook1995-ae]. This data is well described by its geometric structure: a two-dimensional triangle with two one-dimensional strands linearly extending in different directions from each vertex. These strands can sequentially be identified as clusters using the spin-and-brush approach, as shown in Figure \ref{prim7-tour}. We stop the tour each time a cluster is clearly separate from the main distribution in the current projection and brush the points in a new color. In the end the full structure becomes apparent and can be visualized by replaying the tour with all clusters highlighted in different colors.
-
 \begin{figure}[htp]
 \centerline{{\includegraphics[width=0.32\textwidth]{figures/ggobi_book/prim7-pp1.pdf}}
  {\includegraphics[width=0.32\textwidth]{figures/ggobi_book/prim7-pp2.pdf}}
@@ -290,8 +288,11 @@ Tasks such as the identification of outlying points or cluster analysis can be p
   {\includegraphics[width=0.32\textwidth]{figures/ggobi_book/prim7-pp11.pdf}}
   {\includegraphics[width=0.32\textwidth]{figures/ggobi_book/prim7-pp13.pdf}}}
 \caption{Stepwise identification of clusters in the physics data. Each time a cluster is clearely separated we stop the tour and brush the points, followed by another spin of the data, until we can capture the full distribution.}
-\label{prim7-tour}
+\label{fig:prim7-tour}
 \end{figure}
+
+Tasks such as the identification of outlying points or cluster analysis can be performed visually using the tour. Here, a "spin-and-brush" approach works well, since different views will reveal different features and a persistent brush helps us to connect this to the previously observed information. As an example we briefly summarize an analysis from @Cook2007-be that explores clustering of the physics data previously used to in the context of projection pursuit [@Friedman1974-ck; @Cook1995-ae]. This data is well described by its geometric structure: a two-dimensional triangle with two one-dimensional strands linearly extending in different directions from each vertex. These strands can sequentially be identified as clusters using the spin-and-brush approach, as shown in Figure \ref{fig:prim7-tour}. We stop the tour each time a cluster is clearly separate from the main distribution in the current projection and brush the points in a new color. In the end the full structure becomes apparent and can be visualized by replaying the tour with all clusters highlighted in different colors.
+
 
 
 # Software {#software}
@@ -314,19 +315,28 @@ The liminal R package uses the tour to explore the quality of non-linear dimensi
 
 ## Model Visualization
 
-- Model vis examples eg random forest (from Hadley, removing the blindfold) (Stuart)
 
-> figure 12 tour plot(s) of vote matrix and tour plot(s) of variables, with some annotation of cases?
+\begin{figure*}
+  \centering
+    \includegraphics[width=0.32\textwidth]{figures/svm-radial-orange.png}
+    \includegraphics[width=0.32\textwidth]{figures/svm-radial-green.png}
+    \includegraphics[width=0.32\textwidth]{figures/svm-radial-purple.png}
+  \caption{A grand tour run on the prediction boundaries of a radial support vector machine. (Left) The prediction region for points classified as orange produces a slice of a cube. (Middle) The predicition region for points classified as green produces another slice of the cube. (Right) The complete prediction region shows the points classified as purple are embedded within the green slice.}
+  \label{fig:svm-tour}
+\end{figure*}
 
-The grand tour along with direct interaction techniques has been proposed as a technique for understanding the training of deep neural network models [@Li2020-kg]. They proposed a novel method for aligning the output of different layers by interpolating the output of different layers of a deep neural network via the the grand tour. They also apply the grand tour to explore the changes in single layers of the network for each training epoch. For example, by the running tour over the softmax layer outputs of a classification model, an analyst may understand where in the training confusion between classes occur and gain a view of model performance. Similarly, the difference between training and test sets can be assessed through side by side linked tours of layer outputs. @li_toward_2020 extends this idea by first reducing the dimensionality of output layers with UMAP and then using the grand tour with manual controls over 15 dimensional embeddings to understand layer topology.
+@Wickham2015-do espouses the tour as a key component of their approach for visualizing models in data space. They propose using the tour to explore the high dimensional surfaces produced by model fits instead of simple summary statistics.  In Figure \ref{fig:svm-tour} samples have been taken along the prediction region (i.e. the value the model predicts over a grid of observations) of a 3-$d$ support vector machine used to classify three different classes (green, orange purple), by touring over the prediction region we can see how the classifier splits the decision boundaries.  
 
 \begin{figure*}
    \centering
-         \includegraphics[width=0.45\textwidth]{figures/scheidigger_nn_tour.png}
-          \includegraphics[width=0.45\textwidth, keepaspectratio=true]{figures/scheidigger_umap_tour.png}
-\caption{Left: A grand tour run on the output of a deep neural network model for classification. Right: A grand tour on UMAP components of a layer of deep neural network.}
+         \includegraphics[width=0.9\textwidth]{figures/scheidigger_nn_tour.png}
+\caption{A grand tour run on the output of a deep neural network model for classification. The axes correspond to the probabilities that the model of an image belonging to a certain class.}
 \label{fig:tour-nn}
 \end{figure*}
+
+
+The grand tour along with direct interaction techniques has been proposed as a technique for understanding the training of deep neural network models [@Li2020-kg]. They proposed a novel method for aligning the output of different layers by interpolating the output of different layers of a deep neural network via the the grand tour. They also apply the grand tour to explore the changes in single layers of the network for each training epoch. For example, by the running tour over the softmax layer outputs of a classification model, an analyst may understand where in the training confusion between classes occur and gain a view of model performance (Figure \ref{fig:tour-nn}). Similarly, the difference between training and test sets can be assessed through side by side linked tours of layer outputs. @li_toward_2020 extends this idea by first reducing the dimensionality of output layers with UMAP and then using the grand tour with manual controls over 15 dimensional embeddings to understand layer topology.
+
 
 ## Physics 
 
