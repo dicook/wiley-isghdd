@@ -304,20 +304,31 @@ Tasks such as the identification of outlying points or cluster analysis can be p
 
 The R package spinifex [@spyrison_spinifex_2020] has 3 primary features: it produces manual tours (predefined path or interactive manipulation, identifies orthonormal global feature bases with the use of the Rdimtools [@you_rdimtools_2020] package, renders (manual or other) tours as animations exportable to static .gif (gganimate [@pedersen_gganimate_2020] package) or interactive .html widgets (plotly [@sievert_interactive_2020] package), lastly it offers interactive shiny application that offers an graphical user interface to quickly sample tour features.
 
-- liminal (Stuart)
-
-The liminal R package uses the tour to explore the quality of non-linear dimensionality reduction algorithms. The interface consists of two side by side views consisting of a scatter plot displaying a reduced form of the data, and an interactive tour. Controls such as play/stop/restart are implemented allowing a user to pause on interesting projections and return them to their R session for further analysis. Linked brushing is implemented on both views - if a users brush on the scatter plot view they can see if and how an algorithm like t-SNE has distorted distances in higher dimensional space, while if they brush on the tour view, the tour is paused and structure like cluster separation can be ascertained.      
+The liminal R package uses the tour to explore the quality of non-linear dimensionality reduction algorithms [@Lee2020-kg]. The interface consists of two side by side views consisting of a scatter plot displaying a reduced form of the data, and an interactive tour. Controls such as play/stop/restart are implemented allowing a user to pause on interesting projections and return them to their R session for further analysis. Linked brushing is implemented on both views - if a users brush on the scatter plot view they can see if and how an algorithm like t-SNE has distorted distances in higher dimensional space, while if they brush on the tour view, the tour is paused and structure like cluster separation can be ascertained.      
 
 
 - python (Di to follow up with Csaba)
 
 # Applications {#applications}
 
+
+## Model Visualization
+
 - Model vis examples eg random forest (from Hadley, removing the blindfold) (Natalia)
 
 > figure 12 tour plot(s) of vote matrix and tour plot(s) of variables, with some annotation of cases?
 
-- Physics (Ursula)
+The grand tour along with direct interaction techniques has been proposed as a technique for understanding the training of deep neural network models [@Li2020-kg]. They proposed a novel method for aligning the output of different layers by interpolating the output of different layers of a deep neural network via the the grand tour. They also apply the grand tour to explore the changes in single layers of the network for each training epoch. For example, by the running tour over the softmax layer outputs of a classification model, an analyst may understand where in the training confusion between classes occur and gain a view of model performance. Similarly, the difference between training and test sets can be assessed through side by side linked tours of layer outputs. @li_toward_2020 extends this idea by first reducing the dimensionality of output layers with UMAP and then using the grand tour with manual controls over 15 dimensional embeddings to understand layer topology.
+
+\begin{figure*}
+   \centering
+         \includegraphics[width=0.45\textwidth]{figures/scheidigger_nn_tour.png}
+          \includegraphics[width=0.45\textwidth, keepaspectratio=true]{figures/scheidigger_umap_tour.png}
+\caption{Left: A grand tour run on the output of a deep neural network model for classification. Right: A grand tour on UMAP components of a layer of deep neural network.}
+\label{fig:tour-nn}
+\end{figure*}
+
+## Physics 
 
 Physics models often consider $\mathcal{O}(10)$ free parameters and are compared to a much larger number of experimental observables ($\mathcal{O}(100)$). The comparison typically relies on numeric computation of the model predictions for all observables, potentially obscuring the nature of their dependence on the model parameters. Here, multivariate visualisation methods can provide new insights. This was demonstrated in @Cook2018-jm. For example, we explored grouping of experiments based on how they constrain the parameter space and we also identified an interesting multivariate outlier that pointed to potential issues with the data point. For illustration we show static views from the tour showing the orthogonal structure of the three groups (indicated by color), and a display which highlights the outlyingness of the data point marked with an asterisk symbol in Fig. \ref{fig:physics}.
 
@@ -325,14 +336,12 @@ Physics models often consider $\mathcal{O}(10)$ free parameters and are compared
   \centering
            \includegraphics[width=0.45\textwidth]{figures/allcenter-301.png}
          \includegraphics[width=0.45\textwidth]{figures/jetCluster-027.png}
-
-
 \caption{Selected frames from using a grand tour of the physics data. Left: the three different types of measurements (shown in different colors) are aligned along different directions in parameter space. Right: an outlying point is marked with an asterisk symbol in the ATLAS7new facet.}
 \label{fig:physics}
 \end{figure*}
 
 
-- Bioinformatics (Stuart)
+## Bioinformatics
 
 In single cell RNA sequencing, scientists are interested in identifying novel cell types and understanding the relationships between cells or their developmental trajectory. To achieve this they perform cluster analysis on a counts matrix or principal components and embed the results via t-SNE and label points according the cluster label. One of the main advantages of t-SNE is the avoidance of over-plotting so clusters can be clearly identified on a scatter plot, however, this can come at the cost of interpretability as global distances are distorted.  In @Laa2020-uv, we used radial transformations of the tour projections as an alternative to t-SNE that better preserves global structure while still retaining cluster topology.
 
@@ -347,21 +356,12 @@ In single cell RNA sequencing, scientists are interested in identifying novel ce
 \label{fig:mouse-cluster}
 \end{figure*}
 
+
+## Geometry of data
+
 - High-d shapes/distributions: normal, skewed, outliers, (Di from tutorial notes)
 
-> figure 15
 
-- neural networks (this could go into model vis?)
-
-The grand tour along with direct interaction techniques has been proposed as a technique for understanding the training of deep neural network models [@Li2020-kg]. They proposed a novel method for aligning the output of different layers by interpolating the output of different layers of a deep neural network via the the grand tour. They also apply the grand tour to explore the changes in single layers of the network for each training epoch. For example, by the running tour over the softmax layer outputs of a classification model, an analyst may understand where in the training confusion between classes occur and gain a view of model performance. Similarly, the difference between training and test sets can be assessed through side by side linked tours of layer outputs. @li_toward_2020 extends this idea by first reducing the dimensionality of output layers with UMAP and then using the grand tour with manual controls over 15 dimensional embeddings to understand layer topology.
-
-\begin{figure*}
-   \centering
-         \includegraphics[width=0.45\textwidth]{figures/scheidigger_nn_tour.png}
-          \includegraphics[width=0.45\textwidth, keepaspectratio=true]{figures/scheidigger_umap_tour.png}
-\caption{Left: A grand tour run on the output of a deep neural network model for classification. Right: A grand tour on UMAP components of a layer of deep neural network.}
-\label{fig:tour-nn}
-\end{figure*}
 
 # Discussion {#discussion}
 
