@@ -124,7 +124,7 @@ The rest of the review is structured as follows: in section \@ref(notation) we d
 
 # Tours for high dimensional visualization {#notation}
 
-- Bases notation (Sherry)
+## Notation 
 
 Some notations are defined for describing $d$-dimensional projections in $p$-dimensional space. Let $X_{n \times p}$ be the original data whose projections are of our interest. A projection basis, $A_{p \times d}$, characterises the direction from which the high-dimensional data are projected. Projection bases needs to satisfy an orthonormality condition, which requires each axis to be unit vector and perpendicular to each other, and this gives the basis space a geometrical structure of a Stiefel manifold. With a data matrix and a projection basis, a projection can be defined as $Y = X \cdot A$ for visual inspection.
 
@@ -133,7 +133,7 @@ Some notations are defined for describing $d$-dimensional projections in $p$-dim
 PPtreeViz::Huberplot(iris[,1:2],iris[,5],PPmethod="LDA")
 ```
 
-- Display (Sherry)
+## Display
 
 Various displays are available to show projections in 1D, 2D, or higher dimensions. A 1D projection shows the data in a histogram as if a hand shadow being projected onto a wall. Two-d projections are usually displayed with scatterplot since it is the most common plot for showing bivariate relationship. Higher dimensional projections can be shown with multivariate display like scatterplot matrix or parallel coordinates plot. Figure <!--figure 3 --> shows a 1D display with histogram, a 2D display with scatterplot, and a 5D display with a parallel coordinates plot. More display methods can be found in [@Wickham2011-uz].
 
@@ -141,13 +141,13 @@ grand tour, random, may miss interesting, take long to rotate to that specific a
 
 > figure 3 diagram illustrating different displays for different d
 
-- Choosing targets, inc pp indexes (Sherry)
+## Finding targets 
 
 To define whether a projection is interesting or not in the guided tour, an index function is used. An index function defines a surjection function from the projection $Y$ in $\mathbb{R}^{n \times d}$ to a scalar in $\mathbb{R}$. For the high-dimensional data, an interesting projection is the one that deviates from normality, as discussed in @Diaconis1984-mv and @Huber1985-zq [expand more here]. Numerous index functions have been developed since the initial index proposed by @Friedman1974-ck: <!-- entropy-based index? --> holes and central mass index [@Cook2008-nl] computes the deviation of the projected data from a normal distribution; @Posse1995-ih proposed a chi-square index for detecting the spiral structure in the data;  kurtosis and skewness indices are raised in @Loperfido2020-xj and @Loperfido2018-ga to detect outliers in financial time series; and most recently, scagnostic indices [@Laa2020-zj] provides eight measures for summarising information between pairs of variables in scatter plot matrices. 
 
 > figure 4 diagram illustrating different types of target generation
 
-- Geodesic interpolation (Ursula)
+## Geodesic interpolation
 
 The smooth animation between the selected target frame is generated via a step-wise rotation in the high-dimensional space. Different methods to derive this rotation were described in @Buja2005-cx, and we can distinguish two types of interpolation. When interpolating between frames we rotate the starting basis onto the exact basis representation selected as a basis, and @Buja2005-cx describes three different methods to achieve this (based on decompositions of orthogonal matrices, Givens decompositions, or Householder decompositions). Alternatively, when interpolating between planes the rotation is constructed towards any basis that represents the plane corresponding to the target frame, such that it follows the shortest path, i.e. the geodesic, avoiding any in-plane rotation. The geodesic interpolation is derived using singular value decomposition and is implemented in the `tourr` package.
 
@@ -157,7 +157,7 @@ For any method we need to ensure that each projection along the interpolated pat
 
 > figure 5 diagram illustrating geodesic interpolation
 
-- Slices vs projections (Ursula)
+## Slices, sections and projections
 
 The classic tour displays work with projections, and interactive systems like GGobi also provide the option of adding sectioning information via linked brushing. Sectioning can be considered as providing complementary information, and in combination with projections we can for example gain insights into the dimensionality of a data structure [@Furnas1994-dz]. Sectioning a high-dimensional space in systematic manner (without interactive selection of data sections) is challenging, since there is a lot of freedom in choosing a section. A new approach is implemented in the slice tour display [@Laa2020-js], which is using the distance of each from the current projection plane (typically placed such that it passes through the data mean) to highlight points that are nearby and fade out points further from the plane.
 
@@ -192,7 +192,7 @@ The slice tour can reveal concave or non-linear structures obscured in projectio
 -->
 
 
-- Transformations on projections (Ursula)
+## Transformations on projections
 
 Transformations of the data are common in the preprocessing, examples would be scaling, sphering, or a logarithmic transformation for skewed distributions. However, we may also want to transform the data after projecting onto lower dimensions, to correct for unwanted effects of the projections. One example is the piling effect that is observed when projecting a high-dimensional distribution [@Diaconis1984-mv]: projected points are approximately Gaussian in most views, and increasingly concentrating near the center as dimensionality increases. The sage display [@Laa2020-uv] proposes a solution to this issue, via a radial transformation of the projected data. This non-linear transformation is defined in each point of the projection plane and is sensitive to the overall scale of the data as well as the original dimensionality $p$. In addition, tuning parameters can be used to obtain a more (or less) aggressive redistribution of the points. This is illustrated in Fig. \ref{fig:pollen} showing the application of the sage transformation to the classical pollen dataset [@Coleman1986-so]. The projection without any rescaling looks similar to what is found when rescaling with default options (left), and we can use either of the two tuning parameters to better resolve the distribution near the center and reveal the hidden structure (middle and right).
 
@@ -229,7 +229,7 @@ Due to the dynamic nature of the tour, user interfaces can enhance the interpret
 
 ## Manual tour 
 
-<!-- needs to be shortend -->
+<!-- needs to be shortened -->
 
 Manual tours [@cook_manual_1997; @spyrison_spinifex_2020] offer a means to interactively control the contribution of a single variable on the projection plane. This is particularly useful for exploring a projection once a feature of interest has been identified. Manual tours can then be employed to explore local area of, or test the structure of the feature, with respect to a selected variable.
 
@@ -276,7 +276,7 @@ Brushing is an interaction that results in a region being drawn onto the view of
 
 ## Spin-and-brush 
 
-Tasks such as the identification of outlying points or cluster analysis can be performed visually using the tour. Here, a "spin-and-brush" approach works well, since different views will reveal different features and a persistent brush helps us to connect this to the previously observed information. As an example we briefly summarize an analysis from @Cook2007-be that explores clustering of the physics data previously used to in the context of projection pursuit [@Friedman1974-ck; @Cook1995-ae]. This data is well described by its geometric structure: a two-dimensional triangle with two one-dimensional strands linearly extending in different directions from each vertex. These strands can sequentially be identified as clusters using the spin-and-brush approach, as shown in Fig. \ref{prim7-tour}. We stop the tour each time a cluster is clearly separate from the main distribution in the current projection and brush the points in a new color. In the end the full structure becomes apparent and can be visualized by replaying the tour with all clusters highlighted in different colors.
+Tasks such as the identification of outlying points or cluster analysis can be performed visually using the tour. Here, a "spin-and-brush" approach works well, since different views will reveal different features and a persistent brush helps us to connect this to the previously observed information. As an example we briefly summarize an analysis from @Cook2007-be that explores clustering of the physics data previously used to in the context of projection pursuit [@Friedman1974-ck; @Cook1995-ae]. This data is well described by its geometric structure: a two-dimensional triangle with two one-dimensional strands linearly extending in different directions from each vertex. These strands can sequentially be identified as clusters using the spin-and-brush approach, as shown in Figure \ref{prim7-tour}. We stop the tour each time a cluster is clearly separate from the main distribution in the current projection and brush the points in a new color. In the end the full structure becomes apparent and can be visualized by replaying the tour with all clusters highlighted in different colors.
 
 \begin{figure}[htp]
 \centerline{{\includegraphics[width=0.32\textwidth]{figures/ggobi_book/prim7-pp1.pdf}}
@@ -296,25 +296,25 @@ Tasks such as the identification of outlying points or cluster analysis can be p
 
 # Software {#software}
 
+
 - Dataviewer, XGobi, GGobi, cranvas (XLispStat, Orca, mmvz) (Di)
 
 - tourr (Di) 
 
-- spinifex (Nick)
 
 The R package spinifex [@spyrison_spinifex_2020] has 3 primary features: it produces manual tours (predefined path or interactive manipulation, identifies orthonormal global feature bases with the use of the Rdimtools [@you_rdimtools_2020] package, renders (manual or other) tours as animations exportable to static .gif (gganimate [@pedersen_gganimate_2020] package) or interactive .html widgets (plotly [@sievert_interactive_2020] package), lastly it offers interactive shiny application that offers an graphical user interface to quickly sample tour features.
 
 The liminal R package uses the tour to explore the quality of non-linear dimensionality reduction algorithms [@Lee2020-kg]. The interface consists of two side by side views consisting of a scatter plot displaying a reduced form of the data, and an interactive tour. Controls such as play/stop/restart are implemented allowing a user to pause on interesting projections and return them to their R session for further analysis. Linked brushing is implemented on both views - if a users brush on the scatter plot view they can see if and how an algorithm like t-SNE has distorted distances in higher dimensional space, while if they brush on the tour view, the tour is paused and structure like cluster separation can be ascertained.      
 
+- other work (Di)
 
-- python (Di to follow up with Csaba)
 
 # Applications {#applications}
 
 
 ## Model Visualization
 
-- Model vis examples eg random forest (from Hadley, removing the blindfold) (Natalia)
+- Model vis examples eg random forest (from Hadley, removing the blindfold) (Stuart)
 
 > figure 12 tour plot(s) of vote matrix and tour plot(s) of variables, with some annotation of cases?
 
