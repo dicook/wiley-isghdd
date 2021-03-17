@@ -262,18 +262,19 @@ knitr::include_graphics("./figures/fig_radial_manual_tour.png")
 \end{figure*}
 
 
-- Linked brushing (Earo)
+## Linked Brushing
 
-> something from ggobi book
+Brushing is an interaction that results in a region being drawn onto the view of visualisation. When there are multiple views present the act of brushing can be thought of as a database query; points that fall inside the brush can be used as a lookup to highlight or filter data on adjacent views (Figure \ref{fig:brushing}). The effect of brushing can be transient, that is, the changes triggered by a brush are removed after use, or they can be persistent i.e. the changes to data within the same view or adjacent views remain (Figure \ref{fig:prim7-tour}). Brushing can be used to aid statistical and geometrical interpretations of the data; brushing can be thought of as conditioning variables on certain regions of the data or used to section lower dimensional views.  
 
-* Brushing as database query
-* Brushing as conditioning
-* Brushing as geometric sectioning
-* Persistent vs. transient 
+\begin{figure*}[!ht]
+   \centering
+         \includegraphics[width=0.45\textwidth]{figures/ggobi_book/brush_query.pdf}
+         \includegraphics[width=0.45\textwidth]{figures/ggobi_book/brush_response.pdf}
+\caption{When a user brushes data on the left panel, points that fall inside the region are highlighted in orange. The view on the right responds by higlighting the corresponding points.}
+\label{fig:brushing}
+\end{figure*}
 
-> > figure 10: plots showing example
-
-- Spin-and-brush  (Ursula)
+## Spin-and-brush 
 
 Tasks such as the identification of outlying points or cluster analysis can be performed visually using the tour. Here, a "spin-and-brush" approach works well, since different views will reveal different features and a persistent brush helps us to connect this to the previously observed information. As an example we briefly summarize an analysis from @Cook2007-be that explores clustering of the physics data previously used to in the context of projection pursuit [@Friedman1974-ck; @Cook1995-ae]. This data is well described by its geometric structure: a two-dimensional triangle with two one-dimensional strands linearly extending in different directions from each vertex. These strands can sequentially be identified as clusters using the spin-and-brush approach, as shown in Fig. \ref{prim7-tour}. We stop the tour each time a cluster is clearly separate from the main distribution in the current projection and brush the points in a new color. In the end the full structure becomes apparent and can be visualized by replaying the tour with all clusters highlighted in different colors.
 
