@@ -268,8 +268,8 @@ Brushing is an interaction that results in a region being drawn onto the view of
 
 \begin{figure*}[!ht]
    \centering
-         \includegraphics[width=0.45\textwidth]{figures/ggobi_book/brush_query.pdf}
-         \includegraphics[width=0.45\textwidth]{figures/ggobi_book/brush_response.pdf}
+         \includegraphics[width=0.45\textwidth]{figures/ggobi_book/brush-query.pdf}
+         \includegraphics[width=0.45\textwidth]{figures/ggobi_book/brush-response.pdf}
 \caption{When a user brushes data on the left panel, points that fall inside the region are highlighted in orange. The view on the right responds by higlighting the corresponding points.}
 \label{fig:brushing}
 \end{figure*}
