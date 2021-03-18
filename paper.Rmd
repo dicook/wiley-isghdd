@@ -165,6 +165,11 @@ Typically the geodesic interpolation is preferred, since within-plane rotation i
 
 For any method we need to ensure that each projection along the interpolated path is still orthonormal. In the case of one-dimensional projections, the set of bases traces a path along the surface of a hypersphere of radius one, as illustrated in Figure (XXX adding an illustration using ferrn). For higher-dimensional projections this is generalized and we find the path along the surface of a torus instead (need to check about this with Sherry).
 
+Notes to Ursula:
+
+- The basis space constrained by the orthonormality condition forms a Stiefel manifold, which is a sphere in 1D case and a torus in 2D case (I have one sentence for that in the notation section).
+- The space plot with tour path embedded are `figure/notation-1d-space.pdf` and `figure/notation-2d-space.pdf` - let me know if this is what you want
+
 > figure 5 diagram illustrating geodesic interpolation
 
 ## Slices, sections and projections
