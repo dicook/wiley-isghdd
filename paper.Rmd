@@ -6,26 +6,26 @@ author:
     address: |
       | Department of Econometrics and Business Statistics, Monash University
     email: stuart.a.lee@monash.edu
-  - name: Ursula Laa 
-    affiliation: University of Natural Resources and Life Sciences
-    address:  |
-      | Institute of Statistics, University of Natural Resources and Life Sciences
-    email:  ursula.laa@boku.ac.at
-  - name: Natalia da Silva
-    address: |
-      | Instituto de Estadística (IESTA), Universidad de la República
-    affiliation: Universidad de la República
-    email: natalia@iesta.edu.uy
-  - name: Nicholas Spyrison
-    address: |
-      | Faculty of Information and Technology, Monash University
-    affiliation: Monash University
-    email: nicholas.spyrison@monash.edu
   - name: Dianne Cook
     address: |
       | Department of Econometrics and Business Statistics, Monash University
     affiliation: Monash University
     email: dicook@monash.edu
+  - name: Natalia Da Silva
+    address: |
+      | Instituto de Estadística (IESTA), Universidad de la República
+    affiliation: Universidad de la República
+    email: natalia@iesta.edu.uy
+  - name: Ursula Laa 
+    affiliation: University of Natural Resources and Life Sciences
+    address:  |
+      | Institute of Statistics, University of Natural Resources and Life Sciences
+    email:  ursula.laa@boku.ac.at
+  - name: Nicholas Spyrison
+    address: |
+      | Faculty of Information and Technology, Monash University
+    affiliation: Monash University
+    email: nicholas.spyrison@monash.edu
   - name: Earo Wang
     address: |
       | Department of Statistics, The University of Auckland
@@ -37,7 +37,7 @@ author:
     affiliation: Monash University
     email: huize.zhang@monash.edu
 title:
-  formatted: "An Overview of Tours for Dynamic Visualisation of High-dimensional Data"
+  formatted: "A Review of the State-of-the-Art on Tours for Dynamic Visualisation of High-dimensional Data"
 abstract: > 
   This article discusses a high-dimensional visualization technique called the tour, which can be used to view data in more than three dimensions. We review the theory and history behind the technique, as well as modern software developments and applications of the tour that are being found across the sciences and machine learning. 
 keywords:
