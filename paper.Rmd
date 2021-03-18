@@ -73,13 +73,11 @@ Writing style: third person (it was done, ...)
 
 Data commonly arrives with more than two measured variables, which makes it more complicated to plot on a page. With multiple variables, especially if there is some association between variables, this would be called multivariate or high-dimensional data. When the variables are all numeric, or quantitative, visualisation often relies on some form of dimension reduction. This can be done by taking linear projections, for example, principal component analysis [@Hotelling1933-of] or linear discriminant analysis [@Fisher1936]. It is also common to reduce dimension nonlinearly with techniques like multidimensional scaling (MDS) [@Kruskal1964-do] or t-Distributed Stochastic Neighbour Embedding (t-SNE) [@Van_der_Maaten2008-qa]. 
 
-> Maybe we should clarify What is high-dimensional data? here
-
 The term "high-dimensional" here means Euclidean space. Figure \ref{fig:cubes} shows a way to imagine this. It shows a sequence of cube wireframes, ranging from 1D through to 6D, where beyond 2D is a linear projection of the cube. As dimension increase, a new orthogonal axis is added. For cubes, this is achieved by doubling the cube: a 2D is two 1D cubes, a 3D is two 2D cubes, and so forth. 
 
 \begin{figure*}[!h]
 \centerline{\includegraphics[width=0.95\textwidth]{figures/cubes.png}}
-\caption{Illustrating what is meant by "high-dimensional" in this paper, and a "linear projection". From a sequence of increasing dimension cubes, from 1D to 6D, as wireframes, it can be seen that the as dimension increase by 1, the cube doubles}
+\caption{Illustrating what is meant by "high-dimensional" in this paper, and a "linear projection". From a sequence of increasing dimension cubes, from 1D to 6D, as wireframes, it can be seen that the as dimension increase by 1, the cube doubles. (Note to Di: to change this diagram to highlight the doubling.)}
 \label{fig:cubes}
 \end{figure*}
 
@@ -299,6 +297,7 @@ Tasks such as the identification of outlying points or cluster analysis can be p
 
 # Software {#software}
 
+There has been a long history of software including tour methods, or something similar. These have laid the foundation for the current tools. The American Statistical Association Statistical Graphics Video Library web site [@ASASGVL] hosts videos documenting the history. It is fabulous watching the videos titled "Multidimensional Scaling" (Kruskal, 1962), "Real-Time Rotation" (Chang, 1970) and "Prim-9" (Tukey, 1973) show some preliminary methods leading to the development of the grand tour. The video titled "Use of the Grand Tour in Remote Sensing" (McDonald and Willis, 1987) is the first to show a tour, and the video titled "Dataviewer: A Program for Looking at Data in Several Dimensions" (Buja and Tukey, 1987) demonstrates the tour as part of a larger data analysis system.
 
 - Dataviewer, XGobi, GGobi, cranvas (XLispStat, Orca, mmvz) (Di)
 
