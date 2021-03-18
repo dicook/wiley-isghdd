@@ -163,14 +163,15 @@ The smooth animation between the selected target frame is generated via a step-w
 
 Typically the geodesic interpolation is preferred, since within-plane rotation is distracting and does not provide new information. An exception might be the case of a projection pursuit guided tour with an index function that is sensitive to these rotations [@Laa2020-zj].
 
-For any method we need to ensure that each projection along the interpolated path is still orthonormal. In the case of one-dimensional projections, the set of bases traces a path along the surface of a hypersphere of radius one, as illustrated in Figure (XXX adding an illustration using ferrn). For higher-dimensional projections this is generalized and we find the path along the surface of a torus instead (need to check about this with Sherry).
+For any method we need to ensure that each projection along the interpolated path is still orthonormal. As explained above this means a tour path is a trace along a Stiefel manifold. In the case of one-dimensional projections, the set of bases traces a path along the surface of a hypersphere of radius one, as illustrated in Figure \ref{fig:notation-target-gen}, and for two-dimensional projections projections fall onto a torus shape. We can use a tour to visualize such a path, as shown in Figure \ref{fig:interpolation-2d}.
 
-Notes to Ursula:
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth]{figures/notation-2d-space.pdf}
+\caption{Still views of a tour showing the space of possible two-dimensional projections as a torus shape in grey, and the trace of two short paths obtained via geodesic interpolation traced in color.}
+\label{fig:interpolation-2d}
+\end{figure}
 
-- The basis space constrained by the orthonormality condition forms a Stiefel manifold, which is a sphere in 1D case and a torus in 2D case (I have one sentence for that in the notation section).
-- The space plot with tour path embedded are `figure/notation-1d-space.pdf` and `figure/notation-2d-space.pdf` - let me know if this is what you want
-
-> figure 5 diagram illustrating geodesic interpolation
 
 ## Slices, sections and projections
 
