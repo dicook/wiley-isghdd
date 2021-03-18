@@ -369,8 +369,16 @@ In single cell RNA sequencing, scientists are interested in identifying novel ce
 
 ## Geometry of data
 
-- High-d shapes/distributions: normal, skewed, outliers, (Di from tutorial notes)
+High-dimensional data is on many analysts' minds in recent years, and a way to build understanding of high-dimensional spaces is to examine common high-dimensional shapes using a tour. Many different shapes can be simulated using the R package geozoo. Figure \ref{fig:geozoo} shows points on the surface of two different types of high-dimensional torii. 
 
+\begin{figure*}
+  \centering
+  \includegraphics[width=0.24\textwidth]{figures/torus-rings-4-with-torus-1.pdf}\includegraphics[width=0.24\textwidth]{figures/torus-rings-4-with-torus-2.pdf}
+  \includegraphics[width=0.24\textwidth]{figures/torus-flat-6-1.pdf}\includegraphics[width=0.24\textwidth]{figures/torus-flat-6-2.pdf}
+\caption{Several views of torii: (two at left) 4D ring torus, and (two at right) 6D flat torus. In each case, a subset has been highlighted which illustrate the low-dimensional donut shapes.}
+\label{fig:geozoo}
+\end{figure*}
+          
 
 
 # Discussion {#discussion}
