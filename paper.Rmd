@@ -383,8 +383,9 @@ High-dimensional data is on many analysts' minds in recent years, and a way to b
 
 # Discussion {#discussion}
 
-* why tours are useful and what do we learn from them?
-* what research is needed?
+* summarising the paper again
+* highlighting the recent developments, spinifex, liminal, sage, slicing and sectioning, ferrn etc. 
+* what's next - conditional model visualisation (Catherine Hurley's work), a interactive graphics system that easily integrates tours that provides the direct manipulations we want, pre-processing / transformations for high dimensional data, penalised projection pursuit, different kinds of data and spaces
 
 
 # References {-}
