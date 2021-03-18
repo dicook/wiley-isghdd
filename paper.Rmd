@@ -135,11 +135,16 @@ Below introduces the notations used for describing $d$-dimensional projections i
 
 ## Display
 
-Various displays are available to show projections in 1D, 2D, or higher dimensions. A 1D projection shows the data in a histogram as if a hand shadow being projected onto a wall. Two-d projections are usually displayed with scatterplot since it is the most common plot for showing bivariate relationship. Higher dimensional projections can be shown with multivariate display like scatterplot matrix or parallel coordinates plot. Figure <!--figure 3 --> shows a 1D display with histogram, a 2D display with scatterplot, and a 5D display with a parallel coordinates plot. More display methods can be found in [@Wickham2011-uz].
+Various displays are available to show projections in 1D, 2D, or higher dimensions. A 1D projection displays the data in a histogram as if a hand shadow being projected onto a wall. Two-d projections are usually shown as scatterplot since it is the most common display for bivariate relationship. Higher dimensional projections can be shown with multivariate display like scatterplot matrix or parallel coordinates plot. More display methods can be found in [@Wickham2011-uz]. Figure \ref{fig:display} shows a variety of displays for projections and these displays are useful to show the non-normal distributions in the projected data, clustering structure, and multivariate relationship between variables.
 
-grand tour, random, may miss interesting, take long to rotate to that specific angle, guided tour, along with projection pursuit, by generating target bases, interestingness
-
-> figure 3 diagram illustrating different displays for different d
+\begin{figure}
+\centering
+\includegraphics[width=0.3\textwidth]{figures/notation-display-1d.pdf}
+\includegraphics[width=0.3\textwidth]{figures/notation-display-2d.pdf}
+\includegraphics[width=0.3\textwidth]{figures/notation-display-5d.pdf}
+\caption{Various displays of the projections: 1D display in histogram (left), 2D display in scatterplot (middle), and 5d display in parallel coordinate plot (right).}
+\label{fig:display}
+\end{figure}
 
 ## Finding targets 
 
