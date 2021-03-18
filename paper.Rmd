@@ -150,7 +150,12 @@ Various displays are available to show projections in 1D, 2D, or higher dimensio
 
 To define whether a projection is interesting or not in the guided tour, an index function is used. An index function defines a surjection function from the projection $Y$ in $\mathbb{R}^{n \times d}$ to a scalar in $\mathbb{R}$. For the high-dimensional data, an interesting projection is the one that deviates from normality, as discussed in @Diaconis1984-mv and @Huber1985-zq [expand more here]. Numerous index functions have been developed since the initial index proposed by @Friedman1974-ck: <!-- entropy-based index? --> holes and central mass index [@Cook2008-nl] computes the deviation of the projected data from a normal distribution; @Posse1995-ih proposed a chi-square index for detecting the spiral structure in the data;  kurtosis and skewness indices are raised in @Loperfido2020-xj and @Loperfido2018-ga to detect outliers in financial time series; and most recently, scagnostic indices [@Laa2020-zj] provides eight measures for summarising information between pairs of variables in scatter plot matrices. 
 
-> figure 4 diagram illustrating different types of target generation
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{figures/notation-target-gen.pdf}
+\caption{A comparison of guided and grand tour path in the PCA reduced space. The start point of tour paths is smaller and ligher than the end point. Guided tour optimises the index value iteratively and finishes the search quickly while grand tour wanders in the parameter space to look at possible interesting projections.}
+\label{fig:notation-target-gen}
+\end{figure}
 
 ## Geodesic interpolation
 
