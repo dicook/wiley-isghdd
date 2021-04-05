@@ -231,30 +231,9 @@ Due to the dynamic nature of the tour, user interfaces can enhance the interpret
 \label{fig:tour-controls}
 \end{figure*}
 
-## Manual tour 
+## Manual tour
 
-<!-- needs to be shortened -->
-
-Manual tours [@cook_manual_1997; @spyrison_spinifex_2020] offer a means to interactively control the contribution of a single variable on the projection plane. This is particularly useful for exploring a projection once a feature of interest has been identified. Manual tours can then be employed to explore local area of, or test the structure of the feature, with respect to a selected variable.
-
-The details of performing a manual tour are described by @spyrison_spinifex_2020, but high-level unit-interaction between each frame is as follows:
-
-__Input:__ Starting basis, manipulation variable, an in-plane rotation angle -- $\theta$, an out-of-plane rotation angle -- $\phi$  $\\$
-__Output:__ Rotated basis $\\$
-__Steps:__
-
-1. Initialise a manipulation dimension onto the start basis. Given the manipulation variable a full contribution and orthonormalise this space. 
-2. Post-multiply the space, by a rotation matrix, as solved for in application of Rodrigues’ formula [@rodrigues_lois_1840].
-3. Truncate the manipulation dimension.
-
-Figure \ref{fig:manual-tour} illustrates the manual tour, by radially manipulating the contribution of variable that is crucial, to explain the separation of a particular cluster. To start we first identify a basis by orthonormalising the linear discriminant. We select a variable that has a large contribution in the basis, and watch a continuous animation as this variable is rotated fully into the projection, completely out of the projection, and then returned to it's original contribution.
-
-```{r manual-tour, out.width="100%", fig.show='asis', fig.cap='Manual tour of flea data. We initalise the start basis to the linear discriminant analysis and select the variable with the largest contribution separating the cluster shown as green circles. By controlling the contribution of the variable we see that it is quite sensitive to the sepration of this cluster.', eval=FALSE}
-if(F) ## Creation and saving figure at:
-  file.edit("./R/make_radial_tour_fig.r")
-knitr::include_graphics("./figures/fig_radial_manual_tour.png")
-```
-
+Manual tours [@cook_manual_1997; @spyrison_spinifex_2020] offer a means to interactively control the contribution of a single variable on the projection plane. This is particularly useful for exploring a projection once a feature of interest has been identified. Manual tours can then be employed to test the structure of the feature, with respect to a selected variable. For instance, figure \ref{fig:manual-tour}, starts from the orthonormal linear discriminant and explores the sensitivity of class separation as the contribution of a single variable is altered.
 
 \begin{figure*}[!ht]
    \centering
