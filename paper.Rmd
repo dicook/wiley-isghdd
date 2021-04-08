@@ -85,6 +85,8 @@ The focus of this review will be on visualising high-dimensional numerical data 
 
 While tours are invaluable for assessing the geometry of data, they are by no means the only technique available for visualising structure in high dimensional data. An early technique proposed for assessing pairwise relationships between variables is the scatter plot matrix (SPLOM) [@Tukey1981-ov; @Chambers1983-dh; @Tukey1983-fj; @Carr1984-xw; @Becker1987-dw]. The SPLOM allows the viewer to assess correlation structure but does not scale to large numbers of variables. Similarly, parallel coordinates plots (PCP) can be used to explore correlation and multicollinearity [@Inselberg1985-kf; @Wegman1990-dy]. By placing multiple variables side by side in a PCP higher order structure like clustering or lower dimensional embeddings is revealed, however the ordering of variables along the axis changes what can be learned. Another display that relies on variable ordering is the heatmap, which is widely used to visualise cluster structure in bioinformatics. @Wilkinson2009-pj provides a comprehensive history of this display in the social and natural sciences.
 
+<!-- add a couple of sentences about interaction here -->
+
 A tour can be considered to be a dynamic graphic, because it shows a smooth sequence of projections over time, ideally with controls that allow stopping, reversing, changing direction, or going forward again. It can be useful to embed a tour into an interactive graphics system, where plots can be queried and elements highlighted (see for e.g. @Swayne2003-cc or @Tierney1991). To create the smooth sequence, a geodesic interpolation is computed between consecutive frames.  It allows the viewer to extrapolate from the low-dimensional to  shapes corresponding to multivariate distribution, and is particularly useful for detecting clusters, outliers and non-linear dependence. 
 
 Nonlinear dimension reduction techniques such as t-SNE have become very popular in recent years, primarily for the ability to capture cluster structure in a succinct visual summary. However, it is only a summary, and it likely involves substantial warping of the original data space. Using the tour along with these techniques can illuminate the nature of the warped space, and reveal other structure lost in the dimension reduction.  Figure \ref{fig:tsne-tour} illustrates the difference in what can be learned from a tour in comparison with nonlinear dimension reduction using t-SNE. The 10-dimensional data comes from @Rauber2009-kk. The t-SNE view (plot A) shows six clearly separated clusters, all spherical with different sizes. The tour shows that the clusters look very little like this [EW: not sure what "like this" referes to] in the full data space. The clusters are at various distances apart and very different sizes. In the four projections from the tour this can be seen. The two green clusters are large and spherical, and far from the brown clusters. The brown clusters have one larger one, and three smaller, very close to each other. All of these are elliptical, which means that they have very little variability, actually no variability if you watch the full tour, in some of the 10 dimensions. This gives some deeper perspective to what is learned from t-SNE, and illustrates what the t-SNE dimension reduction has done: it has found small gaps between points and expanded these gaps to yield the representation. It should be noted, though, that the t-SNE view clearly reveals the presence of six distinct clusters. With this information is the invitation to look closer at the data in the tour, to see, that yes, indeed, there are three, tiny, tiny clusters very close to each other.
@@ -119,6 +121,8 @@ Below introduces the notations used for describing $d$-dimensional projections i
 \label{fig:notation-huber}
 \end{figure*}
 
+<!-- Sherry to change to penguins data -->
+
 ## Display
 
 Various displays are available to show projections in 1D, 2D, or higher dimensions. A 1D projection displays the data in a histogram as if a hand shadow being projected onto a wall. Two-d projections are usually shown as scatterplot since it is the most common display for bivariate relationship. Higher dimensional projections can be shown with multivariate display like scatterplot matrix or parallel coordinates plot. More display methods can be found in [@Wickham2011-uz]. Figure \ref{fig:display} shows a variety of displays for projections and these displays are useful to show the non-normal distributions in the projected data, clustering structure, and multivariate relationship between variables.
@@ -142,6 +146,8 @@ To define whether a projection is interesting or not in the guided tour [EW: sho
 \caption{A comparison of guided and grand tour path in the PCA reduced space. The start point of tour paths is smaller and lighter than the end point. Guided tour optimises the index value iteratively and finishes the search quickly while grand tour wanders in the parameter space to look at possible interesting projections.}
 \label{fig:notation-target-gen}
 \end{figure}
+
+<!-- Sherry to include two spheres, so the figure fills the whole page -->
 
 ## Geodesic interpolation
 
@@ -248,6 +254,8 @@ Manual tours [@cook_manual_1997; @spyrison_spinifex_2020] offer a means to inter
 ## Linked Brushing
 
 [EW: seems unrelated to the rest of the article; alternatively briefly explain "brushing" in s2.5?]
+
+<!-- move whatever doesn't get placed here into spin and brush -->
 
 Brushing is an interaction that results in a region being drawn onto the view of visualisation. When there are multiple views present the act of brushing can be thought of as a database query; points that fall inside the brush can be used as a lookup to highlight or filter data on adjacent views (Figure \ref{fig:brushing}). The effect of brushing can be transient, that is, the changes triggered by a brush are removed after use, or they can be persistent i.e. the changes to data within the same view or adjacent views remain (Figure \ref{fig:prim7-tour}). Brushing can be used to aid statistical and geometrical interpretations of the data; brushing can be thought of as conditioning variables on certain regions of the data or used to section lower dimensional views.  
 
