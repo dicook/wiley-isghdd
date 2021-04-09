@@ -145,12 +145,16 @@ Various displays are available to show projections in 1D, 2D, or higher dimensio
 
 ## Finding targets 
 
-To define whether a projection is interesting or not in the guided tour [EW: should we add a new section on tour types before this section?], an index function is used. An index function defines a surjection function from the projection $Y$ in $\mathbb{R}^{n \times d}$ to a scalar in $\mathbb{R}$. For the high-dimensional data, an interesting projection is the one that deviates from normality, as discussed in @Diaconis1984-mv and @Huber1985-zq [expand more here]. Numerous index functions have been developed since the initial index proposed by @Friedman1974-ck: <!-- entropy-based index? --> holes and central mass index [@Cook2008-nl] computes the deviation of the projected data from a normal distribution; @Posse1995-ih proposed a chi-square index for detecting the spiral structure in the data;  kurtosis and skewness indices are raised in @Loperfido2020-xj and @Loperfido2018-ga to detect outliers in financial time series; and most recently, scagnostic indices [@Laa2020-zj] provide eight measures for summarizing information between pairs of variables in SPLOM. 
+A sequence of projections can be generated via different tour paths, i.e. grand tour, guided tour, manual tour, little tour, local tour, and most recently, slice tour. The focus of this section will be on the grand and guided tour, with manual and slice tour being introduced in the later sections of the review. 
+
+Grand tour, coined by @Asimov1985-xr, randomly samples target bases in the space and constructs an interpolation between them to produce a sequence of projections as in Figure  \ref{fig:notation-target-gen}. This tour path is suitable for an initial view of the data, however, as the dimension increases, it could take a long time before the grand tour finds a projection.
+
+Instead of randomly generating targets, guided tour [@Cook1995-ae] finds its targets with a technique called projection pursuit [@Friedman1974-ck].  In projection pursuit, an index function is a surjective mapping from the projection $Y$ in $\mathbb{R}^{n \times d}$ to a scalar in $\mathbb{R}$. Guided tour iteratively optimises the index function in the projection pursuit and produces the most interesting projection according to the index measure. The right panel of Figure \ref{fig:notation-target-gen} shows an example of a guided tour path. 
 
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{figures/notation-target-gen.pdf}
-\caption{A comparison of guided and grand tour path in the PCA reduced space. The start point of tour paths is smaller and lighter than the end point. Guided tour optimises the index value iteratively and finishes the search quickly while grand tour wanders in the parameter space to look at possible interesting projections.}
+\caption{A comparison of guided and grand tour path in the PCA reduced 2D space. The start point of tour paths is smaller and lighter than the end point. Guided tour optimises the index value iteratively and finishes the search quickly while grand tour wanders in the parameter space to look at possible interesting projections.}
 \label{fig:notation-target-gen}
 \end{figure}
 

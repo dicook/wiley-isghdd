@@ -37,10 +37,11 @@ library(tourr)
 library(ferrn)
 library(dplyr)
 n_basis <- 20
+start_basis <- holes_1d_better %>% filter(id == 1) %>% pull(basis) %>% .[[1]]
 set.seed(1234)
 grand <- save_history(
   boa5, 
-  grand_tour(d = 1),
+  tour_path = grand_tour(d = 1),
   max_bases = n_basis
 )
 
@@ -54,9 +55,12 @@ index <- holes()
 grand_tibble <- purrr::map_dfr(grand_list, 
                                ~tibble::tibble(basis = list(matrix(.x, ncol = 1)))) %>% 
   mutate(method = "grand_tour", 
-         id = row_number(),
+         id = row_number() + 1,
          info = "interpolation",
-         index_val = vapply(basis, function(x) index(x), double(1)))
+         index_val = vapply(basis, function(x) index(x), double(1))) %>% 
+  add_row(basis = list(start_basis), method = "grand_tour", id = 1, 
+          info = "interpolation", index_val = index(start_basis)) %>% 
+  arrange(id)
 
 dt <- bind_rows(grand_tibble, holes_1d_better %>% mutate(method = "guided_tour")) %>% 
   compute_pca(group = method, flip = FALSE) %>% purrr::pluck("aug")
@@ -76,3 +80,4 @@ p <- ggplot() +
 ggsave(p, filename = "notation-target-gen.pdf", 
        path = here::here("figures"),
        width = 10, height = 5, units = "in")
+
