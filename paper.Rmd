@@ -195,7 +195,7 @@ The slice tour can reveal concave or non-linear structures obscured in projectio
 \hspace{5mm}
 \includegraphics[width=0.2\textwidth]{figures/cube-6-centered-063.png}
 }
-\caption{Still views of the slice tour display showing geometric shapes: Roman surface (left), 4D torus (middle) and a 6d cube (right).}
+\caption{Still views of the slice tour display showing geometric shapes: Roman surface (left), 4D torus (middle) and a 6d cube (right). Adapted from Laa, Cook and Valencia (2020), Fig. 4.}
 \label{fig:tour-slice}
 \end{figure*}
 
@@ -209,7 +209,7 @@ Transformations of the data are common in the preprocessing [EW: "preprocessing"
 \includegraphics[width=0.3\textwidth]{figures/pollen_sage-088.png}
 \includegraphics[width=0.3\textwidth]{figures/pollen_sage_R1-088.png}
 \includegraphics[width=0.3\textwidth]{figures/pollen_sage_gam20-088.png}
-\caption{Snapshots of the same projection from the sage tour on the pollen data, illustrating the different tuning options. Left: using the default settings for the transformation results in a similar view as found in projections without the sage transformation. Middle: using the tuning parameter $R$ for better resolution near the center reveals the word "EUREKA". Right: using the $\gamma$ tuning parameter can also reveal the structure.}
+\caption{Snapshots of the same projection from the sage tour on the pollen data, illustrating the different tuning options. Left: using the default settings for the transformation results in a similar view as found in projections without the sage transformation. Middle: using the tuning parameter $R$ for better resolution near the center reveals the word "EUREKA". Right: using the $\gamma$ tuning parameter can also reveal the structure. Adapted from Laa, Cook and Lee, Fig. 9.}
 \label{fig:pollen}
 \end{figure}
 
@@ -311,7 +311,7 @@ Physics models often consider $\mathcal{O}(10)$ free parameters and are compared
   \centering
            \includegraphics[width=0.45\textwidth]{figures/allcenter-301.png}
          \includegraphics[width=0.45\textwidth]{figures/jetCluster-027.png}
-\caption{Selected frames from using a grand tour of the physics data. Left: the three different types of measurements (shown in different colors) are aligned along different directions in parameter space. Right: an outlying point is marked with an asterisk symbol in the ATLAS7new facet.}
+\caption{Selected frames from using a grand tour of the physics data. Left: the three different types of measurements (shown in different colors) are aligned along different directions in parameter space. Right: an outlying point is marked with an asterisk symbol in the ATLAS7new facet. Adapted from Cook, Laa and Valencia, 2018, Figures 6 and 7.}
 \label{fig:physics}
 \end{figure*}
 
