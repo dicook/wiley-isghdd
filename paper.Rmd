@@ -348,7 +348,12 @@ High-dimensional data is on many analysts' minds in recent years, and a way to b
 
 # Discussion {#discussion}
 
-* summarising the paper again
+
+This review highlights the history of the grand tour and its modern extensions for the visualization of high dimensional numerical data. A rich ecosystem of tour methods are being actively developed and are finding applications in a broad range of areas. Tours are being combined with interactive graphics to assist with cluster analysis (the spinifex and liminal packages), to understand higher dimensional space and find lower dimensional structure (the sage algorithm, slicing and sectioning) <!-- Ursula can you edit this? -->, and to diagnose optimization procedures for projection pursuit (ferrn).
+
+There are many possible future directions for tour research, one big limitation
+of the current software ecosystem is that analysts are no longer able to perform interactions that were possible in software packages from the 80s and 90s. An interactive graphics system that integrated the tour methodology directly would be a big step forward. <!-- Ursula to add sentence on Catherine Hurley's work and other aspects --> 
+
 * highlighting the recent developments, spinifex, liminal, sage, slicing and sectioning, ferrn etc. 
 * what's next - conditional model visualisation (Catherine Hurley's work), a interactive graphics system that easily integrates tours that provides the direct manipulations we want, pre-processing / transformations for high dimensional data, penalised projection pursuit, different kinds of data and spaces
 
