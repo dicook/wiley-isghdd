@@ -121,16 +121,14 @@ The rest of the review is structured as follows: section \@ref(notation) defines
 
 ## Notation 
 
-Below introduces the notations used for describing $d$-dimensional projections in a $p$-dimensional space. Let $X_{n \times p}$ be the data whose projections are of interest. A projection basis, $A_{p \times d}$, characterizes the direction from which the data are projected and needs to satisfy an orthonormality condition, which requires each column to be a unit vector and to be perpendicular to each other. This condition gives the $p$-dimensional basis space a geometrical structure of a Stiefel manifold. With a data matrix and a projection basis, a projection of the data can be defined as $Y = X \cdot A$. Figure \ref{fig:notation-huber} shows an example of the 2D iris data (sepal measures only) in a huber's plot, along with a 1D projection in the histogram. This projection is created based on projecting the data onto the solid line in the huber's plot and it separates group setosa from versicolor and virginica. (This plot is created with package PPtreeViz, whose reference is @Lee2005-gl)
+Below introduces the notations used for describing $d$-dimensional projections in a $p$-dimensional space. Let $X_{n \times p}$ be the data whose projections are of interest. A projection basis, $A_{p \times d}$, characterizes the direction from which the data are projected and needs to satisfy an orthonormality condition, which requires each column to be a unit vector and to be perpendicular to each other. This condition gives the $p$-dimensional basis space a geometrical structure of a Stiefel manifold. With a data matrix and a projection basis, a projection of the data can be defined as $Y = X \cdot A$. Figure \ref{fig:notation-huber} shows an example of the 2D palmerpenguins data (bill measures only) in a huber's plot, along with a 1D projection in the histogram. This projection is created based on projecting the data onto the solid line in the huber's plot and the it shows the separation among three species.
 
 \begin{figure*}
    \centering
          \includegraphics[width=\textwidth]{figures/notation-huber.pdf}
-\caption{Huber's plot (left) of the 2D iris data (sepal length and width only). The solid ellipse represents how well the projection, onto different directions, separating the three species and the dashed circle is a reference guide. The histogram (right) is the 1D projection of the data onto the direction outlined as the solid line in the huber's plot.}
+\caption{Huber's plot (left) of the 2D penguins data (bill length nad depth only). The solid ellipse represents how well the projection, onto different directions, separating the three species and the dashed circle is a reference guide. The histogram (right) is the 1D projection of the data onto the direction outlined as the solid line in the huber's plot. Adapted from E.-K. Lee et al. (2005), Figure 1. }
 \label{fig:notation-huber}
 \end{figure*}
-
-<!-- Sherry to change to penguins data -->
 
 ## Display
 
@@ -151,12 +149,10 @@ To define whether a projection is interesting or not in the guided tour [EW: sho
 
 \begin{figure}
 \centering
-\includegraphics[width=0.5\textwidth]{figures/notation-target-gen.pdf}
+\includegraphics[width=\textwidth]{figures/notation-target-gen.pdf}
 \caption{A comparison of guided and grand tour path in the PCA reduced space. The start point of tour paths is smaller and lighter than the end point. Guided tour optimises the index value iteratively and finishes the search quickly while grand tour wanders in the parameter space to look at possible interesting projections.}
 \label{fig:notation-target-gen}
 \end{figure}
-
-<!-- Sherry to include two spheres, so the figure fills the whole page -->
 
 ## Geodesic interpolation
 

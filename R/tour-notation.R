@@ -1,6 +1,9 @@
 # Figure 2 diagram illustrating a projection: Huber plot of 2D data with 1D projection
 library(ggplot2)
-p <- PPtreeViz::Huberplot(iris[,1:2],iris[,5],PPmethod="LDA") 
+library(palmerpenguins)
+library(dplyr)
+penguins_small <- penguins %>% filter(!is.na(bill_length_mm))
+p <- PPtreeViz::Huberplot(penguins_small[,3:4],penguins_small$species,PPmethod="LDA") 
 
 ggsave(p, filename = "notation-huber.pdf", 
        path = here::here("figures"),
@@ -65,8 +68,11 @@ p <- ggplot() +
   add_interp(get_interp(dt), interp_color = method) + 
   ggplot2::theme_void() +
   ggplot2::theme(aspect.ratio = 1, legend.position = "bottom", legend.title = ggplot2::element_blank()) + 
-  scale_color_discrete_botanical()
+  scale_color_discrete_botanical() + 
+  facet_wrap(vars(method)) + 
+  theme(strip.text.x = element_blank(),
+        legend.text = element_text(size = 20))
 
 ggsave(p, filename = "notation-target-gen.pdf", 
        path = here::here("figures"),
-       width = 5, height = 5, units = "in")
+       width = 10, height = 5, units = "in")
