@@ -94,7 +94,7 @@ By combining views with interactive elements like tooltips or highlighting the a
          \includegraphics[width=0.45\textwidth]{figures/ggobi_book/brush-response.pdf}
 \caption{When a user brushes data on the left panel, points that fall inside the region are highlighted in orange. The view on the right responds by highlighting the corresponding points. (Adapted from Cook and Swayne, 2007 Figure 2.12)}
 \label{fig:brushing}
-\end{figure}
+\end{figure*}
 
 A tour can be considered to be a dynamic graphic, because it shows a smooth sequence of projections over time, ideally with controls that allow stopping, reversing, changing direction, or going forward again. It can be useful to embed a tour into an interactive graphics system, where plots can be queried and elements highlighted (see for e.g. @Swayne2003-cc or @Tierney1991). To create the smooth sequence, a geodesic interpolation is computed between consecutive frames.  It allows the viewer to extrapolate from the low-dimensional to  shapes corresponding to multivariate distribution, and is particularly useful for detecting clusters, outliers and non-linear dependence. 
 
@@ -198,17 +198,6 @@ The slice tour can reveal concave or non-linear structures obscured in projectio
 \caption{Still views of the slice tour display showing geometric shapes: Roman surface (left), 4D torus (middle) and a 6d cube (right).}
 \label{fig:tour-slice}
 \end{figure*}
-
-
-<!--
-\begin{figure*}
-   \centering
-         \includegraphics[width=0.9\textwidth]{figures/slice_tour_left.jpg}
-         \includegraphics[width=0.9\textwidth]{figures/slice_tour_right.jpg}
-\caption{Ursula to write}
-\label{fig:tour-slice}
-\end{figure*}
--->
 
 
 ## Transformations on projections
