@@ -85,7 +85,16 @@ The focus of this review will be on visualising high-dimensional numerical data 
 
 While tours are invaluable for assessing the geometry of data, they are by no means the only technique available for visualising structure in high dimensional data. An early technique proposed for assessing pairwise relationships between variables is the scatter plot matrix (SPLOM) [@Tukey1981-ov; @Chambers1983-dh; @Tukey1983-fj; @Carr1984-xw; @Becker1987-dw]. The SPLOM allows the viewer to assess correlation structure but does not scale to large numbers of variables. Similarly, parallel coordinates plots (PCP) can be used to explore correlation and multicollinearity [@Inselberg1985-kf; @Wegman1990-dy]. By placing multiple variables side by side in a PCP higher order structure like clustering or lower dimensional embeddings is revealed, however the ordering of variables along the axis changes what can be learned. Another display that relies on variable ordering is the heatmap, which is widely used to visualise cluster structure in bioinformatics. @Wilkinson2009-pj provides a comprehensive history of this display in the social and natural sciences.
 
-<!-- add a couple of sentences about interaction here -->
+All of the aforementioned techniques can be enhanced through the use of interactivity.
+By combining views with interactive elements like tooltips or highlighting the analysts is able to quickly interrogate interesting features of the data. One  particularly important interaction technique in the history of statistical graphics is called brushing [@Becker1987-dw]. When brushing an analyst drags their mouse over the view which results in a region being drawn onto the canvas. When there are multiple views present the act of brushing can be thought of as a database query; points that fall inside the brush can be used as a lookup to highlight or filter data on adjacent views (Figure \ref{fig:brushing}). This technique is particularly useful when combined with the tour (Section \@ref(sec:spin)).   
+
+\begin{figure*}[!ht]
+   \centering
+         \includegraphics[width=0.45\textwidth]{figures/ggobi_book/brush-query.pdf}
+         \includegraphics[width=0.45\textwidth]{figures/ggobi_book/brush-response.pdf}
+\caption{When a user brushes data on the left panel, points that fall inside the region are highlighted in orange. The view on the right responds by highlighting the corresponding points. (Adapted from Cook and Swayne, 2007 Figure 2.12)}
+\label{fig:brushing}
+\end{figure}
 
 A tour can be considered to be a dynamic graphic, because it shows a smooth sequence of projections over time, ideally with controls that allow stopping, reversing, changing direction, or going forward again. It can be useful to embed a tour into an interactive graphics system, where plots can be queried and elements highlighted (see for e.g. @Swayne2003-cc or @Tierney1991). To create the smooth sequence, a geodesic interpolation is computed between consecutive frames.  It allows the viewer to extrapolate from the low-dimensional to  shapes corresponding to multivariate distribution, and is particularly useful for detecting clusters, outliers and non-linear dependence. 
 
@@ -106,7 +115,7 @@ Nonlinear dimension reduction techniques such as t-SNE have become very popular 
 \end{figure*}
 
 
-The rest of the review is structured as follows: in section \@ref(notation) we [EW: all of a sudden, from third person to first person?] define the notation and components of a tour display. By its nature a tour is most effective to analyst when combined with interactivity; in section \@ref(interaction) we review the components of user interfaces for manipulating tour views. The implementation of tour paths in statistical software is reviewed in section \@ref(software), where we discuss the history and state of the art packages for computing them. Section \@ref(applications) shows the diverse applications of the tour in the natural sciences, machine learning and applied statistics. Finally, in section \@ref(discussion) we point to future research directions for tours. 
+The rest of the review is structured as follows: section \@ref(notation) defines the notation and components of a tour displays. By its nature a tour is most effective to analyst when combined with interactivity; section \@ref(interaction) reviews the components of user interfaces for manipulating tour views. The implementation of tour paths in statistical software is reviewed in section \@ref(software). Section \@ref(applications) shows the diverse applications of the tour in the natural sciences, machine learning and applied statistics. Finally, section \@ref(discussion) discusses future research directions for tours. 
 
 # Tours for high dimensional visualization {#notation}
 
@@ -171,7 +180,7 @@ Interactive systems like GGobi provide the option of adding sectioning informati
 
 Sectioning a high-dimensional space in systematic manner (without interactive selection of data sections) is challenging, since there is a lot of freedom in choosing a section. One approach is to define sections based on projection planes, we refer to such sections as "slices" of the data. This is implemented in the slice tour display [@Laa2020-js], and uses the orthogonal distance of each data point from the current projection plane (typically placed such that it passes through the data mean) to highlight points that are nearby and fade out points further from the plane.
 
-The slice tour can reveal concave or non-linear structures obscured in projections, as well as small structures hidden near the center of a distribution. Fig. \ref{fig:tour-slice} shows snapshots of the slice tour of points distributed on the surface of geometric shapes. Along with projections, an index function can be used to select target planes to show interesting slices of the data, defined as a section pursuit guided tour [@Laa2020-ni].
+The slice tour can reveal concave or non-linear structures obscured in projections, as well as small structures hidden near the center of a distribution. Figure \ref{fig:tour-slice} shows snapshots of the slice tour of points distributed on the surface of geometric shapes. Along with projections, an index function can be used to select target planes to show interesting slices of the data, defined as a section pursuit guided tour [@Laa2020-ni].
 
 \begin{figure*}[ht]
 \centerline{\includegraphics[width=0.2\textwidth]{figures/roman-surface-centered-010.png}
@@ -204,7 +213,7 @@ The slice tour can reveal concave or non-linear structures obscured in projectio
 
 ## Transformations on projections
 
-Transformations of the data are common in the preprocessing [EW: "preprocessing" means b/f projecting?], such as scaling, sphering, or a logarithmic transformation for skewed distributions. However, we may also want to transform the data after projecting onto lower dimensions, to correct for unwanted effects of the projections. One example is the piling effect that is observed when projecting a high-dimensional distribution [@Diaconis1984-mv]: projected points are approximately Gaussian in most views, and increasingly concentrating near the center as dimensionality increases. The sage display [@Laa2020-uv] proposes a solution to this issue, via a radial transformation of the projected data. This non-linear transformation is defined in each point of the projection plane and is sensitive to the overall scale of the data as well as the original dimensionality $p$. In addition, tuning parameters can be used to obtain a more (or less) aggressive redistribution of the points. This is illustrated in Fig. \ref{fig:pollen} showing the application of the sage transformation to the classical pollen dataset [@Coleman1986-so]. The projection without any rescaling looks similar to what is found when rescaling with default options (left), and we can use either of the two tuning parameters to better resolve the distribution near the center and reveal the hidden structure (middle and right).
+Transformations of the data are common in the preprocessing [EW: "preprocessing" means b/f projecting?], such as scaling, sphering, or a logarithmic transformation for skewed distributions. However, we may also want to transform the data after projecting onto lower dimensions, to correct for unwanted effects of the projections. One example is the piling effect that is observed when projecting a high-dimensional distribution [@Diaconis1984-mv]: projected points are approximately Gaussian in most views, and increasingly concentrating near the center as dimensionality increases. The sage display [@Laa2020-uv] proposes a solution to this issue, via a radial transformation of the projected data. This non-linear transformation is defined in each point of the projection plane and is sensitive to the overall scale of the data as well as the original dimensionality $p$. In addition, tuning parameters can be used to obtain a more (or less) aggressive redistribution of the points. This is illustrated in Figure \ref{fig:pollen} showing the application of the sage transformation to the classical pollen dataset [@Coleman1986-so]. The projection without any rescaling looks similar to what is found when rescaling with default options (left), and we can use either of the two tuning parameters to better resolve the distribution near the center and reveal the hidden structure (middle and right).
 
 \begin{figure}
 \centering
@@ -215,14 +224,6 @@ Transformations of the data are common in the preprocessing [EW: "preprocessing"
 \label{fig:pollen}
 \end{figure}
 
-<!--
-\begin{figure*}
-   \centering
-         \includegraphics[width=0.9\textwidth]{figures/laa_radial_transformation.pdf}
-\caption{An illustration of the radial transformation. Each panel represents linear projections of $p$ dimensional equidistant circles. As $p$ increases the circles get pushed further to the edge.}
-\label{fig:tour-transformation}
-\end{figure*}
--->
 
 # Ways of interacting {#interaction}
 
@@ -233,7 +234,7 @@ Due to the dynamic nature of the tour, user interfaces can enhance the interpret
 \begin{figure*}
    \centering
          \includegraphics[width=0.9\textwidth]{figures/liminal-stop-pause-refresh.png}
-\caption{The clustering example from Figure \ref{fig:tsne-tour} using the liminal interface. Here a grand tour is displayed on the right hand side, with buttons allowing users to play, pause and refresh the tour animation.}
+\caption{The clustering example from Figure \ref{fig:tsne-tour} using the liminal interface. Here a grand tour is displayed on the right hand side, with buttons allowing users to play, pause and refresh the tour animation. Adapted from Lee, Laa and Cook, 2020 Figure 2.}
 \label{fig:tour-controls}
 \end{figure*}
 
@@ -250,24 +251,7 @@ Manual tours [@cook_manual_1997; @spyrison_spinifex_2020] offer a means to inter
 \label{fig:manual-tour}
 \end{figure*}
 
-
-## Linked Brushing
-
-[EW: seems unrelated to the rest of the article; alternatively briefly explain "brushing" in s2.5?]
-
-<!-- move whatever doesn't get placed here into spin and brush -->
-
-Brushing is an interaction that results in a region being drawn onto the view of visualisation. When there are multiple views present the act of brushing can be thought of as a database query; points that fall inside the brush can be used as a lookup to highlight or filter data on adjacent views (Figure \ref{fig:brushing}). The effect of brushing can be transient, that is, the changes triggered by a brush are removed after use, or they can be persistent i.e. the changes to data within the same view or adjacent views remain (Figure \ref{fig:prim7-tour}). Brushing can be used to aid statistical and geometrical interpretations of the data; brushing can be thought of as conditioning variables on certain regions of the data or used to section lower dimensional views.  
-
-\begin{figure*}[!ht]
-   \centering
-         \includegraphics[width=0.45\textwidth]{figures/ggobi_book/brush-query.pdf}
-         \includegraphics[width=0.45\textwidth]{figures/ggobi_book/brush-response.pdf}
-\caption{When a user brushes data on the left panel, points that fall inside the region are highlighted in orange. The view on the right responds by highlighting the corresponding points.}
-\label{fig:brushing}
-\end{figure*}
-
-## Spin-and-brush 
+## Spin-and-brush {#sec:spin}
 
 \begin{figure}[htp]
 \centerline{{\includegraphics[width=0.32\textwidth]{figures/ggobi_book/prim7-pp1.pdf}}
@@ -280,12 +264,11 @@ Brushing is an interaction that results in a region being drawn onto the view of
 \centerline{{\includegraphics[width=0.32\textwidth]{figures/ggobi_book/prim7-pp10.pdf}}
   {\includegraphics[width=0.32\textwidth]{figures/ggobi_book/prim7-pp11.pdf}}
   {\includegraphics[width=0.32\textwidth]{figures/ggobi_book/prim7-pp13.pdf}}}
-\caption{Stepwise identification of clusters in the physics data. Each time a cluster is clearely separated we stop the tour and brush the points, followed by another spin of the data, until we can capture the full distribution.}
+\caption{Stepwise identification of clusters in the physics data. Each time a cluster is clearely separated we stop the tour and brush the points, followed by another spin of the data, until we can capture the full distribution. Adapted from Cook and Swayne, 2007 Figure 5.3.}
 \label{fig:prim7-tour}
 \end{figure}
 
-Tasks such as the identification of outlying points or cluster analysis can be performed visually using the tour. Here, a "spin-and-brush" approach works well, since different views will reveal different features and a persistent brush helps us to connect this to the previously observed information. As an example we briefly summarize an analysis from @Cook2007-be that explores clustering of the physics data previously used to in the context of projection pursuit [@Friedman1974-ck; @Cook1995-ae]. This data is well described by its geometric structure: a two-dimensional triangle with two one-dimensional strands linearly extending in different directions from each vertex. These strands can sequentially be identified as clusters using the spin-and-brush approach, as shown in Figure \ref{fig:prim7-tour}. We stop the tour each time a cluster is clearly separate from the main distribution in the current projection and brush the points in a new color. In the end the full structure becomes apparent and can be visualized by replaying the tour with all clusters highlighted in different colors.
-
+Brushing can be used to aid statistical and geometrical interpretations of the data; brushing can be thought of as conditioning variables on certain regions of the data or used to section lower dimensional views. This aids tasks such as the identification of outlying points or visual cluster analysis when combined with the tour. Here, a "spin-and-brush" approach works well, since different views will reveal different features and a persistent brush helps us to connect this to the previously observed information. As an example we briefly summarize an analysis from @Cook2007-be that explores clustering of the physics data previously used to in the context of projection pursuit [@Friedman1974-ck; @Cook1995-ae]. This data is well described by its geometric structure: a two-dimensional triangle with two one-dimensional strands linearly extending in different directions from each vertex. These strands can sequentially be identified as clusters using the spin-and-brush approach, as shown in Figure \ref{fig:prim7-tour}. We stop the tour each time a cluster is clearly separate from the main distribution in the current projection and brush the points in a new color. In the end the full structure becomes apparent and can be visualized by replaying the tour with all clusters highlighted in different colors.
 
 
 # Software {#software}
@@ -314,7 +297,7 @@ The liminal R package uses the tour to explore the quality of non-linear dimensi
     \includegraphics[width=0.32\textwidth]{figures/svm-radial-orange.png}
     \includegraphics[width=0.32\textwidth]{figures/svm-radial-green.png}
     \includegraphics[width=0.32\textwidth]{figures/svm-radial-purple.png}
-  \caption{A grand tour run on the prediction boundaries of a radial support vector machine. (Left) The prediction region for points classified as orange produces a slice of a cube. (Middle) The predicition region for points classified as green produces another slice of the cube. (Right) The complete prediction region shows the points classified as purple are embedded within the green slice.}
+  \caption{A grand tour run on the prediction boundaries of a radial support vector machine. (Left) The prediction region for points classified as orange produces a slice of a cube. (Middle) The predicition region for points classified as green produces another slice of the cube. (Right) The complete prediction region shows the points classified as purple are embedded within the green slice. Adapted from Wickham, Hoffman and Cook, 2015.}
   \label{fig:svm-tour}
 \end{figure*}
 
@@ -323,7 +306,7 @@ The liminal R package uses the tour to explore the quality of non-linear dimensi
 \begin{figure*}
    \centering
          \includegraphics[width=0.9\textwidth]{figures/scheidigger_nn_tour.png}
-\caption{A grand tour run on the output of a deep neural network model for classification. The axes correspond to the probabilities that the model of an image belonging to a certain class.}
+\caption{A grand tour run on the output of a deep neural network model for classification. The axes correspond to the probabilities that the model of an image belonging to a certain class. Adapted from Li, Zhao and Scheidigger, 2020.}
 \label{fig:tour-nn}
 \end{figure*}
 
@@ -333,7 +316,7 @@ The grand tour along with direct interaction techniques has been proposed as a t
 
 ## Physics 
 
-Physics models often consider $\mathcal{O}(10)$ free parameters and are compared to a much larger number of experimental observables ($\mathcal{O}(100)$). The comparison typically relies on numeric computation of the model predictions for all observables, potentially obscuring the nature of their dependence on the model parameters. Here, multivariate visualisation methods can provide new insights. This was demonstrated in @Cook2018-jm. For example, we explored grouping of experiments based on how they constrain the parameter space and we also identified an interesting multivariate outlier that pointed to potential issues with the data point. For illustration we show static views from the tour showing the orthogonal structure of the three groups (indicated by color), and a display which highlights the outlyingness of the data point marked with an asterisk symbol in Fig. \ref{fig:physics}.
+Physics models often consider $\mathcal{O}(10)$ free parameters and are compared to a much larger number of experimental observables ($\mathcal{O}(100)$). The comparison typically relies on numeric computation of the model predictions for all observables, potentially obscuring the nature of their dependence on the model parameters. Here, multivariate visualisation methods can provide new insights. This was demonstrated in @Cook2018-jm. For example, we explored grouping of experiments based on how they constrain the parameter space and we also identified an interesting multivariate outlier that pointed to potential issues with the data point. For illustration we show static views from the tour showing the orthogonal structure of the three groups (indicated by color), and a display which highlights the outlyingness of the data point marked with an asterisk symbol in Figure \ref{fig:physics}.
 
 \begin{figure*}
   \centering
@@ -355,7 +338,7 @@ In single cell RNA sequencing, scientists are interested in identifying novel ce
          \includegraphics[width=0.24\textwidth]{figures/mouse_sage_2c_gam3-038.png}
          \includegraphics[width=0.24\textwidth]{figures/mouse_sage_2c_gam3-074.png}
 
-\caption{Selected frames from using a grand tour of mouse retina single cell RNA-seq data with the radial transformation. The sage display was used to identify and verify cluster sepearation between the three highlighted clusters estimated from a clustering algorithm.}
+\caption{Selected frames from using a grand tour of mouse retina single cell RNA-seq data with the radial transformation. The sage display was used to identify and verify cluster sepearation between the three highlighted clusters estimated from a clustering algorithm. Adapted from Laa, Lee and Cook, 2020 Figure 6.}
 \label{fig:mouse-cluster}
 \end{figure*}
 
