@@ -106,12 +106,12 @@ Nonlinear dimension reduction techniques such as t-SNE have become very popular 
      \vfill
    \begin{minipage}{\linewidth}     
    \centering
-         \includegraphics[width=0.24\textwidth]{figures/cluster_example_tour1_r.pdf}
-         \includegraphics[width=0.24\textwidth]{figures/cluster_example_tour2_r.pdf}
-         \includegraphics[width=0.24\textwidth]{figures/cluster_example_tour3_r.pdf}
-         \includegraphics[width=0.24\textwidth]{figures/cluster_example_tour4_r.pdf}
+         \includegraphics[width=0.24\textwidth]{figures/cluster_example_new_tour1.png}
+         \includegraphics[width=0.24\textwidth]{figures/cluster_example_new_tour2.png}
+         \includegraphics[width=0.24\textwidth]{figures/cluster_example_new_tour3.png}
+         \includegraphics[width=0.24\textwidth]{figures/cluster_example_new_tour4.png}
    \end{minipage}%
-\caption{Comparison of structure perception between nonlinear dimension reduction using t-SNE (A) and projections seen during a tour (B.1-4). There are six clusters, as seen in the t-SNE view, but the relative distance between the clusters is extremely varied. This can be seen in the tour projections. The two green clusters are spherical in shape, and very distance from the brown clusters. Three of the brown clusters are very close to each other (just visible in B.1), and all brown clusters are elliptical. The tour provides a more accurate rendering of the clusters in the high-dimensional space, and complements what is learned from the dimension reduction.}
+\caption{Comparison of structure perception between nonlinear dimension reduction from 10D, using t-SNE (A) and a tour (B). There are six clusters, as seen in the t-SNE view, but the relative distance between the clusters is extremely varied. This can be seen in sample of tour projections shown. The two green clusters are (almost) spherical in shape, and very distance from the brown clusters. Three of the brown clusters are very close to each other (just visible in B.1), and all brown clusters are elliptical. The tour provides a more accurate rendering of the clusters in the high-dimensional space, and complements what is learned from the dimension reduction.}
 \label{fig:tsne-tour}
 \end{figure*}
 

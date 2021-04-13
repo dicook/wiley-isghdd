@@ -42,7 +42,7 @@ tsne_df <- tibble(tsneX = tsne_y$Y[,1],
                     tsneY = tsne_y$Y[,2], 
                     cluster = X_tbl$cluster)
 ggplot(tsne_df, aes(x=tsneX, y=tsneY, colour=cluster)) +
-  geom_point() + coord_equal()
+  geom_point() + coord_equal() 
 
 # multichallenge data set
 url <- "http://ifs.tuwien.ac.at/dm/download/multiChallenge-matrix.txt"
@@ -66,7 +66,14 @@ tsne_multi_df <- tibble(tsneX = tsne_multi$Y[,1],
                   cluster = multi$group)
 ggplot(tsne_multi_df, aes(x=tsneX, y=tsneY, colour=cluster)) +
   geom_point() + coord_equal() +
-  scale_colour_brewer("", palette="Dark2")
+  scale_colour_brewer("", palette="Dark2") +
+  ggtitle("A. t-SNE") + 
+  theme_solid() + 
+  theme(plot.title = element_text(colour = "black", size = 18),
+        legend.text = element_text(colour="black", size = 18),
+        panel.background = element_rect(fill = "white"),
+        panel.border = element_rect(fill = NA, colour="black", size=1,
+                                        linetype = 1)) 
 
 # tourr
 library(tourr)
@@ -81,7 +88,7 @@ render_gif(multi[,2:11],
 
 render_gif(multi[,2:11], 
            grand_tour(),
-           display_xy(col=clrs, axes="bottomleft", half_range = 0.5, center = TRUE), 
+           display_xy(col=clrs, axes="off", half_range = 0.7, center = TRUE), 
            frames = 200,
            "figures/cluster_example_zoom.gif")
 
