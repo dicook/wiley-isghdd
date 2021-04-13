@@ -73,11 +73,11 @@ Writing style: third person (it was done, ...)
 
 Data commonly arrives with more than two measured variables, which makes it more complicated to plot on a page. With multiple variables, especially if there is some association between variables, this would be called multivariate or high-dimensional data. When the variables are all numeric, or quantitative, visualisation often relies on some form of dimension reduction. This can be done by taking linear projections, for example, principal component analysis [@Hotelling1933-of] or linear discriminant analysis [@Fisher1936]. It is also common to reduce dimension with nonlinear techniques like multidimensional scaling (MDS) [@Kruskal1964-do] or t-Distributed Stochastic Neighbor Embedding (t-SNE) [@Van_der_Maaten2008-qa]. 
 
-The term "high-dimensional" here means Euclidean space. Figure \ref{fig:cubes} shows a way to imagine this. It shows a sequence of cube wireframes, ranging from 1D through to 6D, where beyond 2D is a linear projection of the cube. As dimension increase, a new orthogonal axis is added. For cubes, this is achieved by doubling the cube: a 2D is two 1D cubes, a 3D is two 2D cubes, and so forth. 
+The term "high-dimensional" here means Euclidean space. Figure \ref{fig:cubes} shows a way to imagine this. It shows a sequence of cube wireframes, ranging from 1D through to 5D, where beyond 2D is a linear projection of the cube. As dimension increase, a new orthogonal axis is added. For cubes, this is achieved by doubling the cube: a 2D is two 1D cubes, a 3D is two 2D cubes, and so forth. 
 
 \begin{figure*}[!h]
 \centerline{\includegraphics[width=0.95\textwidth]{figures/cubes.png}}
-\caption{Illustrating what is meant by "high-dimensional" in this paper, and a "linear projection". From a sequence of increasing dimension cubes, from 1D to 6D, as wireframes, it can be seen that the as dimension increase by 1, the cube doubles. (Note to Di: to change this diagram to highlight the doubling.)}
+\caption{Illustrating what is meant by "high-dimensional" in this paper, and a "linear projection". From a sequence of increasing dimension cubes, from 1D to 5D, as wireframes, it can be seen that the as dimension increase by 1, the cube doubles. }
 \label{fig:cubes}
 \end{figure*}
 
