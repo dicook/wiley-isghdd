@@ -69,8 +69,8 @@ ggplot(tsne_multi_df, aes(x=tsneX, y=tsneY, colour=cluster)) +
   scale_colour_brewer("", palette="Dark2") +
   ggtitle("A. t-SNE") + 
   theme_solid() + 
-  theme(plot.title = element_text(colour = "black", size = 18),
-        legend.text = element_text(colour="black", size = 18),
+  theme(plot.title = element_text(colour = "black", size = 12),
+        legend.text = element_text(colour="black", size = 12),
         panel.background = element_rect(fill = "white"),
         panel.border = element_rect(fill = NA, colour="black", size=1,
                                         linetype = 1)) 
