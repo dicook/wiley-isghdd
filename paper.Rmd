@@ -11,7 +11,7 @@ author:
       | Department of Econometrics and Business Statistics, Monash University
     affiliation: Monash University
     email: dicook@monash.edu
-  - name: Natalia Da Silva
+  - name: Natalia da Silva
     address: |
       | Instituto de Estadística (IESTA), Universidad de la República
     affiliation: Universidad de la República
@@ -155,7 +155,7 @@ A sequence of projections can be generated via different tour paths, i.e. grand 
 
 Grand tour, coined by @Asimov1985-xr, randomly samples target bases in the space and constructs an interpolation between them to produce a sequence of projections as in Figure  \ref{fig:notation-target-gen}. This tour path is suitable for an initial view of the data, however, as the dimension increases, it could take a long time before the grand tour finds a projection.
 
-Instead of randomly generating targets, guided tour [@Cook1995-ae] finds its targets with a technique called projection pursuit [@Friedman1974-ck].  In projection pursuit, an index function is defined that is a surjective mapping from the projection $Y$ in $\mathbb{R}^{n \times d}$ to a scalar in $\mathbb{R}$. The guided tour iteratively optimizes the index function in the projection pursuit and produces the most interesting projection according to the index measure. The right panel of Figure \ref{fig:notation-target-gen} shows an example of a guided tour path. 
+Instead of randomly generating targets, guided tour [@Cook1995-ae] finds its targets with a technique called projection pursuit [@Friedman1974-ck].  In projection pursuit, an index function is defined that is a subjective mapping from the projection $Y$ in $\mathbb{R}^{n \times d}$ to a scalar in $\mathbb{R}$. The guided tour iteratively optimizes the index function in the projection pursuit and produces the most interesting projection according to the index measure. The right panel of Figure \ref{fig:notation-target-gen} shows an example of a guided tour path. 
 
 \begin{figure}
 \centering
