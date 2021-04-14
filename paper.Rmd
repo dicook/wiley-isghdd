@@ -385,4 +385,8 @@ There are many possible future directions for tour research.  One big challenge 
 * what's next - conditional model visualisation (Catherine Hurley's work), a interactive graphics system that easily integrates tours that provides the direct manipulations we want, pre-processing / transformations for high dimensional data, penalised projection pursuit, different kinds of data and spaces
 -->
 
+# Acknowledgements {-}
+
+The authors gratefully acknowledge the support of the Australian Research Council. The paper was written in `rmarkdown` [@Xie2018-bg] using `knitr` [@Xie2017-uh].
+
 # References {-}
