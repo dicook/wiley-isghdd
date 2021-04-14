@@ -104,7 +104,7 @@ Nonlinear dimension reduction techniques such as t-SNE and Uniform Manifold Alig
 <!-- Reading the introduction I noticed maybe can be included UMAP, I'm not an expert (Uniform Manifold approximation and projection for dimension reduction ) I saw this before but maybe some of you know about it to evaluated if worth it to be include it here. I have an arXiv paper https://arxiv.org/abs/1802.03426 maybe some of you can identify if it is relevant or not or at least you know about the authors ....just a comment (Di, or ALL )-->
 
 \begin{figure*}[!t]
-         \includegraphics[width=0.371\textwidth]{figures/cluster_example_r.pdf}
+         \includegraphics[width=0.371\textwidth]{figures/cluster_example.pdf}
      \vfill
    \begin{minipage}{\linewidth}     
    \centering
