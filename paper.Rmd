@@ -168,12 +168,24 @@ The smooth progression in the tour path is due to geodesic interpolation between
 
 Figure \ref{fig:interpolation-2d} shows tour paths of 2D projections of 6D data. The space of all tour paths is a high-dimensional torus, as represented by the grey points. The tour paths are shown in green and brown, and each dot indicates a projection in the sequence.  The plots in this figure could be considered to be a tour looking at itself, because each plot is a selected view from a tour of the torus with the paths overlaid. 
 
-\begin{figure}
-\centering
-\includegraphics[width=0.9\textwidth]{figures/notation-2d-space.pdf}
+\begin{figure*}[ht]
+\centerline{\includegraphics[width=0.2\textwidth]{figures/notation-torus-frames/torus001.png}
+\hspace{5mm}
+\includegraphics[width=0.2\textwidth]{figures/notation-torus-frames/torus017.png}
+\hspace{5mm}
+\includegraphics[width=0.2\textwidth]{figures/notation-torus-frames/torus064.png}}
+\centerline{
+\includegraphics[width=0.2\textwidth]{figures/notation-torus-frames/torus068.png}
+\hspace{5mm}
+\includegraphics[width=0.2\textwidth]{figures/notation-torus-frames/torus075.png}
+\hspace{5mm}
+\includegraphics[width=0.2\textwidth]{figures/notation-torus-frames/torus100.png}
+}
 \caption{Still views of a tour showing the space of possible two-dimensional projections as a torus shape in grey, and the trace of two short paths obtained via geodesic interpolation traced in color.}
 \label{fig:interpolation-2d}
-\end{figure}
+\end{figure*}
+
+
 
 ## Display
 
@@ -364,7 +376,7 @@ High-dimensional data is on many analysts' minds in recent years, and a way to b
 # Discussion {#discussion}
 
 
-This review highlights the history of tour methods, and modern extensions for the visualization of high dimensional numerical data. The rich ecosystem of tours is being actively developed and applied to a broad range of problems including machine learning. When tours are be combined with some interactivity it can assist with analyses like clustering (the spinifex and liminal packages).  Modified displays of projected data can be used to expose local structures (the sage algorithm, slicing and section pursuit). New algorithm data collection inside the tour code is being used to better diagnose optimization procedures for projection pursuit (ferrn).
+This review highlights the history of tour methods, and modern extensions for the visualization of high dimensional numerical data. The rich ecosystem of tours is being actively developed and applied to a broad range of problems including machine learning. When tours are be combined with some interactivity it can assist with analyses like clustering (the spinifex and liminal packages).  Modified displays of projected data can be used to expose local structures (the sage algorithm, slicing and section pursuit). New algorithm data collection inside the tour code is being used to better diagnose optimization procedures for projection pursuit [@zhang2021visual].
 
 There are many possible future directions for tour research.  One big challenge for software engineering is to seamlessly embed the tour with interactivity. Currently, there is no implementation that analysts can use to perform tasks that were easy in software available in the 80s and 90s. More contributions in sectioning as an alternative to projection, could be broadly useful. An example is conditional model visualization, as implemented in the condviz package [@JSSv081i05], which assists with visual exploration of multivariate fitted models. It could be interesting to define tour paths for different types of nonlinear subspaces, or non-Euclidean space.
 
