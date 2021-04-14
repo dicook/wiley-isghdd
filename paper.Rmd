@@ -133,20 +133,6 @@ When using a tour, a sequence of $d$-dimensional linear projections are obtained
 \label{fig:notation-huber}
 \end{figure*}
 
-## Display
-
-<!-- SL: I think this paragraph could moved down to the bottom of this section -->
-Various displays are available to show projections in 1-$d$, 2-$d$ and higher dimensions. A 1-$d$ projection displays the data in a histogram analogous to a shadow puppet being projected onto a wall, while 2-$d$ projections are displayed as scatterplots. Higher dimensional projections can be shown with multivariate displays like SPLOMs or parallel coordinates. Figure \ref{fig:display} shows a variety of displays for projections and these displays are useful to show the non-normal distributions in the projected data, clustering structure, and multivariate relationship between variables.
-
-\begin{figure}
-\centering
-\includegraphics[width=0.3\textwidth]{figures/notation-display-1d.pdf}
-\includegraphics[width=0.3\textwidth]{figures/notation-display-2d.pdf}
-\includegraphics[width=0.3\textwidth]{figures/notation-display-5d.pdf}
-\caption{Various displays of the projections: 1D display in histogram (left), 2D display in scatterplot (middle), and 5d display in parallel coordinate plot (right).}
-\label{fig:display}
-\end{figure}
-
 ## Finding targets 
 
 <!-- SL: I think this needs to be linked up to the notation section -->
@@ -181,6 +167,19 @@ For any method we need to ensure that each projection along the interpolated pat
 \label{fig:interpolation-2d}
 \end{figure}
 
+## Display
+
+<!-- SL: I think this paragraph could moved down to the bottom of this section -->
+Various displays are available to show projections in 1-$d$, 2-$d$ and higher dimensions. A 1-$d$ projection displays the data in a histogram analogous to a shadow puppet being projected onto a wall, while 2-$d$ projections are displayed as scatterplots. Higher dimensional projections can be shown with multivariate displays like SPLOMs or parallel coordinates. Figure \ref{fig:display} shows a variety of displays for projections and these displays are useful to show the non-normal distributions in the projected data, clustering structure, and multivariate relationship between variables.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.3\textwidth]{figures/notation-display-1d.pdf}
+\includegraphics[width=0.3\textwidth]{figures/notation-display-2d.pdf}
+\includegraphics[width=0.3\textwidth]{figures/notation-display-5d.pdf}
+\caption{Various displays of the projections: 1D display in histogram (left), 2D display in scatterplot (middle), and 5d display in parallel coordinate plot (right).}
+\label{fig:display}
+\end{figure}
 
 ## Slices, sections and projections
 
