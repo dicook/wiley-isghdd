@@ -116,7 +116,7 @@ Nonlinear dimension reduction techniques such as t-SNE have become very popular 
 \end{figure*}
 
 
-The rest of the review is structured as follows: section \@ref(notation) defines the notation and components of a tour displays. By its nature a tour is most effective to analyst when combined with interactivity; section \@ref(interaction) reviews the components of user interfaces for manipulating tour views. Section \@ref(tours) shows manual tours, these are useful to test structure of selected features. The implementation of tour paths in statistical software is reviewed in section \@ref(software). Section \@ref(applications) shows the diverse applications of the tour in the natural sciences, machine learning and applied statistics. Finally, section \@ref(discussion) discusses future research directions for tours. 
+The rest of the review is structured as follows: Section \@ref(notation) defines the notation and components of a tour displays. By its nature a tour is most effective to analyst when combined with interactivity; Section \@ref(interaction) reviews the components of user interfaces for manipulating tour views, including manual tours (Section \@ref(tours)) which are useful to test structure of selected features. The implementation of tour paths in statistical software is reviewed in Section \@ref(software). Section \@ref(applications) shows the diverse applications of the tour in the natural sciences, machine learning and applied statistics. Finally, Section \@ref(discussion) discusses future research directions for tours. 
 
 # Tours for high dimensional visualization {#notation}
 
@@ -234,7 +234,7 @@ Due to the dynamic nature of the tour, user interfaces can enhance the interpret
 \label{fig:tour-controls}
 \end{figure*}
 
-# Manual Tours {#tours}
+## Manual Tours {#tours}
 
 Manual tours [@cook_manual_1997; @spyrison_spinifex_2020] offer a means to interactively control the contribution of a single variable on the projection plane. This is particularly useful for exploring a projection once a feature of interest has been identified. Manual tours can then be employed to test the structure of the feature, with respect to a selected variable. For instance, figure \ref{fig:manual-tour}, starts from the orthonormal linear discriminant and explores the sensitivity of class separation as the contribution of a single variable is altered.
 
