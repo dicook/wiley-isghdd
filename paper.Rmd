@@ -118,6 +118,8 @@ Nonlinear dimension reduction techniques such as t-SNE have become very popular 
 \end{figure*}
 
 
+<!-- FIGURE 3, I think you are using Dark2 palette but in the figure caption you mention green and brown, I'm not colorblind but I check the palette description and the color is #D95F02 (https://www.colorhexa.com/d95f02) color description: Vivid orange. If this is correct, you should  replace  "brown" by orange in  Figure 3  caption and in  Figure 3 comments in page 4 (two brown each)-->
+
 The rest of the review is structured as follows: Section \@ref(notation) defines the notation and components of a tour displays. By its nature a tour is most effective to analyst when combined with interactivity; Section \@ref(interaction) reviews the components of user interfaces for manipulating tour views, including manual tours (Section \@ref(tours)) which are useful to test structure of selected features. The implementation of tour paths in statistical software is reviewed in Section \@ref(software). Section \@ref(applications) shows the diverse applications of the tour in the natural sciences, machine learning and applied statistics. Finally, Section \@ref(discussion) discusses future research directions for tours. 
 
 # Tours for high dimensional visualization {#notation}
