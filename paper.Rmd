@@ -138,6 +138,8 @@ When using a tour, a sequence of $d$-dimensional linear projections are obtained
 \label{fig:notation-huber}
 \end{figure*}
 
+<!-- Figure 4:   Huber's plot (left plots) of the penguins data....Maybe will be better to  capital letter for axis labels (Count, Group and Best projected data). And maybe use the same Dark2 palette. -->
+
 \begin{figure*}
    \centering
          \includegraphics[width=\textwidth]{figures/tour_path.png}
@@ -161,6 +163,8 @@ There are other tour types which don't fit this style of tour. The manual tour [
 \caption{A comparison of guided and grand tour path in the PCA reduced 2D space. The start point of tour paths is smaller and lighter than the end point. Guided tour optimises the index value iteratively and finishes the search quickly while grand tour wanders in the parameter space to look at possible interesting projections.}
 \label{fig:notation-target-gen}
 \end{figure}
+
+<!-- Figure 6: "A comparison of guided....." and Figure 7:"Still views of a tour showing the space...." maybe change the color (brown) because are difficult to distinguish. Similar problem in Figure 12: Three  projections  from  a  manual  tour  where  variable  "bl" .... "  Not sure if you have selected a colorblind friendly palette but I check these Figures with a colorblind person (small sample but...) and was very  difficult  for him to distinguish the mixed colors.  -->
 
 ## Geodesic interpolation
 
