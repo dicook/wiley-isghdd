@@ -102,7 +102,6 @@ By combining views with interactive elements like tool tips or highlighting the 
 
 Nonlinear dimension reduction techniques such as t-SNE and Uniform Manifold Alignment and Projection (UMAP) have become very popular in recent years, primarily for the ability to capture cluster structure in a succinct visual summary [@Van_der_Maaten2008-qa;@mcinnes2020umap]. However, it is only a summary, and it likely involves substantial warping of the original data space. Using the tour along with these techniques can illuminate the nature of the warped space, and reveal other structure lost in the dimension reduction.  Figure \ref{fig:tsne-tour} illustrates the difference in what can be learned from a tour in comparison with nonlinear dimension reduction using t-SNE. The 10-dimensional data comes from @Rauber2009-kk. The t-SNE view (plot A) shows six clearly separated clusters, all spherical with different sizes. The tour shows that the clusters do not look like this in the full data space. The clusters are at various distances apart and very different sizes, as can be seen from the four projections from a tour. The two green clusters are large and almost spherical, and far from the orange clusters. The orange clusters have one larger one, and three smaller, very close to each other. All of these are elliptical, which means that they have very little variability, actually no variability if you watch the full tour, in some of the 10 dimensions. This gives some deeper perspective to what is learned from t-SNE, and illustrates what the t-SNE dimension reduction has done: it has found small gaps between points and expanded these gaps to yield the representation. It should be noted, though, that the methods (t-SNE and tour) complement each other. The t-SNE view gives a clear indication of six clusters, which may have been overlooked on initial viewing with a tour. With this information is the invitation to look closer at the data in the tour, to see, that yes, indeed, there are three, tiny, tiny clusters very close to each other.
 
-<!-- Reading the introduction I noticed maybe can be included UMAP, I'm not an expert (Uniform Manifold approximation and projection for dimension reduction ) I saw this before but maybe some of you know about it to evaluated if worth it to be include it here. I have an arXiv paper https://arxiv.org/abs/1802.03426 maybe some of you can identify if it is relevant or not or at least you know about the authors ....just a comment (Di, or ALL )-->
 
 \begin{figure*}[!t]
          \includegraphics[width=0.371\textwidth]{figures/cluster_example.pdf}
@@ -118,15 +117,13 @@ Nonlinear dimension reduction techniques such as t-SNE and Uniform Manifold Alig
 \label{fig:tsne-tour}
 \end{figure*}
 
-
-
 The rest of the review is structured as follows: Section \@ref(notation) defines the notation and components of a tour displays. By its nature a tour is most effective to analyst when combined with interactivity; Section \@ref(interaction) reviews the components of user interfaces for manipulating tour views, including manual tours (Section \@ref(tours)) which are useful to test structure of selected features. The implementation of tour paths in statistical software is reviewed in Section \@ref(software). Section \@ref(applications) shows the diverse applications of the tour in the natural sciences, machine learning and applied statistics. Finally, Section \@ref(discussion) discusses future research directions for tours. 
 
 # Tours for high dimensional visualization {#notation}
 
 ## Notation 
 
-When using a tour, a sequence of $d$-dimensional linear projections are obtained from a $p$-dimensional space, where $d \ll p$. Let $X_{n \times p}$ be the data matrix, consisting of $n$ observations and $p$ variables, whose projections are of interest. A projection basis, $A_{p \times d}$, is matrix that characterizes the direction from which the data are projected and needs to satisfy an orthonormality condition, which requires that each column in $A$ has unit length and are perpendicular. <!-- This condition gives the $p$-dimensional basis space a geometrical structure of a Stiefel manifold. (Not sure this adds anything) --> With a data matrix and a projection basis, a projection of the data can be defined as $Y = X \cdot A$. Figure \ref{fig:notation-huber} shows an example of lower dimensional projections of the palmer penguins data in a Huber plot and a histogram [@huber1990;@penguins]. 
+When using a tour, a sequence of $d$-dimensional linear projections are obtained from a $p$-dimensional space, where $d \ll p$. Let $X_{n \times p}$ be the data matrix, consisting of $n$ observations and $p$ variables, whose projections are of interest. A projection basis, $A_{p \times d}$, is matrix that characterizes the direction from which the data are projected and needs to satisfy an orthonormality condition, which requires that each column in $A$ has unit length and are perpendicular. With a data matrix and a projection basis, a projection of the data can be defined as $Y = X \cdot A$. Figure \ref{fig:notation-huber} shows an example of lower dimensional projections of the palmer penguins data in a Huber plot and a histogram [@huber1990;@penguins]. 
 
 <!-- SL: I think there needs to be more detail here to link to the next paragraph and more explanation about what the huber plot is showing -->
 
@@ -164,7 +161,6 @@ There are other tour types which don't fit this style of tour. The manual tour [
 \label{fig:notation-target-gen}
 \end{figure}
 
-<!-- Figure 6: "A comparison of guided....." and Figure 7:"Still views of a tour showing the space...." maybe change the color (brown) because are difficult to distinguish. Similar problem in Figure 12: Three  projections  from  a  manual  tour  where  variable  "bl" .... "  Not sure if you have selected a colorblind friendly palette but I check these Figures with a colorblind person (small sample but...) and was very  difficult  for him to distinguish the mixed colors.  -->
 
 ## Geodesic interpolation
 
@@ -189,7 +185,6 @@ Figure \ref{fig:interpolation-2d} shows tour paths of 2D projections of 6D data.
 
 ## Display
 
-<!-- SL: I think this paragraph could moved down to the bottom of this section -->
 Various displays are available to show projections in 1D, 2D and higher dimensions. A 1D projection displays the data in a histogram analogous to a shadow puppet being projected onto a wall, while 2D projections are displayed as scatterplots. Higher dimensional projections can be shown with multivariate displays like SPLOMs or parallel coordinates. Figure \ref{fig:display} shows a variety of displays for projections and these displays are useful to show the non-normal distributions in the projected data, clustering structure, and multivariate relationship between variables.
 
 <!-- Figure 5: "Various displays of the projections..." Maybe increasing the axis text size will be good to see the axis labels -->
@@ -296,7 +291,7 @@ The R package spinifex [@spyrison_spinifex_2020] has 3 primary features: it prod
 
 The liminal R package uses the tour to explore the quality of non-linear dimensionality reduction algorithms [@Lee2020-kg]. The interface consists of two side by side views consisting of a scatter plot displaying a reduced form of the data, and an interactive tour. Controls such as play/stop/restart are implemented allowing a user to pause on interesting projections and return them to their R session for further analysis. Linked brushing is implemented on both views - if a users brush on the scatter plot view they can see if and how an algorithm like t-SNE has distorted distances in higher dimensional space, while if they brush on the tour view, the tour is paused and structure like cluster separation can be ascertained.      
 
-A python implementation of the tour written by @Nguyen2020 is also available, and would benefit from extension by other developers.
+A Python implementation of the tour written by @Nguyen2020 is also available, and would benefit from extension by other developers.
 
 
 # Applications {#applications}
@@ -377,10 +372,6 @@ This review highlights the history of tour methods, and modern extensions for th
 
 There are many possible future directions for tour research.  One big challenge for software engineering is to seamlessly embed the tour with interactivity. Currently, there is no implementation that analysts can use to perform tasks that were easy in software available in the 80s and 90s. More contributions in sectioning as an alternative to projection, could be broadly useful. An example is conditional model visualization, as implemented in the condviz package [@JSSv081i05], which assists with visual exploration of multivariate fitted models. It could be interesting to define tour paths for different types of nonlinear subspaces, or non-Euclidean space.
 
-<!--
-* highlighting the recent developments, spinifex, liminal, sage, slicing and sectioning, ferrn etc. 
-* what's next - conditional model visualisation (Catherine Hurley's work), a interactive graphics system that easily integrates tours that provides the direct manipulations we want, pre-processing / transformations for high dimensional data, penalised projection pursuit, different kinds of data and spaces
--->
 
 # Acknowledgements {-}
 
