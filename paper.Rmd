@@ -47,8 +47,7 @@ output:
     template: template/wires_template_rmd.tex
     keep_tex: true
     toc: false
-bibliography: references.bib
-biblio-style: apalike
+bibliography: "references.bib"
 ---
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
