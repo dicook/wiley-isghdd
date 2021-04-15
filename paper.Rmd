@@ -378,6 +378,6 @@ There are many possible future directions for tour research.  One big challenge 
 
 # Acknowledgements {-}
 
-The authors gratefully acknowledge the support of the Australian Research Council. The paper was written in `rmarkdown` [@Xie2018-bg] using `knitr` [@Xie2017-uh].
+The authors gratefully acknowledge the support of the Australian Research Council. The paper was written in `rmarkdown` [@Xie2018-bg] using `knitr` [@Xie2017-uh]. The source material for this paper is available at \url{https://github.com/dicook/wiley-isghdd}.
 
 # References {-}
