@@ -4,11 +4,6 @@ library(palmerpenguins)
 library(dplyr)
 library(PPtreeViz)
 penguins_small <- penguins %>% filter(!is.na(bill_length_mm))
-p <- PPtreeViz::Huberplot(penguins_small[,3:4],penguins_small$species,PPmethod="LDA") 
-
-ggsave(p, filename = "notation-huber.pdf", 
-       path = here::here("figures"),
-       width = 12, height = 5, units = "in")
 
 # figure 3 diagram illustrating different displays for different d
 library(tourr)
@@ -83,8 +78,9 @@ ggsave(p, filename = "notation-target-gen.pdf",
        width = 10, height = 5, units = "in")
 
 # This is a hack to get minimum index value in the Huber plot, too
-Huberplot_min <- function (origdata2D, origclass, PPmethod = "LDA", weight = TRUE, 
+Huberplot2 <- function (origdata2D, origclass, PPmethod = "LDA", weight = TRUE, 
           r = 1, lambda = 0.5, opt.proj = TRUE, UserDefFtn = NULL, 
+          min = FALSE, scale_data = 1,
           ...) 
 {
   index <- NULL
@@ -120,8 +116,12 @@ Huberplot_min <- function (origdata2D, origclass, PPmethod = "LDA", weight = TRU
     }
     index <- c(index, newindex)
   }
-  sel.index <- which(index[1:360] < signif(min(index), 6) - 
+  if (!min) {
+    sel.index <- which(index[1:360] > signif(max(index), 6) - 
                        1e-06)
+  } else
+    sel.index <- which(index[1:360] < signif(min(index), 6) + 
+                         1e-06)
   theta.best.all <- pi/180 * (sel.index - 1)
   theta.best <- theta.best.all[1]
   proj.data.best <- matrix(cos(theta.best) * origdata2D[, 1] + 
@@ -160,8 +160,8 @@ Huberplot_min <- function (origdata2D, origclass, PPmethod = "LDA", weight = TRU
   max.X <- max(unlist(plot.data))
   P1 <- ggplot(data = plot.data, aes(x = data.X, y = data.Y)) + 
     geom_path() + geom_path(aes(x = data.cX, y = data.cY), 
-                            linetype = "dashed") + geom_point(data = point.data, 
-                                                              aes(x = x, y = y, color = group, shape = group)) + scale_x_continuous(breaks = NULL) + 
+                            linetype = "dashed") + 
+    geom_point(data = point.data, aes(x = x*scale_data, y = y*scale_data, color = group, shape = group)) + scale_x_continuous(breaks = NULL) + 
     scale_y_continuous(breaks = NULL) + xlab("") + ylab("") + 
     coord_fixed() + theme_bw() + theme(panel.border = element_blank())
   if (opt.proj) {
@@ -179,9 +179,19 @@ Huberplot_min <- function (origdata2D, origclass, PPmethod = "LDA", weight = TRU
   gridExtra::grid.arrange(P1, P2, nrow = 1)
 }
 
-p <- Huberplot_min(penguins_small[,3:4],penguins_small$species,PPmethod="LDA") 
+p <- Huberplot2(penguins_small[,3:4],
+                           penguins_small$species,
+                           PPmethod="LDA", scale=1.8) 
 
-ggsave(p, filename = "notation-huber.pdf", 
+ggsave(p, filename = "notation-huber1.pdf", 
+       path = here::here("figures"),
+       width = 12, height = 5, units = "in")
+
+p <- Huberplot2(penguins_small[,3:4],
+                penguins_small$species,
+                PPmethod="LDA", min=TRUE, scale=1.8) 
+
+ggsave(p, filename = "notation-huber2.pdf", 
        path = here::here("figures"),
        width = 12, height = 5, units = "in")
 

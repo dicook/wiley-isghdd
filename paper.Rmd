@@ -132,8 +132,9 @@ When using a tour, a sequence of $d$-dimensional linear projections are obtained
 
 \begin{figure*}
    \centering
-         \includegraphics[width=\textwidth]{figures/notation-huber.pdf}
-\caption{Huber's plot (left) of the penguins data (bill length and depth only). The solid ellipse represents how well the projection, onto different directions, separates the three species and the dashed circle is a reference guide. The histogram (right) is the 1D projection of the data onto the direction outlined as the solid line in the huber's plot. (Adapted from Lee et al. 2005, Figure 1.) }
+         \includegraphics[width=\textwidth]{figures/notation-huber1.pdf}
+         \includegraphics[width=\textwidth]{figures/notation-huber2.pdf}
+\caption{Huber's plot (left plots) of the penguins data (bill length and depth only). The solid ellipse represents how well the projection, onto different directions, separates the three species and the dashed circle is a reference guide. The histogram (right) is the 1D projection of the data onto the direction outlined as the solid line in the Huber's plot. (Adapted from Lee et al. 2005, Figure 1.) }
 \label{fig:notation-huber}
 \end{figure*}
 
