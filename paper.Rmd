@@ -132,8 +132,9 @@ When using a tour, a sequence of $d$-dimensional linear projections are obtained
 
 \begin{figure*}
    \centering
-         \includegraphics[width=\textwidth]{figures/notation-huber.pdf}
-\caption{Huber's plot (left) of the penguins data (bill length and depth only). The solid ellipse represents how well the projection, onto different directions, separates the three species and the dashed circle is a reference guide. The histogram (right) is the 1D projection of the data onto the direction outlined as the solid line in the huber's plot. (Adapted from Lee et al. 2005, Figure 1.) }
+         \includegraphics[width=\textwidth]{figures/notation-huber1.pdf}
+         \includegraphics[width=\textwidth]{figures/notation-huber2.pdf}
+\caption{Huber's plot (left plots) of the penguins data (bill length and depth only). The solid ellipse represents how well the projection, onto different directions, separates the three species and the dashed circle is a reference guide. The histogram (right) is the 1D projection of the data onto the direction outlined as the solid line in the Huber's plot. (Adapted from Lee et al. 2005, Figure 1.) }
 \label{fig:notation-huber}
 \end{figure*}
 
@@ -168,17 +169,13 @@ The smooth progression in the tour path is due to geodesic interpolation between
 Figure \ref{fig:interpolation-2d} shows tour paths of 2D projections of 6D data. The space of all tour paths is a high-dimensional torus, as represented by the gray points. The tour paths are shown in green and orange, and each dot indicates a projection in the sequence.  The plots in this figure could be considered to be a tour looking at itself, because each plot is a selected view from a tour of the torus with the paths overlaid. 
 
 \begin{figure*}[ht]
-\centerline{\includegraphics[width=0.2\textwidth]{figures/notation-torus-frames/torus001.png}
-\hspace{5mm}
-\includegraphics[width=0.2\textwidth]{figures/notation-torus-frames/torus017.png}
-\hspace{5mm}
-\includegraphics[width=0.2\textwidth]{figures/notation-torus-frames/torus064.png}}
+\centerline{\includegraphics[width=0.3\textwidth]{figures/notation-torus-frames/torus001.png}
+\includegraphics[width=0.3\textwidth]{figures/notation-torus-frames/torus017.png}
+\includegraphics[width=0.3\textwidth]{figures/notation-torus-frames/torus064.png}}
 \centerline{
-\includegraphics[width=0.2\textwidth]{figures/notation-torus-frames/torus068.png}
-\hspace{5mm}
-\includegraphics[width=0.2\textwidth]{figures/notation-torus-frames/torus075.png}
-\hspace{5mm}
-\includegraphics[width=0.2\textwidth]{figures/notation-torus-frames/torus100.png}
+\includegraphics[width=0.3\textwidth]{figures/notation-torus-frames/torus068.png}
+\includegraphics[width=0.3\textwidth]{figures/notation-torus-frames/torus075.png}
+\includegraphics[width=0.3\textwidth]{figures/notation-torus-frames/torus100.png}
 }
 \caption{Still views of a tour showing the space of possible two-dimensional projections as a torus shape in grey, and the trace of two short paths obtained via geodesic interpolation traced in color.}
 \label{fig:interpolation-2d}
@@ -196,7 +193,7 @@ Various displays are available to show projections in 1D, 2D and higher dimensio
 \includegraphics[width=0.3\textwidth]{figures/notation-display-1d.pdf}
 \includegraphics[width=0.3\textwidth]{figures/notation-display-2d.pdf}
 \includegraphics[width=0.3\textwidth]{figures/notation-display-5d.pdf}
-\caption{Various displays of the projections: 1D display in histogram (left), 2D display in scatterplot (middle), and 5d display in parallel coordinate plot (right).}
+\caption{Various displays of the projections: 1D display in histogram (left), 2D display in scatterplot (middle), and 5D display in parallel coordinate plot (right).}
 \label{fig:display}
 \end{figure}
 
@@ -209,17 +206,13 @@ Sectioning a high-dimensional space in systematic manner (without interactive se
 The slice tour can reveal concave or non-linear structures obscured in projections, as well as small structures hidden near the center of a distribution. Figure \ref{fig:tour-slice} shows snapshots of the slice tour of points distributed on the surface of geometric shapes. Along with projections, an index function can be used to select target planes to show interesting slices of the data, defined as a section pursuit guided tour [@Laa2020-ni].
 
 \begin{figure*}[ht]
-\centerline{\includegraphics[width=0.2\textwidth]{figures/roman-surface-centered-010.png}
-\hspace{5mm}
-\includegraphics[width=0.2\textwidth]{figures/torus-4-centered-015.png}
-\hspace{5mm}
-\includegraphics[width=0.2\textwidth]{figures/cube-6-centered-001.png}}
+\centerline{\includegraphics[width=0.3\textwidth]{figures/roman-surface-centered-010.png}
+\includegraphics[width=0.3\textwidth]{figures/torus-4-centered-015.png}
+\includegraphics[width=0.3\textwidth]{figures/cube-6-centered-001.png}}
 \centerline{
-\includegraphics[width=0.2\textwidth]{figures/roman-surface-centered-032.png}
-\hspace{5mm}
-\includegraphics[width=0.2\textwidth]{figures/torus-4-centered-033.png}
-\hspace{5mm}
-\includegraphics[width=0.2\textwidth]{figures/cube-6-centered-063.png}
+\includegraphics[width=0.3\textwidth]{figures/roman-surface-centered-032.png}
+\includegraphics[width=0.3\textwidth]{figures/torus-4-centered-033.png}
+\includegraphics[width=0.3\textwidth]{figures/cube-6-centered-063.png}
 }
 \caption{Still views of the slice tour display showing geometric shapes: Roman surface (left), 4D torus (middle) and a 6d cube (right). (Adapted from Laa, Cook and Valencia, 2020, Figure 4.)}
 \label{fig:tour-slice}
@@ -244,7 +237,7 @@ Transformations of data are often useful prior to touring such as scaling, spher
 
 ## Basic Interactions
 
-Due to the dynamic nature of the tour, user interfaces can enhance the interpretability of the resulting visualization. Often one will want to pause on a particularly interesting projection and return it for use in a downstream analysis or static plot.  Basic controls can be implemented so a tour display can be paused, refreshed and replayed over and over, as shown in figure \ref{fig:tour-controls}.
+Due to the dynamic nature of the tour, user interfaces can enhance the interpretability of the resulting visualization. Often one will want to pause on a particularly interesting projection and return it for use in a downstream analysis or static plot.  Basic controls can be implemented so a tour display can be paused, refreshed and replayed over and over, as shown in Figure \ref{fig:tour-controls}.
 
 \begin{figure*}
    \centering
@@ -386,6 +379,6 @@ There are many possible future directions for tour research.  One big challenge 
 
 # Acknowledgements {-}
 
-The authors gratefully acknowledge the support of the Australian Research Council. The paper was written in `rmarkdown` [@Xie2018-bg] using `knitr` [@Xie2017-uh].
+The authors gratefully acknowledge the support of the Australian Research Council. The paper was written in `rmarkdown` [@Xie2018-bg] using `knitr` [@Xie2017-uh]. The source material for this paper is available at \url{https://github.com/dicook/wiley-isghdd}.
 
 # References {-}
