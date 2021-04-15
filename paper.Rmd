@@ -48,6 +48,7 @@ output:
     keep_tex: true
     toc: false
 bibliography: "references.bib"
+csl: apa.csl
 ---
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
