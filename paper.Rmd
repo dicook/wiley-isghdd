@@ -244,7 +244,7 @@ Transformations of data are often useful prior to touring such as scaling, spher
 
 ## Basic Interactions
 
-Due to the dynamic nature of the tour, user interfaces can enhance the interpretability of the resulting visualization. Often one will want to pause on a particularly interesting projection and return it for use in a downstream analysis or static plot.  Basic controls can be implemented so a tour display can be paused, refreshed and replayed over and over, as shown in figure \ref{fig:tour-controls}.
+Due to the dynamic nature of the tour, user interfaces can enhance the interpretability of the resulting visualization. Often one will want to pause on a particularly interesting projection and return it for use in a downstream analysis or static plot.  Basic controls can be implemented so a tour display can be paused, refreshed and replayed over and over, as shown in Figure \ref{fig:tour-controls}.
 
 \begin{figure*}
    \centering
@@ -255,7 +255,7 @@ Due to the dynamic nature of the tour, user interfaces can enhance the interpret
 
 ## Manual Tours {#tours}
 
-Manual tours [@cook_manual_1997; @spyrison_spinifex_2020] offer a means to interactively control the contribution of a single variable on the projection plane. This is particularly useful for exploring a projection once a feature of interest has been identified. Manual tours can then be employed to test the structure of the feature, with respect to a selected variable. For instance, figure \ref{fig:manual-tour}, starts from the orthonormal linear discriminant and explores the sensitivity of class separation as the contribution of a single variable is altered.
+Manual tours [@cook_manual_1997; @spyrison_spinifex_2020] offer a means to interactively control the contribution of a single variable on the projection plane. This is particularly useful for exploring a projection once a feature of interest has been identified. Manual tours can then be employed to test the structure of the feature, with respect to a selected variable. For instance, Figure \ref{fig:manual-tour}, starts from the orthonormal linear discriminant and explores the sensitivity of class separation as the contribution of a single variable is altered.
 
 \begin{figure*}[!ht]
    \centering
