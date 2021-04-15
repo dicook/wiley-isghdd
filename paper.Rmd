@@ -192,6 +192,7 @@ Figure \ref{fig:interpolation-2d} shows tour paths of 2D projections of 6D data.
 <!-- SL: I think this paragraph could moved down to the bottom of this section -->
 Various displays are available to show projections in 1D, 2D and higher dimensions. A 1D projection displays the data in a histogram analogous to a shadow puppet being projected onto a wall, while 2D projections are displayed as scatterplots. Higher dimensional projections can be shown with multivariate displays like SPLOMs or parallel coordinates. Figure \ref{fig:display} shows a variety of displays for projections and these displays are useful to show the non-normal distributions in the projected data, clustering structure, and multivariate relationship between variables.
 
+<!-- Figure 5: "Various displays of the projections..." Maybe increasing the axis text size will be good to see the axis labels -->
 \begin{figure}
 \centering
 \includegraphics[width=0.3\textwidth]{figures/notation-display-1d.pdf}
