@@ -255,7 +255,7 @@ Due to the dynamic nature of the tour, user interfaces can enhance the interpret
 
 ## Manual Tours {#tours}
 
-Manual tours [@cook_manual_1997; @spyrison_spinifex_2020] offer a means to interactively control the contribution of a single variable on the projection plane. This is particularly useful for exploring a projection once a feature of interest has been identified. Manual tours can then be employed to test the structure of the feature, with respect to a selected variable. For instance, figure \ref{fig:manual-tour}, starts from the orthonormal linear discriminant and explores the sensitivity of class separation as the contribution of a single variable is altered.
+Manual tours [@cook_manual_1997; @spyrison_spinifex_2020] offer a means to interactively control the contribution of a single variable on the projection plane. This is particularly useful for exploring a projection once a feature of interest has been identified. Manual tours can then be employed to test the structure of the feature, with respect to a selected variable. For instance, Figure \ref{fig:manual-tour}, starts from the orthonormal linear discriminant and explores the sensitivity of class separation as the contribution of a single variable is altered.
 
 \begin{figure*}[!ht]
    \centering
