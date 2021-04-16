@@ -123,7 +123,7 @@ The rest of the review is structured as follows: Section \@ref(notation) defines
 
 ## Notation 
 
-When using a tour, a sequence of $d$-dimensional linear projections are obtained from a $p$-dimensional space, where $d \ll p$. Let $X_{n \times p}$ be the data matrix, consisting of $n$ observations and $p$ variables, whose projections are of interest. A projection basis, $A_{p \times d}$, is matrix that characterizes the direction from which the data are projected and needs to satisfy an orthonormality condition, which requires that each column in $A$ has unit length and are perpendicular. With a data matrix and a projection basis, a projection of the data can be defined as $Y = X \cdot A$. Figure \ref{fig:notation-huber} shows an example of lower dimensional projections of the palmer penguins data in a Huber plot and a histogram [@huber1990;@penguins]. 
+When using a tour, a sequence of $d$-dimensional linear projections are obtained from a $p$-dimensional space, where $d \ll p$. Let $X_{n \times p}$ be the data matrix, consisting of $n$ observations and $p$ variables, whose projections are of interest. A projection basis, $A_{p \times d}$, is matrix that characterizes the direction from which the data are projected and needs to satisfy an orthonormality condition, which requires that each column in $A$ has unit length and are perpendicular. With a data matrix and a projection basis, a projection of the data can be defined as $Y = X \cdot A$. Figure \ref{fig:notation-huber} shows two examples of low-dimensional projections of the palmer penguins data [@penguins] in a Huber plot [@huber1990] and a histogram. 
 
 <!-- SL: I think there needs to be more detail here to link to the next paragraph and more explanation about what the huber plot is showing -->
 
@@ -131,7 +131,7 @@ When using a tour, a sequence of $d$-dimensional linear projections are obtained
    \centering
          \includegraphics[width=\textwidth]{figures/notation-huber1.pdf}
          \includegraphics[width=\textwidth]{figures/notation-huber2.pdf}
-\caption{Huber's plot (left plots) of the penguins data (bill length and depth only). The solid ellipse represents how well the projection, onto different directions, separates the three species and the dashed circle is a reference guide. The histogram (right) is the 1D projection of the data onto the direction outlined as the solid line in the Huber's plot. (Adapted from Lee et al. 2005, Figure 1.) }
+\caption{Huber's plot (left plots) of the penguins data (bill length and depth only). The solid line represents how well the projection onto different directions, separates the three species, and the dashed circle is a reference guide. The histogram (right plots) is the 1D projection of the data onto the direction outlined as the solid line in the Huber's plot. (Adapted from Lee et al. 2005, Figure 1.) }
 \label{fig:notation-huber}
 \end{figure*}
 
