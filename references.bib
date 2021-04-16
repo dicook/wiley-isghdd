@@ -875,7 +875,7 @@
 @BOOK{Cook2007-be,
   title     = "Interactive and Dynamic Graphics for Data Analysis: With {R} and
                {GGobi}",
-  author    = "Cook, Dianne and Swayne, Deborah F. and Buja, A",
+  author    = "Cook, Dianne and Swayne, Deborah F. and Buja, Andreas",
   abstract  = "This book is about using interactive and dynamic plots on a
                computer screen as part of data exploration and modeling, both
                alone and as a partner with static graphics and non-graphical
@@ -1228,28 +1228,13 @@
   keywords = "wiley-review-paper;paper-tsne-liminal;interactive-graphics"
 }
 
-@UNPUBLISHED{Laa2020-uv,
-  title    = "Burning sage: Reversing the curse of dimensionality in the
-              visualization of high-dimensional data",
-  author   = "Laa, Ursula and Cook, Dianne and Lee, Stuart",
-  abstract = "In high-dimensional data analysis the curse of dimensionality
-              reasons that points tend to be far away from the center of the
-              distribution and on the edge of high-dimensional space. Contrary
-              to this, is that projected data tends to clump at the center.
-              This gives a sense that any structure near the center of the
-              projection is obscured, whether this is true or not. A
-              transformation to reverse the curse, is defined in this paper,
-              which uses radial transformations on the projected data. It is
-              integrated seamlessly into the grand tour algorithm, and we have
-              called it a burning sage tour, to indicate that it reverses the
-              curse. The work is implemented into the tourr package in R.
-              Several case studies are included that show how the sage
-              visualizations enhance exploratory clustering and classification
-              problems.",
-  month    =  sep,
-  year     =  2020,
-  url      = "http://arxiv.org/abs/2009.10979",
-  keywords = "wiley-review-paper;by-me"
+@online{Laa2020-uv,
+      title={Burning sage: Reversing the curse of dimensionality in the visualization of high-dimensional data}, 
+      author={Ursula Laa and Dianne Cook and Stuart Lee},
+      year={2020},
+      eprint={2009.10979},
+      archivePrefix={arXiv},
+      primaryClass={stat.CO}
 }
 
 @ARTICLE{Hotelling1933-of,
@@ -1376,37 +1361,15 @@
   chapter = 14
 }
 
-@UNPUBLISHED{Laa2020-ni,
-  title    = "{Hole or grain? A Section Pursuit Index for Finding Hidden
-              Structure in Multiple Dimensions}",
-  author   = "Laa, Ursula and Cook, Dianne and Buja, Andreas and Valencia,
-              German",
-  abstract = "Multivariate data is often visualized using linear projections,
-              produced by techniques such as principal component analysis,
-              linear discriminant analysis, and projection pursuit. A problem
-              with projections is that they obscure low and high density
-              regions near the center of the distribution. Sections, or slices,
-              can help to reveal them. This paper develops a section pursuit
-              method, building on the extensive work in projection pursuit, to
-              search for interesting slices of the data. Linear projections are
-              used to define sections of the parameter space, and to calculate
-              interestingness by comparing the distribution of observations,
-              inside and outside a section. By optimizing this index, it is
-              possible to reveal features such as holes (low density) or grains
-              (high density). The optimization is incorporated into a guided
-              tour so that the search for structure can be dynamic. The
-              approach can be useful for problems when data distributions
-              depart from uniform or normal, as in visually exploring nonlinear
-              manifolds, and functions in multivariate space. Two applications
-              of section pursuit are shown: exploring decision boundaries from
-              classification models, and exploring subspaces induced by complex
-              inequality conditions from multiple parameter model. The new
-              methods are available in R, in the tourr package.",
-  month    =  apr,
-  year     =  2020,
-  url      = "http://arxiv.org/abs/2004.13327",
-  keywords = "wiley-review-paper;high-dimensions"
+@online{Laa2020-ni,
+      title={Hole or grain? A Section Pursuit Index for Finding Hidden Structure in Multiple Dimensions}, 
+      author={Ursula Laa and Dianne Cook and Andreas Buja and German Valencia},
+      year={2020},
+      eprint={2004.13327},
+      archivePrefix={arXiv},
+      primaryClass={stat.CO}
 }
+
 
 @ARTICLE{Wickham2011-uz,
   title    = "{tourr}: An {R} Package for Exploring Multivariate Data with
@@ -1862,7 +1825,7 @@ doi="10.1080/01621459.1990.10474926"
 }
 
 
-@misc{you_rdimtools_2020,
+@online{you_rdimtools_2020,
       title={Rdimtools: An R package for Dimension Reduction and Intrinsic Dimension Estimation}, 
       author={Kisung You},
       year={2020},
@@ -1953,13 +1916,12 @@ doi="10.1080/01621459.1990.10474926"
 }
 
 
-@ARTICLE{Lee2020-kg,
+@online{Lee2020-kg,
   title         = "Casting Multiple Shadows: {High-Dimensional} Interactive
                    Data Visualisation with Tours and Embeddings",
   author        = "Lee, Stuart and Laa, Ursula and Cook, Dianne",
   month         =  dec,
   year          =  2020,
-  url           = "http://arxiv.org/abs/2012.06077",
   archivePrefix = "arXiv",
   eprint        = "2012.06077",
   primaryClass  = "stat.OT",
@@ -1970,7 +1932,8 @@ doi="10.1080/01621459.1990.10474926"
   author = {{ASA Statistical Graphics Section}},
   title = {{Video Library}},
   year = 2021,
-  howpublished = {\url{https://community.amstat.org/jointscsg-section/media/videos}}}
+  url = https://community.amstat.org/jointscsg-section/media/videos
+}
 
 @InProceedings{Wegman92,
 author="Wegman, Edward J.",
@@ -2034,7 +1997,6 @@ year = {2009}
 	Author = {Swayne, D.~F. and {Temple Lang}, D. and Buja, A. and Cook, D.},
 	Issue = {4},
 	Journal = {Journal of Computational Statistics and Data Analysis},
-	Note = {http://authors.elsevier.com/sd/article/S0167947302002864},
 	Pages = {423--444},
 	Title = {GGobi: Evolving from XGobi into an Extensible Framework for Interactive Data Visualization},
 	Volume = {43},
@@ -2111,7 +2073,7 @@ URL = {https://doi.org/10.1214/14-STS477}
   note         = "Accessed: 2021-4-14"
 }
 
-@misc{mcinnes2020umap,
+@online{mcinnes2020umap,
       title={UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction}, 
       author={Leland McInnes and John Healy and James Melville},
       year={2020},
@@ -2120,7 +2082,7 @@ URL = {https://doi.org/10.1214/14-STS477}
       primaryClass={stat.ML}
 }
 
-@misc{zhang2021visual,
+@online{zhang2021visual,
       title={Visual Diagnostics for Constrained Optimisation with Application to Guided Tours}, 
       author={H. Sherry Zhang and Dianne Cook and Ursula Laa and Nicolas Langrené and Patricia Menéndez},
       year={2021},

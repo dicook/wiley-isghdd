@@ -46,9 +46,9 @@
 \usepackage{tabulary}
 \usepackage{booktabs,array,multirow}
 \usepackage{amsfonts,amsmath,amssymb}
-\providecommand\citet{\cite}
-\providecommand\citep{\cite}
-\providecommand\citealt{\cite}
+%\providecommand\citet{\cite}
+%\providecommand\citep{\cite}
+%\providecommand\citealt{\cite}
 % You can conditionalize code for latexml or normal latex using this.
 \newif\iflatexml\latexmlfalse
 \providecommand{\tightlist}{\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}%
@@ -59,7 +59,9 @@
 \usepackage[english]{babel}
 \usepackage{float}
 \usepackage[margin=1.5in]{geometry}
-
+\usepackage{csquotes}
+\usepackage[style=apa,backend=biber, eprint=true]{biblatex} 
+\addbibresource{$bibliography$}
 %\usepackage{caption}
 %\usepackage{subcaption}
 \usepackage{subfig}

@@ -47,8 +47,8 @@ output:
     template: template/wires_template_rmd.tex
     keep_tex: true
     toc: false
+    citation_package: biblatex
 bibliography: "references.bib"
-csl: apa.csl
 ---
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(
@@ -95,7 +95,7 @@ By combining views with interactive elements like tool tips or highlighting the 
    \centering
          \includegraphics[width=0.45\textwidth]{figures/ggobi_book/brush-query.pdf}
          \includegraphics[width=0.45\textwidth]{figures/ggobi_book/brush-response.pdf}
-\caption{When a user brushes data on the left panel, points that fall inside the region are highlighted in orange. The view on the right responds by highlighting the corresponding points. (Adapted from Cook and Swayne, 2007 Figure 2.12)}
+\caption{When a user brushes data on the left panel, points that fall inside the region are highlighted in orange. The view on the right responds by highlighting the corresponding points. Adapted from \cite{Cook2007-be} Figure 2.12.}
 \label{fig:brushing}
 \end{figure*}
 
@@ -131,7 +131,7 @@ When using a tour, a sequence of $d$-dimensional linear projections are obtained
    \centering
          \includegraphics[width=\textwidth]{figures/notation-huber1.pdf}
          \includegraphics[width=\textwidth]{figures/notation-huber2.pdf}
-\caption{Huber's plot (left plots) of the penguins data (bill length and depth only). The solid line represents how well the projection onto different directions, separates the three species, and the dashed circle is a reference guide. The histogram (right plots) is the 1D projection of the data onto the direction outlined as the solid line in the Huber's plot. (Adapted from Lee et al. 2005, Figure 1.) }
+\caption{Huber's plot (left plots) of the penguins data (bill length and depth only). The solid line represents how well the projection onto different directions, separates the three species, and the dashed circle is a reference guide. The histogram (right plots) is the 1D projection of the data onto the direction outlined as the solid line in the Huber's plot. Adapted from \cite{Lee2005-gl}, Figure 1.}
 \label{fig:notation-huber}
 \end{figure*}
 
@@ -140,7 +140,7 @@ When using a tour, a sequence of $d$-dimensional linear projections are obtained
 \begin{figure*}
    \centering
          \includegraphics[width=\textwidth]{figures/tour_path.png}
-\caption{Illustration of a tour path, indicating target planes, and interpolation planes. (Adapted from Buja et al. 2005, Figure 1.) }
+\caption{Illustration of a tour path, indicating target planes, and interpolation planes. Adapted from \cite{Buja2005-cx}, Figure 1.}
 \label{fig:tour-path}
 \end{figure*}
 
@@ -214,7 +214,7 @@ The slice tour can reveal concave or non-linear structures obscured in projectio
 \includegraphics[width=0.3\textwidth]{figures/torus-4-centered-033.png}
 \includegraphics[width=0.3\textwidth]{figures/cube-6-centered-063.png}
 }
-\caption{Still views of the slice tour display showing geometric shapes: Roman surface (left), 4D torus (middle) and a 6d cube (right). (Adapted from Laa, Cook and Valencia, 2020, Figure 4.)}
+\caption{Still views of the slice tour display showing geometric shapes: Roman surface (left), 4D torus (middle) and a 6d cube (right). Adapted from \cite{Laa2020-ni}, Figure 4.}
 \label{fig:tour-slice}
 \end{figure*}
 
@@ -228,7 +228,7 @@ Transformations of data are often useful prior to touring such as scaling, spher
 \includegraphics[width=0.3\textwidth]{figures/pollen_sage-088.png}
 \includegraphics[width=0.3\textwidth]{figures/pollen_sage_R1-088.png}
 \includegraphics[width=0.3\textwidth]{figures/pollen_sage_gam20-088.png}
-\caption{Snapshots of the same projection from the sage tour on the pollen data, illustrating the different tuning options. Left: using the default settings for the transformation results in a similar view as found in projections without the sage transformation. Middle: using the tuning parameter $R$ for better resolution near the center reveals the word "EUREKA". Right: using the $\gamma$ tuning parameter can also reveal the structure. (Adapted from Laa, Cook and Lee, 2020, Figure 9.)}
+\caption{Snapshots of the same projection from the sage tour on the pollen data, illustrating the different tuning options. Left: using the default settings for the transformation results in a similar view as found in projections without the sage transformation. Middle: using the tuning parameter $R$ for better resolution near the center reveals the word "EUREKA". Right: using the $\gamma$ tuning parameter can also reveal the structure. Adapted from \cite{Laa2020-uv}, Figure 9.}
 \label{fig:pollen}
 \end{figure}
 
@@ -242,7 +242,7 @@ Due to the dynamic nature of the tour, user interfaces can enhance the interpret
 \begin{figure*}
    \centering
          \includegraphics[width=0.9\textwidth]{figures/liminal-stop-pause-refresh.png}
-\caption{The clustering example from Figure \ref{fig:tsne-tour} using the liminal interface. Here a grand tour is displayed on the right hand side, with buttons allowing users to play, pause and refresh the tour animation. (Adapted from Lee, Laa and Cook, 2020, Figure 2.)}
+\caption{The clustering example from Figure \ref{fig:tsne-tour} using the liminal interface. Here a grand tour is displayed on the right hand side, with buttons allowing users to play, pause and refresh the tour animation. Adapted from \cite{Lee2020-kg}, Figure 2.}
 \label{fig:tour-controls}
 \end{figure*}
 
@@ -272,7 +272,7 @@ Manual tours [@cook_manual_1997; @spyrison_spinifex_2020] offer a means to inter
 \centerline{{\includegraphics[width=0.32\textwidth]{figures/ggobi_book/prim7-pp10.pdf}}
   {\includegraphics[width=0.32\textwidth]{figures/ggobi_book/prim7-pp11.pdf}}
   {\includegraphics[width=0.32\textwidth]{figures/ggobi_book/prim7-pp13.pdf}}}
-\caption{Stepwise identification of clusters in the physics data. Each time a cluster is clearely separated we stop the tour and brush the points, followed by another spin of the data, until we can capture the full distribution. (Adapted from Cook and Swayne, 2007, Figure 5.3.)}
+\caption{Stepwise identification of clusters in the physics data. Each time a cluster is clearely separated we stop the tour and brush the points, followed by another spin of the data, until we can capture the full distribution. Adapted from \cite{Cook2007-be}, Figure 5.3.}
 \label{fig:prim7-tour}
 \end{figure}
 
@@ -305,7 +305,7 @@ A Python implementation of the tour written by @Nguyen2020 is also available, an
     \includegraphics[width=0.32\textwidth]{figures/svm-radial-orange.png}
     \includegraphics[width=0.32\textwidth]{figures/svm-radial-green.png}
     \includegraphics[width=0.32\textwidth]{figures/svm-radial-purple.png}
-  \caption{A grand tour run on the prediction boundaries of a radial support vector machine. (Left) The prediction region for points classified as orange produces a slice of a cube. (Middle) The predicition region for points classified as green produces another slice of the cube. (Right) The complete prediction region shows the points classified as purple are embedded within the green slice. (Adapted from Wickham, Hofmann and Cook, 2015, Figure 6.)}
+  \caption{A grand tour run on the prediction boundaries of a radial support vector machine. (Left) The prediction region for points classified as orange produces a slice of a cube. (Middle) The predicition region for points classified as green produces another slice of the cube. (Right) The complete prediction region shows the points classified as purple are embedded within the green slice. Adapted from \cite{Wickham2015-do}, Figure 6.}
   \label{fig:svm-tour}
 \end{figure*}
 
@@ -314,7 +314,7 @@ A Python implementation of the tour written by @Nguyen2020 is also available, an
 \begin{figure*}
    \centering
          \includegraphics[width=0.9\textwidth]{figures/scheidigger_nn_tour.png}
-\caption{A grand tour run on the output of a deep neural network model for classification. The axes correspond to the probabilities that the model of an image belonging to a certain class. (Adapted from Li, Zhao and Scheidigger, 2020.)}
+\caption{A grand tour run on the output of a deep neural network model for classification. The axes correspond to the probabilities that the model of an image belonging to a certain class. Adapted from \cite{Li2020-kg}.}
 \label{fig:tour-nn}
 \end{figure*}
 
@@ -330,7 +330,7 @@ Physics models often consider $\mathcal{O}(10)$ free parameters and are compared
   \centering
            \includegraphics[width=0.45\textwidth]{figures/allcenter-301.png}
          \includegraphics[width=0.45\textwidth]{figures/jetCluster-027.png}
-\caption{Selected frames from using a grand tour of the physics data. Left: the three different types of measurements (shown in different colors) are aligned along different directions in parameter space. Right: an outlying point is marked with an asterisk symbol in the ATLAS7new facet. (Adapted from Cook, Laa and Valencia, 2018, Figures 6 and 7.)}
+\caption{Selected frames from using a grand tour of the physics data. Left: the three different types of measurements (shown in different colors) are aligned along different directions in parameter space. Right: an outlying point is marked with an asterisk symbol in the ATLAS7new facet. Adapted from \cite{Cook2018-jm}, Figures 6 and 7.}
 \label{fig:physics}
 \end{figure*}
 
@@ -346,20 +346,20 @@ In single cell RNA sequencing, scientists are interested in identifying novel ce
          \includegraphics[width=0.24\textwidth]{figures/mouse_sage_2c_gam3-038.png}
          \includegraphics[width=0.24\textwidth]{figures/mouse_sage_2c_gam3-074.png}
 
-\caption{Selected frames from using a grand tour of mouse retina single cell RNA-seq data with the radial transformation. The sage display was used to identify and verify cluster sepearation between the three highlighted clusters estimated from a clustering algorithm. (Adapted from Laa, Lee and Cook, 2020 Figure 6.)}
+\caption{Selected frames from using a grand tour of mouse retina single cell RNA-seq data with the radial transformation. The sage display was used to identify and verify cluster separation between the three highlighted clusters estimated from a clustering algorithm. Adapted from \cite{Laa2020-uv}, Figure 6.}
 \label{fig:mouse-cluster}
 \end{figure*}
 
 
 ## Geometry of data
 
-High-dimensional data is on many analysts' minds in recent years, and a way to build understanding of high-dimensional spaces is to examine common high-dimensional shapes using a tour. Many different shapes can be simulated using the R package geozoo. Figure \ref{fig:geozoo} shows points on the surface of two different types of high-dimensional torii. 
+High-dimensional data is on many analysts' minds in recent years, and a way to build understanding of high-dimensional spaces is to examine common high-dimensional shapes using a tour. Many different shapes can be simulated using the R package geozoo [@RJ-2016-044]. Figure \ref{fig:geozoo} shows points on the surface of two different types of high-dimensional torii. 
 
 \begin{figure*}
   \centering
   \includegraphics[width=0.24\textwidth]{figures/torus-rings-4-with-torus-1.pdf}\includegraphics[width=0.24\textwidth]{figures/torus-rings-4-with-torus-2.pdf}
   \includegraphics[width=0.24\textwidth]{figures/torus-flat-6-1.pdf}\includegraphics[width=0.24\textwidth]{figures/torus-flat-6-2.pdf}
-\caption{Several views of torii: (two at left) 4D ring torus, and (two at right) 6D flat torus. In each case, a subset has been highlighted which illustrate the low-dimensional donut shapes. (Adapted from Schloerke, et al., 2016, Figures 10 and 13.)}
+\caption{Several views of torii: (two at left) 4D ring torus, and (two at right) 6D flat torus. In each case, a subset has been highlighted which illustrate the low-dimensional donut shapes. Adapted from \cite{RJ-2016-044}, Figures 10 and 13.}
 \label{fig:geozoo}
 \end{figure*}
           
