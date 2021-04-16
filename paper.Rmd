@@ -37,7 +37,7 @@ author:
     affiliation: Monash University
     email: huize.zhang@monash.edu
 title:
-  formatted: "A Review of the State-of-the-Art on Tours for Dynamic Visualisation of High-dimensional Data"
+  formatted: "A Review of the State-of-the-Art on Tours for Dynamic Visualization of High-dimensional Data"
 abstract: > 
   This article discusses a high-dimensional visualization technique called the tour, which can be used to view data in more than three dimensions. We review the theory and history behind the technique, as well as modern software developments and applications of the tour that are being found across the sciences and machine learning. 
 keywords:
