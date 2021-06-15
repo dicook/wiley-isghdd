@@ -27,7 +27,7 @@ author:
     orcid: 0000-0002-0249-6439
   - name: Nicholas Spyrison
     address: |
-      | Faculty of Information and Technology, Monash University
+      | Faculty of Information Technology, Monash University
     affiliation: Monash University
     email: nicholas.spyrison@monash.edu
     orcid: 0000-0002-8417-0212
