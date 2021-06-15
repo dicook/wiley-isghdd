@@ -30,6 +30,7 @@ author:
       | Faculty of Information and Technology, Monash University
     affiliation: Monash University
     email: nicholas.spyrison@monash.edu
+    orcid: 0000-0002-8417-0212
   - name: Earo Wang
     address: |
       | Department of Statistics, The University of Auckland
