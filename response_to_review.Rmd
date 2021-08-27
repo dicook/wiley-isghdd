@@ -36,12 +36,14 @@ ASA, Alexandria, VA, 8: 7-11, April, 1997.
 
 ## Recommended Revisions
 
-- I highly appreciate the specification of notations in Section 2.1, but few sections use the notation. 
-Instead, different tour methods are only described in text. 
-I anticipate that the readers would benefit from a highlight of key differences between different tour variants and interactions using the unified notations.
-For example, (as far as I understand) guided tour finds a sequence of interesting projections $A_i$ by applying projection pursuit optimization on a predefined criteria $c(\cdot)$ of ``interestingness'' of a projection, $argmax_A c(XA)$; local tour rocks back and forth from a particular plane $A$ to randomly chosen targets $A_i$ in a small neighborhood $\{A_j |\; d(A_j, A) < \epsilon \}$; manual tour manipulates the contribution of any variable by editing the corresponding row $A[i]$ in the projection frame $A$, $A[i] \leftarrow A[i] + \Delta[i]$ and re-orthonormalizing the columns.
+- I highly appreciate the specification of notations in Section 2.1, but few sections use the notation.  Instead, different tour methods are only described in text. 
+I anticipate that the readers would benefit from a highlight of key differences between different tour variants and interactions using the unified notations. For example, (as far as I understand) guided tour finds a sequence of interesting projections $A_i$ by applying projection pursuit optimization on a predefined criteria $c(\cdot)$ of ``interestingness'' of a projection, $argmax_A c(XA)$; local tour rocks back and forth from a particular plane $A$ to randomly chosen targets $A_i$ in a small neighborhood $\{A_j |\; d(A_j, A) < \epsilon \}$; manual tour manipulates the contribution of any variable by editing the corresponding row $A[i]$ in the projection frame $A$, $A[i] \leftarrow A[i] + \Delta[i]$ and re-orthonormalizing the columns.
+
+    - **Done**
 
 - Section 2.2: "A guided tour ... The little tour ... and a local tour ..." --- cite? 
+
+    - **Done, cited as much as is possible**
 
 - Section 2.3: "contains all the rotation to be between planes, not a particular basis in any plane". It maybe worth mentioning the difference between "interpolating frames" (interpolating projection frame A and B directly, which involves particular bases) vs. "interpolating planes" (between span(A) and span(B) ), and briefly discuss how the motion can be decomposed to motion of planes and within plane spin.
 
