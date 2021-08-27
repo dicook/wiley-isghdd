@@ -1,0 +1,53 @@
+---
+title: "Response to review"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Thank you for the detailed and helpful reviews. These are the ways that we have changed the article in response to the comments.
+
+# Co-editor
+
+- I am fond of this reference, but perhaps Debby's contains it:
+
+Salch, J.D. and D.W. Scott, (1997),
+``Data Exploration with the Density Grand Tour,''
+ Statistical Graphics and Computing Newsletter,
+ASA, Alexandria, VA, 8: 7-11, April, 1997.
+
+# Reviewer: 1
+
+- Overall, there is nothing wrong in the article, but lots of language issues, problems with references, and a few aspects of tours (including software and references) that have not been explored in detail. Please see the attached markup for details. 
+
+- Before submitting the revision, I would encourage one of the senior native English speaking authors to carefully do a final language review of the article. I have marked many language problems, but there may be more.
+
+# Reviewer 2
+
+## Summary
+
+- This work summarizes the state-of-the-art tour methods for visualizing high-dimensional data. The tour works by linearly projecting the set of data points down to low dimensions through a sequence of smoothly changing orthonormal projections. The work summarizes the development, components for the display, interaction modes, software and latest applications of the tour method. Overall, the work is well-written and well-covered.  I would recommend a minor revision to authors sometime to revise the content and text (see recommended revisions).
+
+## Strengths
+
+- The literature is well covered and described, and up to date. There are abundant number of examples with figures which covers a large variety of use cases of the tour method (e.g. kinds of display, structure of measurements in physics, geometric shapes, a tour looking at itself, ...) 
+
+## Recommended Revisions
+
+- I highly appreciate the specification of notations in Section 2.1, but few sections use the notation. 
+Instead, different tour methods are only described in text. 
+I anticipate that the readers would benefit from a highlight of key differences between different tour variants and interactions using the unified notations.
+For example, (as far as I understand) guided tour finds a sequence of interesting projections $A_i$ by applying projection pursuit optimization on a predefined criteria $c(\cdot)$ of ``interestingness'' of a projection, $argmax_A c(XA)$; local tour rocks back and forth from a particular plane $A$ to randomly chosen targets $A_i$ in a small neighborhood $\{A_j |\; d(A_j, A) < \epsilon \}$; manual tour manipulates the contribution of any variable by editing the corresponding row $A[i]$ in the projection frame $A$, $A[i] \leftarrow A[i] + \Delta[i]$ and re-orthonormalizing the columns.
+
+- Section 2.2: "A guided tour ... The little tour ... and a local tour ..." --- cite? 
+
+- Section 2.3: "contains all the rotation to be between planes, not a particular basis in any plane". It maybe worth mentioning the difference between "interpolating frames" (interpolating projection frame A and B directly, which involves particular bases) vs. "interpolating planes" (between span(A) and span(B) ), and briefly discuss how the motion can be decomposed to motion of planes and within plane spin.
+
+- Section 2.3: "The space of all tour *paths* is a high-dimensional torus..." --- All paths, all k-planes or all orthogonal k-frames? 
+From the context it's not clear to me whether the space of all tour paths is a high-D torus. 
+Consider giving some contexts/explanations to this statement?
+
+- Section 3: Li et al. 2020 seems to propose a different way to control the projection, via brushing and dragging data points as opposed to moving individual variables in manual tour (what they call ``the data point mode'' direct manipulation). 
+Perhaps it is worth mentioning it as a way of manual control in Section 3.
