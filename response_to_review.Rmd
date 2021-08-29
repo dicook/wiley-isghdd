@@ -21,8 +21,42 @@ ASA, Alexandria, VA, 8: 7-11, April, 1997.
 # Reviewer: 1
 
 - Overall, there is nothing wrong in the article, but lots of language issues, problems with references, and a few aspects of tours (including software and references) that have not been explored in detail. Please see the attached markup for details. 
-
+    
 - Before submitting the revision, I would encourage one of the senior native English speaking authors to carefully do a final language review of the article. I have marked many language problems, but there may be more.
+
+## Marked up comments
+
+- check your citation settings; I would have expected that clicking on a citation brings you to that reference in the reference list, but this does not seem to be the case here
+
+    - **This might be a problem with the Wiley template**
+    
+- "means" sounds strange; perhaps "refers to the number of dimensions in ..." ?
+
+    - **Changed**
+    
+- first introduce "one-dimensional (1D) through to five-dimensional (5D)"; then you can use 1D, ..., 5D
+
+    - **Changed**
+    
+- perhaps "As the dimension increases, ..."
+
+    - **Changed**
+    
+- change to  "a 2D cube consists of ..." and "a 3D cube consists of ..."
+
+    - **Changed**
+
+- fig 1: explain how the cube doubles: by connecting the vertexes of the two cubes. can you use 3 colors: two colors for the two original cubes and a third color for the connecting edges of the vertexes; perhaps draw those connectors as dashed lines
+
+- p2 l49: perhaps "seen that as the dimension increases by one, ..."
+
+- p3 l14 just "e.g.," or "see for example"
+
+- p3 l14 mention the underlying software as well (and then cite these references)
+
+- p3 l16 what are geodesic interpolations? explain in 1 or2 sentences and add a reference
+
+- p3 l17 "a multivariate ..." or "distributions"
 
 # Reviewer 2
 
@@ -30,9 +64,13 @@ ASA, Alexandria, VA, 8: 7-11, April, 1997.
 
 - This work summarizes the state-of-the-art tour methods for visualizing high-dimensional data. The tour works by linearly projecting the set of data points down to low dimensions through a sequence of smoothly changing orthonormal projections. The work summarizes the development, components for the display, interaction modes, software and latest applications of the tour method. Overall, the work is well-written and well-covered.  I would recommend a minor revision to authors sometime to revise the content and text (see recommended revisions).
 
+    - **Thanks for the positive comments**
+
 ## Strengths
 
 - The literature is well covered and described, and up to date. There are abundant number of examples with figures which covers a large variety of use cases of the tour method (e.g. kinds of display, structure of measurements in physics, geometric shapes, a tour looking at itself, ...) 
+
+    - **Thanks for the positive comments**
 
 ## Recommended Revisions
 
@@ -43,7 +81,7 @@ I anticipate that the readers would benefit from a highlight of key differences 
 
 - Section 2.2: "A guided tour ... The little tour ... and a local tour ..." --- cite? 
 
-    - **Done, cited as much as is possible**
+    - **Done, cited as much as is possible. There isn't a good citation for little tour or local tour, so we have referred to the original Dataviewer software.**
 
 - Section 2.3: "contains all the rotation to be between planes, not a particular basis in any plane". It maybe worth mentioning the difference between "interpolating frames" (interpolating projection frame A and B directly, which involves particular bases) vs. "interpolating planes" (between span(A) and span(B) ), and briefly discuss how the motion can be decomposed to motion of planes and within plane spin.
 
