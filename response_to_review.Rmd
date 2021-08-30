@@ -48,15 +48,253 @@ ASA, Alexandria, VA, 8: 7-11, April, 1997.
 
 - fig 1: explain how the cube doubles: by connecting the vertexes of the two cubes. can you use 3 colors: two colors for the two original cubes and a third color for the connecting edges of the vertexes; perhaps draw those connectors as dashed lines
 
+    - **Done**
+
 - p2 l49: perhaps "seen that as the dimension increases by one, ..."
+
+    - **Done**
 
 - p3 l14 just "e.g.," or "see for example"
 
+    - **Done**
+
 - p3 l14 mention the underlying software as well (and then cite these references)
+
+    - **Done**
 
 - p3 l16 what are geodesic interpolations? explain in 1 or2 sentences and add a reference
 
+    - **Done**
+
 - p3 l17 "a multivariate ..." or "distributions"
+
+    - **Done**
+
+- p3 l28 this sounds like a limitation of PCPs on your side, but Hurley & Oldford found a possible solution, e.g., https://link.springer.com/article/10.1007/s00180-011-0229-5
+
+- p3 l28 you mention Andrews curves later on when you speak about software; mention them here as well and clarify that they are some kind of tour, but not a grand tour; Wegman & Solka (2002) describe Andrews plot as a pseudo-grand tour that is not space filling - see
+On Some Mathematics for Visualizing High Dimensional Data
+Author(s): Edward J. Wegman and Jeffrey L. Solka
+Source: Sankhyā: The Indian Journal of Statistics, Series A (1961-2002) , Jun., 2002, Vol.
+64, No. 2, Selected Articles from San Antonio Conference in Honour of C. R. Rao (Jun.,
+2002), pp. 429-452
+Published by: Indian Statistical Institute
+Stable URL: https://www.jstor.org/stable/25051404
+
+- p3 l28 Wegman & Solka (2002) also provide mathematical details and further references; while it is not necessary for this article to repeat all of that information, it should at least summarize those mathematical references in one paragraph.
+
+- p3 l32 "analyst" (singular)
+
+- p3 l43 be specific which reference is for which of the 2 techniques
+
+- p3 l51 add "have" ?
+
+- p4 l27 do not just show some graphs; provide at least some meaningful background information: 2 species of crabs where 0 represents xxx and 1 represents yyy; 2 sexes (which is M & F); the data in the left plot seem to be jittered , etc.; what are dimensions in the right plot - cm?; also cite the original article where these data have first been reported and analyzed
+
+- p4 l41 add a "," here
+
+- p5 fig 3 what does flat and hierarchical mean here? 
+
+- p5 fig3 be consistent and write as "10D"
+
+- p5 fig3 perhaps "can be seen" or "shown"
+
+- p5 fig3 perhaps "a sample" or "a selection" (as you picked specific projections)
+
+- p5 fig3 distance does not seem to fit here - perhaps "distant"
+
+- p5 l38 add "a"
+
+- p5 l40 perhaps "all columns are..."
+
+- p5 2.2 header these are rarely used; briefly explain what a Huber plot is and how it can be interpreted
+
+- p5 l43 as for the two previous data examples, briefly explain the data set, source, variables, and other information; what are the dimensions of this data set?
+
+- p5 l48 "targets" (plural)
+
+- p5 l49 "projections"
+
+- p5 l50 cite 1 or 2 references for projection pursuit, including the WIREs article - see
+https://wires.onlinelibrary.wiley.com/doi/abs/10.1002/wics.23
+
+- p5 l53 define PCA and include references; one should be the WIREs article - see
+https://onlinelibrary.wiley.com/doi/10.1002/wics.101
+
+- fig 4 what does "best.proj.data" represent - and what does the scale for this variable mean?
+
+- p7 l35 perhaps "these two tour types." ?
+
+- p7 l37 be specific: "in Section xxx"
+
+- p7 l39 same: "in Section yyy"
+
+- p7 l42 perhaps "it maintains" or "to maintain"; same for (2) below
+
+- p7 l44 "rotations"
+
+- p7 l45 "are" not "a"
+
+- p7 l46 "projections{
+
+- p7 l47 "A more detailed ..."
+
+- fig 6 caption "paths", "The guided...", "the grand..."
+
+- p8 l30 Cook worked with 3D tours in VRGobi; ideally cite one of those original references where the 3D tour is introduced or cite this chapter (in particular Section 10.5.2) from a book chapter by Symanzik as a secondary reference:
+http://sfb649.wiwi.hu-berlin.de/fedc_homepage/xplore/ebooks/html/csa/node83.html
+This is from 
+Handbook of Computational Statistics by	 
+J.E. Gentle, W. Härdle, Y. Mori, Editors, ISBN-10: 3540404643
+
+- fig 7 caption remind the reader that small points are identical start points while large points are different end points AND emphasize that each of these 6 views shows exactly the same tour, just under a different projection in 2D space
+
+- p9 l36 change order; perhaps "Transformations of data (such as ..) are often useful prior to touring.
+
+- p9 l45 as before, briefly summarize this data set (dimensions, number of points, and the text that magically occurs with the proper methods are being applied)
+
+- fig 9 caption how many dimensions does this have?; add ","; "6D"
+
+- fig 10 caption what do R and gamma tune? can you verbally explain their purpose?
+
+- section 3 header be consistent with capitalizations of headings, e.g., lower case "i" here but upper case in the subheading below (check and adjust elsewhere)
+
+- p12 l11 add "to"
+
+- p12 l12 which software is this? and which options for tour interactions are commonly available in other software with tour functionality such as XGobi, RGobi, tourr ?
+
+- p12 l25 "or it can be used"
+
+- p12 l30 add "set"
+
+- fig 12 caption perhaps "variable "bl" (shown as an orange line) is being..."; as before, describe the data set, source, dimensions, variables (what is bl), etc.?; add ","
+
+- fig 13 what is hidden (and why)?; what is the purpose of "connect dots"? how are they connected (this does not look like the convex hull in the projection plane); which software has been used here?
+
+- p15 l11 add ","
+
+- p15 l11 add "that"
+
+- p15 l21 indicate the names of the software, i.e., XplorN and (X)Lisp-Stat; in particular, XplorN deserves some further description as it was one of the first software implementations that provided a PCP grand tour; here is a suitable technical report (follow the cite references for more):
+https://apps.dtic.mil/sti/pdfs/ADA313999.pdf
+
+- p15 l22 this paragraph doesn't seem to belong here as it doesn't seem to relate to software; I suggested earlier on that Andrews curves should be introduced earlier in this review; this paragraph can be used there
+
+- p15 l26 explain in one sentence what the image grand tour is and cite one original article for it (likely something from Wegman et al); by the way, here, you cite the WIREs review article, but an original article is missing; for several of my previous comments, you cited the original article, but not the WIREs review article; ideally, both (original and review article where it exists) should be cited in a review like this
+
+- p15 l28 also cite rggobi as it seemed to support some tour as well - see https://vita.had.co.nz/papers/rggobi-rnews.pdf
+
+- p15 l33 write as "three"
+
+- p15 l36 sentence structure is too complex; break at least into 2 sentences and avoid the double parentheses for (software (author))
+
+- p15 l44 remove "a"
+
+- p15 l46 perhaps "structures such as .. separations"
+
+- p15 l48 perhaps "from further extensions" ?
+
+- fig 14 make sure to indicate which software has been used for each tour figure; as before, provide more details about the underlying data; Be consistent how to introduce multiple plots in the same figures; you use (left), (Left), Left: etc.
+
+- p16 l31 3D (for consistency)
+
+- p16 l32 add ","
+
+- p16 l32 period here; then start a new sentence: "By touring..."
+
+- p16 l35 you mix present tense and past tense when you summarize the content of references; here, you use past tense, elsewhere, you use present tense; at least, be consistent; personally, I prefer past tense as authors did something in the past (and not in the present)
+
+- p16 l37 perhaps "running the" ?
+
+- p16 l38 add "the"
+
+- p16 l47 do you need the O notation here? what about dozens and hundreds instead?
+
+- p16 l50 "we" or "they" (several times)? [and note that this is past tense again]
+
+- fig 15 as always, much more details about the underlying data needed
+
+- p17 l36 add ","
+
+- p17 l41 again "we"; perhaps "the authors"
+
+- p17 l41 mention Figure 17 here in the text
+
+- p17 add "5.5 Historical applications" and briefly review other examples from the literature here; e.g., Koschat and Swayne seem to have used the tour for telecommunication data (see below)
+
+- fig 16 as always. more details about the data needed
+
+- fig 16 what is ATLAS7new facet ? explain in main text
+
+- fig 18 perhaps "subset... illustrates ... shape"
+
+- p19 l10 remove "be"
+
+- p19 l12 add "R" (as you mentioned Python and other software before)
+
+- p19 l12 "it" ? - perhaps "supporting software" ?
+
+- p19 l13 add ","
+
+- p19 add a paragraph about success of the various tour methods; Cook et al (1995) stated this (p.163): 
+"but it is important to statisticians for the reason that the inherent structure has never been completely described. The combination of the grand tour and projection pursuit contributes significantly to revealing the nature of the variable relationships in seven dimensions. Recently, Koschat and Swayne (1992, in press) have used the projection pursuit guided tour in XGobi to explore telecommunications data, and indeed found previously undetected structure. "
+
+- p19 l18 add "to perform"
+
+- p19 l19 add ","
+
+- p19 l19 be specific what is missing in current software, i.e., continue with "(such as ...)."
+
+- p19 l23 perhaps "spaces" (there could be more than just one?)
+
+- References
+    - video library url needed 
+    - buja et al in wegman & solka add city
+    - buja et al (1986) this is a conference proceedings series; capitalize similar to a journal
+    - carr add page numbers (or is this the previous ref)
+    - chambers et al list the editors
+    - coleman add when accessed
+    - cook et al (1995) adjust style (compare with previous reference)
+    - cook et al (2018) remove the ArXiv information for an article that has been published
+    - cook, swayne (2007) reference is wrong add add city of publication (New York, Berlin, Heidelberg?)
+    - diaconis as above - either full journal names or abbreviations (adjust other references in a similar way, according to WIREs specifications)
+    - fisher remove the first URL and just keep the one with the DOI
+    - friedman is there a DOI?
+    - horst capitalize both "A" as these seem to be geographic names; just "R package" once
+    - hotelling should be "417-441"
+    - huber is there a URL where this can be obtained?
+    - laa et al (2020) section pursuit incomplete
+    - laa et al (2021) burning sage incomplete
+    - laa et al (2020) slice tour update reference (it is published now) and remove the arXiv information
+    - lee at al DOI ?
+    - li incomplete; use lower case "c" and "t" here
+    - li where does the 5(3) come from? - check the web page again
+    - martinez remove the first URL
+    - mcinnes capitalize "UMAP"
+    - moustafa incomplete; Remove the first URL
+    - moustafa and hadi remove the first URL
+    - nguyen capitalize P (in Python), R (in the next reference), etc.
+    - pedersen just once; check gganimate capitalisation
+    - sievert city?; should be "Chapman and Hall/CRC" (several times)
+    - spyrison change to lower case (except R); 243-257 (again!)
+    - swayne DOI
+    - swayne et al DOI; XGobi (as a software name); issue ?
+    - tierney DOI
+    - tukey editors?
+    - tukey pages, city, publisher ?; city?
+    - van der maaten they list this as 9(86) on their web page
+    - wegman list editors only once; page numbers; is there a volume ? - these are Interface (conference proceedings)
+    - wilkinson capital "S"
+    - xie lower case
+    - you "R"
+    - zhang extend reference as for other R packages; incomplete
+    
+    
+
+- I am curious: Why do you not cite https://doi.org/10.1051/epjconf/202024506018
+
+- as you cite R packages, reference R as well
+
 
 # Reviewer 2
 

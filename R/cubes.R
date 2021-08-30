@@ -4,6 +4,8 @@ library(ggthemes)
 library(geozoo)
 library(tourr)
 library(patchwork)
+library(ggrepel)
+
 set.seed(5)
 c1 <- cube.iterate(p = 1)
 c1$points <- as_tibble(c1$points)
@@ -41,7 +43,8 @@ p1 <- ggplot() +
   geom_segment(data=c1$edges, 
                aes(x=c1$points$Var1[c1$edges$from], 
                    xend=c1$points$Var1[c1$edges$to],
-                   y=1, yend=1)) + 
+                   y=1, yend=1), 
+               linetype=3, colour = "#607848") + 
   geom_point(data=c1$points[1,], aes(x=Var1, y=1), colour = "#E7298A") +
   ggtitle("1D") +
   theme_void() +
@@ -52,17 +55,25 @@ p1 <- ggplot() +
 # 2D
 p2 <- ggplot() +
   geom_point(data=c2$points, aes(x=Var1, y=Var2)) +
-  geom_segment(data=c2$edges, 
-               aes(x=c2$points$Var1[c2$edges$from], 
-                   xend=c2$points$Var1[c2$edges$to],
-                   y=c2$points$Var2[c2$edges$from], 
-                   yend=c2$points$Var2[c2$edges$to])) + 
-  geom_point(data=c2$points[1:2,], aes(x=Var1, y=Var2), colour = "#E7298A") +
+  geom_segment(data=c2$edges[c(1,4),], 
+               aes(x=c2$points$Var1[from], 
+                   xend=c2$points$Var1[to],
+                   y=c2$points$Var2[from], 
+                   yend=c2$points$Var2[to])) + 
+  geom_segment(data=c2$edges[c(2,3),], 
+               aes(x=c2$points$Var1[from], 
+                   xend=c2$points$Var1[to],
+                   y=c2$points$Var2[from], 
+                   yend=c2$points$Var2[to]), 
+               linetype = 3, colour = "#607848") + # dashed connectors
+  geom_point(data=c2$points[1:2,], aes(x=Var1, y=Var2), 
+             colour = "#E7298A") +
   geom_segment(data=c2$edges[1,], 
                aes(x=c2$points$Var1[from], 
                    xend=c2$points$Var1[to],
                    y=c2$points$Var2[from], 
-                   yend=c2$points$Var2[to]), colour = "#E7298A") + 
+                   yend=c2$points$Var2[to]), 
+               colour = "#E7298A") + 
   ggtitle("2D") +
   theme_void() +
   theme(title = element_text(colour = "black", size = 24),
@@ -70,13 +81,21 @@ p2 <- ggplot() +
   xlim(c(-0.15, 1.15)) + ylim(c(-0.15, 1.15))
 
 # 3D
+c_in <- c(1,2,4,6,9,10,11,12)
+c_out <- c(3,5,7,8)
 p3 <- ggplot() +
   geom_point(data=c3$points, aes(x=Var1, y=Var2)) +
-  geom_segment(data=c3$edges, 
-               aes(x=c3$points$Var1[c3$edges$from], 
-                   xend=c3$points$Var1[c3$edges$to],
-                   y=c3$points$Var2[c3$edges$from], 
-                   yend=c3$points$Var2[c3$edges$to])) + 
+  geom_segment(data=c3$edges[c_in,], 
+               aes(x=c3$points$Var1[from], 
+                   xend=c3$points$Var1[to],
+                   y=c3$points$Var2[from], 
+                   yend=c3$points$Var2[to])) + 
+  geom_segment(data=c3$edges[c_out,], 
+               aes(x=c3$points$Var1[from], 
+                   xend=c3$points$Var1[to],
+                   y=c3$points$Var2[from], 
+                   yend=c3$points$Var2[to]), 
+               linetype = 3, colour = "#607848") + 
   geom_point(data=c3$points[1:4,], aes(x=Var1, y=Var2), colour = "#E7298A") +
   geom_segment(data=c3$edges[c(1,2,4,6),], 
                aes(x=c3$points$Var1[from], 
@@ -87,17 +106,25 @@ p3 <- ggplot() +
   theme_void() +
   theme(title = element_text(colour = "black", size = 24),
         aspect.ratio = 1)
-
+# p3 + geom_text_repel(data=c3$points, aes(x=Var1, y=Var2, label = 1:nrow(c3$points)), size=5) 
+  
 # 4D
+c_out <- c(4, 7, 10, 12, 15, 17, 19, 20)
+c_in <- c(1:nrow(c4$edges))[-c_out]
 p4 <- ggplot() +
   geom_point(data=c4$points, aes(x=Var1, y=Var2)) +
-  geom_segment(data=c4$edges, 
-               aes(x=c4$points$Var1[c4$edges$from], 
-                   xend=c4$points$Var1[c4$edges$to],
-                   y=c4$points$Var2[c4$edges$from], 
-                   yend=c4$points$Var2[c4$edges$to])) + 
+  geom_segment(data=c4$edges[c_in,], 
+               aes(x=c4$points$Var1[from], 
+                   xend=c4$points$Var1[to],
+                   y=c4$points$Var2[from], 
+                   yend=c4$points$Var2[to])) + 
+  geom_segment(data=c4$edges[c_out,], 
+               aes(x=c4$points$Var1[from], 
+                   xend=c4$points$Var1[to],
+                   y=c4$points$Var2[from], 
+                   yend=c4$points$Var2[to]),
+               linetype = 3, colour = "#607848") + 
   geom_point(data=c4$points[1:8,], aes(x=Var1, y=Var2), colour = "#E7298A") +
-  #geom_text(data=c4$points[1:8,], aes(x=Var1, y=Var2, label = 1:8), size=5) +
   geom_segment(data=c4$edges.sub, 
                aes(x=c4$points$Var1[from], 
                    xend=c4$points$Var1[to],
@@ -107,17 +134,26 @@ p4 <- ggplot() +
   theme_void() +
   theme(title = element_text(colour = "black", size = 24),
         aspect.ratio = 1)
+# p4 + geom_text_repel(data=c4$points, aes(x=Var1, y=Var2, label = 1:nrow(c4$points)), size=5) 
 
 # 5D
+c_out <- c(5,9,13,16,20,23,26,28,32,35,38,
+           40,43,45,47,48)
+c_in <- c(1:nrow(c5$edges))[-c_out]
 p5 <- ggplot() +
   geom_point(data=c5$points, aes(x=Var1, y=Var2)) +
-  geom_segment(data=c5$edges, 
-               aes(x=c5$points$Var1[c5$edges$from], 
-                   xend=c5$points$Var1[c5$edges$to],
-                   y=c5$points$Var2[c5$edges$from], 
-                   yend=c5$points$Var2[c5$edges$to])) + 
+  geom_segment(data=c5$edges[c_in,], 
+               aes(x=c5$points$Var1[from], 
+                   xend=c5$points$Var1[to],
+                   y=c5$points$Var2[from], 
+                   yend=c5$points$Var2[to])) + 
+  geom_segment(data=c5$edges[c_out,], 
+               aes(x=c5$points$Var1[from], 
+                   xend=c5$points$Var1[to],
+                   y=c5$points$Var2[from], 
+                   yend=c5$points$Var2[to]),
+               linetype = 3, colour = "#607848") + 
   geom_point(data=c5$points[1:16,], aes(x=Var1, y=Var2), colour = "#E7298A") +
-  #geom_text(data=c5$points[1:16,], aes(x=Var1, y=Var2, label = 1:16, colour = "#E7298A"), size=8) +
   geom_segment(data=c5$edges.sub, 
                aes(x=c5$points$Var1[from], 
                    xend=c5$points$Var1[to],
@@ -127,6 +163,7 @@ p5 <- ggplot() +
   theme_void() +
   theme(title = element_text(colour = "black", size = 24),
         aspect.ratio = 1)
+# p5 + geom_text_repel(data=c5$points, aes(x=Var1, y=Var2, label = 1:nrow(c5$points)), size=5) 
 
 p1 + p2 + p3 + p4 + p5 + 
   plot_layout(ncol = 5)
