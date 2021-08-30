@@ -103,7 +103,7 @@ All of the aforementioned techniques can be enhanced through the use of interact
    \centering
          \includegraphics[width=0.45\textwidth]{figures/ggobi_book/brush-query.pdf}
          \includegraphics[width=0.45\textwidth]{figures/ggobi_book/brush-response.pdf}
-\caption{When a user brushes data on the left panel, points that fall inside the region are highlighted in orange. The view on the right responds by highlighting the corresponding points. Adapted from \cite{Cook2007-be} Figure 2.12.}
+\caption{When a user brushes data on the left panel, points that fall inside the region are highlighted in orange. The view on the right responds by highlighting the corresponding points. Adapted from \cite{Cook2007-be} Figure 2.12. The left plot shows a jittered scatterplot of two species and two sexes of crabs from \cite{CM74}, and the right plot shows two of their five physical measurements.}
 \label{fig:brushing}
 \end{figure*}
 
