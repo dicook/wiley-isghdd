@@ -125,7 +125,7 @@ Nonlinear dimension reduction techniques such as t-SNE and Uniform Manifold Alig
 \label{fig:tsne-tour}
 \end{figure*}
 
-The rest of the review is structured as follows: Section \@ref(notation) defines the notation and components of a tour displays. By its nature a tour is most effective to analyst when combined with interactivity; Section \@ref(interaction) reviews the components of user interfaces for manipulating tour views, including manual tours (Section \@ref(tours)) which are useful to test structure of selected features. The implementation of tour paths in statistical software is reviewed in Section \@ref(software). Section \@ref(applications) shows the diverse applications of the tour in the natural sciences, machine learning and applied statistics. Finally, Section \@ref(discussion) discusses future research directions for tours. 
+The rest of the review is structured as follows: Section \@ref(notation) defines the notation and components of a tour displays. By its nature a tour is most effective to analyst when combined with interactivity; Section \@ref(interaction) reviews the components of user interfaces for manipulating tour views, including manual tours (Section \@ref(tours)) which are useful to test structure of selected features. The implementation of tour paths in statistical software is reviewed in Section \@ref(software). Section \@ref(applications) shows the diverse applications of the tour in the natural sciences, machine learning, and applied statistics. Finally, Section \@ref(discussion) discusses future research directions for tours. 
 
 # Tours for high dimensional visualization {#notation}
 

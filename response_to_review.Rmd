@@ -103,7 +103,11 @@ Stable URL: https://www.jstor.org/stable/25051404
 
 - p4 l27 do not just show some graphs; provide at least some meaningful background information: 2 species of crabs where 0 represents xxx and 1 represents yyy; 2 sexes (which is M & F); the data in the left plot seem to be jittered , etc.; what are dimensions in the right plot - cm?; also cite the original article where these data have first been reported and analyzed
 
+    - **Done**
+
 - p4 l41 add a "," here
+
+    - **Done**
 
 - p5 fig 3 what does flat and hierarchical mean here? 
 
