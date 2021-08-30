@@ -72,6 +72,8 @@ ASA, Alexandria, VA, 8: 7-11, April, 1997.
 
 - p3 l28 this sounds like a limitation of PCPs on your side, but Hurley & Oldford found a possible solution, e.g., https://link.springer.com/article/10.1007/s00180-011-0229-5
 
+    - **added a sentence and the reference**
+
 - p3 l28 you mention Andrews curves later on when you speak about software; mention them here as well and clarify that they are some kind of tour, but not a grand tour; Wegman & Solka (2002) describe Andrews plot as a pseudo-grand tour that is not space filling - see
 On Some Mathematics for Visualizing High Dimensional Data
 Author(s): Edward J. Wegman and Jeffrey L. Solka
@@ -80,6 +82,8 @@ Source: Sankhyā: The Indian Journal of Statistics, Series A (1961-2002) , Jun.,
 2002), pp. 429-452
 Published by: Indian Statistical Institute
 Stable URL: https://www.jstor.org/stable/25051404
+
+    - "Added, and explained"
 
 - p3 l28 Wegman & Solka (2002) also provide mathematical details and further references; while it is not necessary for this article to repeat all of that information, it should at least summarize those mathematical references in one paragraph.
 
@@ -179,6 +183,8 @@ J.E. Gentle, W. Härdle, Y. Mori, Editors, ISBN-10: 3540404643
 https://apps.dtic.mil/sti/pdfs/ADA313999.pdf
 
 - p15 l22 this paragraph doesn't seem to belong here as it doesn't seem to relate to software; I suggested earlier on that Andrews curves should be introduced earlier in this review; this paragraph can be used there
+
+    - **Moved to the intro with other discussion of lietrature**
 
 - p15 l26 explain in one sentence what the image grand tour is and cite one original article for it (likely something from Wegman et al); by the way, here, you cite the WIREs review article, but an original article is missing; for several of my previous comments, you cited the original article, but not the WIREs review article; ideally, both (original and review article where it exists) should be cited in a review like this
 
