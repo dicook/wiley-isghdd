@@ -87,9 +87,15 @@ Stable URL: https://www.jstor.org/stable/25051404
 
 - p3 l28 Wegman & Solka (2002) also provide mathematical details and further references; while it is not necessary for this article to repeat all of that information, it should at least summarize those mathematical references in one paragraph.
 
+    - "Not done. We have reference the paper but the Buja et al is the better reference for mathematics."
+    
 - p3 l32 "analyst" (singular)
 
+    - **Done**
+    
 - p3 l43 be specific which reference is for which of the 2 techniques
+
+    - **Done**
 
 - p3 l51 add "have" ?
 
