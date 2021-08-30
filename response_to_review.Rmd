@@ -276,46 +276,46 @@ https://apps.dtic.mil/sti/pdfs/ADA313999.pdf
 - p19 l23 perhaps "spaces" (there could be more than just one?)
 
 - References
-    - video library url needed 
-    - buja et al in wegman & solka add city
-    - buja et al (1986) this is a conference proceedings series; capitalize similar to a journal
-    - carr add page numbers (or is this the previous ref)
-    - chambers et al list the editors
-    - coleman add when accessed
-    - cook et al (1995) adjust style (compare with previous reference)
-    - cook et al (2018) remove the ArXiv information for an article that has been published
-    - cook, swayne (2007) reference is wrong add add city of publication (New York, Berlin, Heidelberg?)
-    - diaconis as above - either full journal names or abbreviations (adjust other references in a similar way, according to WIREs specifications)
-    - fisher remove the first URL and just keep the one with the DOI
-    - friedman is there a DOI?
-    - horst capitalize both "A" as these seem to be geographic names; just "R package" once
-    - hotelling should be "417-441"
-    - huber is there a URL where this can be obtained?
-    - laa et al (2020) section pursuit incomplete
-    - laa et al (2021) burning sage incomplete
-    - laa et al (2020) slice tour update reference (it is published now) and remove the arXiv information
-    - lee at al DOI ?
-    - li incomplete; use lower case "c" and "t" here
-    - li where does the 5(3) come from? - check the web page again
-    - martinez remove the first URL
-    - mcinnes capitalize "UMAP"
-    - moustafa incomplete; Remove the first URL
-    - moustafa and hadi remove the first URL
-    - nguyen capitalize P (in Python), R (in the next reference), etc.
-    - pedersen just once; check gganimate capitalisation
-    - sievert city?; should be "Chapman and Hall/CRC" (several times)
-    - spyrison change to lower case (except R); 243-257 (again!)
-    - swayne DOI
-    - swayne et al DOI; XGobi (as a software name); issue ?
-    - tierney DOI
-    - tukey editors?
-    - tukey pages, city, publisher ?; city?
-    - van der maaten they list this as 9(86) on their web page
-    - wegman list editors only once; page numbers; is there a volume ? - these are Interface (conference proceedings)
-    - wilkinson capital "S"
-    - xie lower case
-    - you "R"
-    - zhang extend reference as for other R packages; incomplete
+    - video library url needed - done
+    - buja et al in wegman & solka add city - done
+    - buja et al (1986) this is a conference proceedings series; capitalize similar to a journal - I think this needs to be fixed via bibstyle
+    - carr add page numbers (or is this the previous ref) - I think this is for the previous reference, again it is there in the bib file, to show it the bibstyle should be formatted accordingly for proceeding entries
+    - chambers et al list the editors - I don't think there was any 'scientific' editor on this book, didn't find any relevant person to list here ...
+    - coleman add when accessed - this was taken from animation package so I got the date when the rda file was added to its github repo and added it here...
+    - cook et al (1995) adjust style (compare with previous reference) - done
+    - cook et al (2018) remove the ArXiv information for an article that has been published - done
+    - cook, swayne (2007) reference is wrong add add city of publication (New York, Berlin, Heidelberg?) - done
+    - diaconis as above - either full journal names or abbreviations (adjust other references in a similar way, according to WIREs specifications) - done
+    - fisher remove the first URL and just keep the one with the DOI - done
+    - friedman is there a DOI? - added
+    - horst capitalize both "A" as these seem to be geographic names; just "R package" once - fixed capitalization, but repetition needs to be fixed in bibstyle
+    - hotelling should be "417-441" - fixed (plus full journal name instead of abbreviation)
+    - huber is there a URL where this can be obtained? - could not find it via google at least...
+    - laa et al (2020) section pursuit incomplete - fixed
+    - laa et al (2021) burning sage incomplete - fixed
+    - laa et al (2020) slice tour update reference (it is published now) and remove the arXiv information - fixed
+    - lee at al DOI ? - added
+    - li incomplete; use lower case "c" and "t" here - fixed
+    - li where does the 5(3) come from? - check the web page again - fixed
+    - martinez remove the first URL - fixed
+    - mcinnes capitalize "UMAP" - fixed
+    - moustafa incomplete; Remove the first URL - fixed
+    - moustafa and hadi remove the first URL - fixed
+    - nguyen capitalize P (in Python), R (in the next reference), etc. - fixed
+    - pedersen just once; check gganimate capitalisation - fixed capitalisation, but repeating version number is bibstyle issue
+    - sievert city?; should be "Chapman and Hall/CRC" (several times) - fixed
+    - spyrison change to lower case (except R); 243-257 (again!) - fixed
+    - sutherland et al DOI - added
+    - swayne DOI - I have no idea why it is not printing the DOI for the XGobi reference...
+    - swayne et al DOI; XGobi (as a software name); issue ? -fixed
+    - tukey editors? - added something based on web search, but not sure I got the right names..
+    - tukey pages, city, publisher ?; city? - as above ..
+    - van der maaten they list this as 9(86) on their web page - fixed
+    - wegman list editors only once; page numbers; is there a volume ? - these are Interface (conference proceedings) - problem with showing these information for proceedings entry, again bibstyle issue?
+    - wilkinson capital "S" - fixed
+    - xie lower case - fixed
+    - you "R" - fixed
+    - zhang extend reference as for other R packages; incomplete - fixed
     
     
 
