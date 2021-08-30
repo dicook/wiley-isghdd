@@ -112,7 +112,7 @@ Nonlinear dimension reduction techniques such as t-SNE and Uniform Manifold Alig
 
 
 \begin{figure*}[!t]
-         \includegraphics[width=0.371\textwidth]{figures/cluster_example.pdf}
+         \includegraphics[width=0.255\textwidth]{figures/cluster_example.pdf}
      \vfill
    \begin{minipage}{\linewidth}     
    \centering

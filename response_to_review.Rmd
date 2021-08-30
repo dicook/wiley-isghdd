@@ -111,6 +111,8 @@ Stable URL: https://www.jstor.org/stable/25051404
 
 - p5 fig 3 what does flat and hierarchical mean here? 
 
+    - **removed legend because these labels are not really sensible or useful**
+
 - p5 fig3 be consistent and write as "10D"
 
 - p5 fig3 perhaps "can be seen" or "shown"
