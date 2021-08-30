@@ -115,11 +115,19 @@ Stable URL: https://www.jstor.org/stable/25051404
 
 - p5 fig3 be consistent and write as "10D"
 
+    - **Done**
+
 - p5 fig3 perhaps "can be seen" or "shown"
+
+    - **used "visible"**
 
 - p5 fig3 perhaps "a sample" or "a selection" (as you picked specific projections)
 
+    - **Done**
+
 - p5 fig3 distance does not seem to fit here - perhaps "distant"
+
+    - **Done**
 
 - p5 l38 add "a"
 
