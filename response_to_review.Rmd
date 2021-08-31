@@ -237,6 +237,8 @@ J.E. Gentle, W. Härdle, Y. Mori, Editors, ISBN-10: 3540404643
 
 - section 3 header be consistent with capitalizations of headings, e.g., lower case "i" here but upper case in the subheading below (check and adjust elsewhere)
 
+    - **done**
+
 - p12 l11 add "to"
 
 - p12 l12 which software is this? and which options for tour interactions are commonly available in other software with tour functionality such as XGobi, RGobi, tourr ?
