@@ -16,14 +16,18 @@ Thank you for the detailed and helpful reviews. These are the ways that we have 
 Salch, J.D. and D.W. Scott, (1997),
 ``Data Exploration with the Density Grand Tour,''
  Statistical Graphics and Computing Newsletter,
-ASA, Alexandria, VA, 8: 7-11, April, 1997.
+ASA, Alexandria, VA, 8: 7-11, April, 1997. https://community.amstat.org/jointscsg-section/newsletter
 
+    - **Added**
+    
 # Reviewer: 1
 
 - Overall, there is nothing wrong in the article, but lots of language issues, problems with references, and a few aspects of tours (including software and references) that have not been explored in detail. Please see the attached markup for details. 
+
+    - **We are extremely grateful for the detailed read and fixes!**
     
 - Before submitting the revision, I would encourage one of the senior native English speaking authors to carefully do a final language review of the article. I have marked many language problems, but there may be more.
-
+    
 ## Marked up comments
 
 - check your citation settings; I would have expected that clicking on a citation brings you to that reference in the reference list, but this does not seem to be the case here
@@ -165,21 +169,39 @@ https://onlinelibrary.wiley.com/doi/10.1002/wics.101
 
 - fig 4 what does "best.proj.data" represent - and what does the scale for this variable mean?
 
+    - **changed**
+    
 - p7 l35 perhaps "these two tour types." ?
+
+    - **Paragraph is now changed**
 
 - p7 l37 be specific: "in Section xxx"
 
+    - **done**
+
 - p7 l39 same: "in Section yyy"
+
+    - **Paragraph changed and it doesn't fit to forward reference here**
 
 - p7 l42 perhaps "it maintains" or "to maintain"; same for (2) below
 
+    - **done**
+
 - p7 l44 "rotations"
+
+    - **singular is correct here**
 
 - p7 l45 "are" not "a"
 
+    - **done**
+
 - p7 l46 "projections{
 
+    - **done**
+
 - p7 l47 "A more detailed ..."
+
+    - **done**
 
 - fig 6 caption "paths", "The guided...", "the grand..."
 
@@ -337,6 +359,8 @@ https://apps.dtic.mil/sti/pdfs/ADA313999.pdf
 
 - I am curious: Why do you not cite https://doi.org/10.1051/epjconf/202024506018
 
+    - **This was a conference presentation and summarised work in other papers. It looks like a paper, which is the physics approach, but it cannot be considered a paper in its own right.**
+    
 - as you cite R packages, reference R as well
 
 
