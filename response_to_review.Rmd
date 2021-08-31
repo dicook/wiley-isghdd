@@ -143,15 +143,25 @@ Stable URL: https://www.jstor.org/stable/25051404
 
 - p5 l43 as for the two previous data examples, briefly explain the data set, source, variables, and other information; what are the dimensions of this data set?
 
+    - **Done**
+
 - p5 l48 "targets" (plural)
 
+    - **Done**
+
 - p5 l49 "projections"
+
+    - **Sentence changed**
 
 - p5 l50 cite 1 or 2 references for projection pursuit, including the WIREs article - see
 https://wires.onlinelibrary.wiley.com/doi/abs/10.1002/wics.23
 
+    - **Introduced in section 1 where PCA and LDA is first mentioned**
+
 - p5 l53 define PCA and include references; one should be the WIREs article - see
 https://onlinelibrary.wiley.com/doi/10.1002/wics.101
+
+    - **added more details on both PCA and PP here**
 
 - fig 4 what does "best.proj.data" represent - and what does the scale for this variable mean?
 

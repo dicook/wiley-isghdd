@@ -175,7 +175,10 @@ Huberplot2 <- function (origdata2D, origclass, PPmethod = "LDA", weight = TRUE,
   group <- origclass
   hist.data <- data.frame(best.proj.data, group)
   P2 <- ggplot(data = hist.data, aes(x = best.proj.data, group = group)) + 
-    geom_histogram(aes(fill = group), position = "stack")
+    #geom_histogram(aes(fill = group), position = "stack") +
+    geom_density(aes(fill = group, colour = group), alpha=0.7) +
+    xlab("Projection") +
+    theme(axis.text.x = element_blank())
   gridExtra::grid.arrange(P1, P2, nrow = 1)
 }
 
