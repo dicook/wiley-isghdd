@@ -205,13 +205,19 @@ https://onlinelibrary.wiley.com/doi/10.1002/wics.101
 
 - fig 6 caption "paths", "The guided...", "the grand..."
 
+    - **done**
+
 - p8 l30 Cook worked with 3D tours in VRGobi; ideally cite one of those original references where the 3D tour is introduced or cite this chapter (in particular Section 10.5.2) from a book chapter by Symanzik as a secondary reference:
 http://sfb649.wiwi.hu-berlin.de/fedc_homepage/xplore/ebooks/html/csa/node83.html
 This is from 
 Handbook of Computational Statistics by	 
 J.E. Gentle, W. Härdle, Y. Mori, Editors, ISBN-10: 3540404643
 
+    - **done**
+
 - fig 7 caption remind the reader that small points are identical start points while large points are different end points AND emphasize that each of these 6 views shows exactly the same tour, just under a different projection in 2D space
+
+    - **done**
 
 - p9 l36 change order; perhaps "Transformations of data (such as ..) are often useful prior to touring.
 

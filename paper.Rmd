@@ -172,7 +172,7 @@ The recently developed slice tour [@Laa2020-js] can be applied to any of the abo
 \begin{figure}
 \centering
 \includegraphics[width=\textwidth]{figures/notation-target-gen.pdf}
-\caption{A comparison of guided and grand tour path in the PCA reduced 2D space. The start point of tour paths is smaller and lighter than the end point. Guided tour optimises the index value iteratively and finishes the search quickly while grand tour wanders in the parameter space to look at possible interesting projections.}
+\caption{A comparison of a guided tour path and grand tour path in a PCA-reduced 2D space. The start point of tour paths is smaller and lighter than the end point. Guided tour optimises the index value iteratively and finishes the search quickly while grand tour wanders in the parameter space to look at possible interesting projections.}
 \label{fig:notation-target-gen}
 \end{figure}
 
@@ -192,15 +192,15 @@ Figure \ref{fig:interpolation-2d} shows tour paths of 2D projections of 6D data.
 \includegraphics[width=0.3\textwidth]{figures/notation-torus-frames/torus075.png}
 \includegraphics[width=0.3\textwidth]{figures/notation-torus-frames/torus100.png}
 }
-\caption{Still views of a tour showing the space of possible two-dimensional projections as a torus shape in grey, and the trace of two short paths obtained via geodesic interpolation traced in color.}
+\caption{A selection of projections from a tour showing the space of possible 2D projections from 6D. Grey points indicate possible 2D projections. The traces of two short paths obtained via geodesic interpolation are shown in color, with starting and ending projections being slightly larger. The space of all 2D projections is a torus, as noted in \cite{Buja1986-sw}. }
 \label{fig:interpolation-2d}
 \end{figure*}
 
 
 
-## Display
+## Displaying data projections
 
-Various displays can be used to show projections in 1D, 2D and higher dimensions. A 1D projection displays the data in a histogram analogous to a shadow puppet being projected onto a wall, while 2D projections are displayed as scatterplots. Higher dimensional projections can be shown with multivariate displays like SPLOMs or parallel coordinates. Figure \ref{fig:display} shows a variety of displays for projections and these displays are useful to show the non-normal distributions in the projected data, clustering structure, and multivariate relationship between variables. It is possible to define tours for more complex data also. For example, @Martinez2013 proposed the image grand tour for multivariate spatial raster data, which displays a linear combination of variables at each spatial pixel. 
+Various displays can be used to show projections in 1D, 2D and higher dimensions. A 1D projection displays the data in a histogram, while 2D projections are displayed as scatterplots,  analogous to a shadow puppet being projected onto a wall. Cook implemented 3D tours in VRGobi [@vrgobi;@Nelson1999XGobiVT].  Higher dimensional projections can be shown with multivariate displays like SPLOMs or parallel coordinates. Figure \ref{fig:display} shows a variety of displays for projections and these displays are useful to show the non-normal distributions in the projected data, clustering structure, and multivariate relationship between variables. It is possible to define tours for more complex data also. For example, @Martinez2013 proposed the image grand tour for multivariate spatial raster data, which displays a linear combination of variables at each spatial pixel. 
 
 <!-- Figure 5: "Various displays of the projections..." Maybe increasing the axis text size will be good to see the axis labels -->
 \begin{figure}
@@ -229,7 +229,7 @@ The slice tour can reveal concave or non-linear structures obscured in projectio
 \includegraphics[width=0.3\textwidth]{figures/torus-4-centered-033.png}
 \includegraphics[width=0.3\textwidth]{figures/cube-6-centered-063.png}
 }
-\caption{Still views of the slice tour display showing geometric shapes: Roman surface (left), 4D torus (middle) and a 6d cube (right). Adapted from \cite{Laa2020-ni}, Figure 4.}
+\caption{A selection of views of a slice tour display showing geometric shapes: Roman surface (left), 4D torus (middle) and a 6d cube (right). Adapted from \cite{Laa2020-ni}, Figure 4.}
 \label{fig:tour-slice}
 \end{figure*}
 
