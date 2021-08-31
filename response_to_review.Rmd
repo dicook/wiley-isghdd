@@ -221,11 +221,19 @@ J.E. Gentle, W. Härdle, Y. Mori, Editors, ISBN-10: 3540404643
 
 - p9 l36 change order; perhaps "Transformations of data (such as ..) are often useful prior to touring.
 
+    - **done**
+
 - p9 l45 as before, briefly summarize this data set (dimensions, number of points, and the text that magically occurs with the proper methods are being applied)
+
+    - **done**
 
 - fig 9 caption how many dimensions does this have?; add ","; "6D"
 
+    - **done**
+
 - fig 10 caption what do R and gamma tune? can you verbally explain their purpose?
+
+    - **done**
 
 - section 3 header be consistent with capitalizations of headings, e.g., lower case "i" here but upper case in the subheading below (check and adjust elsewhere)
 

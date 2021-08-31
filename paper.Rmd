@@ -229,21 +229,21 @@ The slice tour can reveal concave or non-linear structures obscured in projectio
 \includegraphics[width=0.3\textwidth]{figures/torus-4-centered-033.png}
 \includegraphics[width=0.3\textwidth]{figures/cube-6-centered-063.png}
 }
-\caption{A selection of views of a slice tour display showing geometric shapes: Roman surface (left), 4D torus (middle) and a 6d cube (right). Adapted from \cite{Laa2020-ni}, Figure 4.}
+\caption{A selection of views of a slice tour display showing geometric shapes: Roman surface, 3D (left), 4D torus (middle) and a 6D cube (right). Adapted from \cite{Laa2020-ni}, Figure 4.}
 \label{fig:tour-slice}
 \end{figure*}
 
 
 ## Transformations on projections
 
-Transformations of data are often useful prior to touring such as scaling, sphering, or a logarithmic transformation for skewed distributions. However, we may also want to transform the data after projecting onto lower dimensions, to correct for unwanted effects of the projections. One example is the piling effect that is observed when projecting a high-dimensional distribution [@Diaconis1984-mv]: projected points are approximately Gaussian in most views, and increasingly concentrating near the center as dimensionality increases. The sage display [@Laa2020-uv] proposes a solution to this issue, via a radial transformation of the projected data. This nonlinear transformation is defined in each point of the projection plane and is sensitive to the overall scale of the data as well as the original dimensionality $p$. In addition, tuning parameters can be used to obtain a more (or less) aggressive redistribution of the points. This is illustrated in Figure \ref{fig:pollen} showing the application of the sage transformation to the classical pollen dataset [@Coleman1986-so]. The projection without any rescaling looks similar to what is found when rescaling with default options (left), and we can use either of the two tuning parameters to better resolve the distribution near the center and reveal the hidden structure (middle and right).
+Transformations of data such as scaling, sphering, or a logarithmic transformation for skewed distributions are often useful prior to touring. However, we may also want to transform the data after projecting onto lower dimensions, to correct for unwanted effects of the projections. One example is the piling effect that is observed when projecting a high-dimensional distribution [@Diaconis1984-mv]: projected points are approximately Gaussian in most views, and increasingly concentrating near the center as dimensionality increases. The sage display [@Laa2020-uv] proposes a solution to this issue, via a radial transformation of the projected data. This nonlinear transformation is defined in each point of the projection plane and is sensitive to the overall scale of the data as well as the original dimensionality $p$. In addition, tuning parameters can be used to obtain a more (or less) aggressive redistribution of the points. This is illustrated in Figure \ref{fig:pollen} showing the application of the sage transformation to the classical pollen dataset [@Coleman1986-so]. (This data has five variables and was simulated as a challenge for the 1986 American Statistical Association Data Expo.) The projection without any rescaling looks similar to what is found when rescaling with default options (left), and we can use either of the two tuning parameters to better resolve the distribution near the center and reveal the hidden structure (middle and right).
 
 \begin{figure}
 \centering
 \includegraphics[width=0.3\textwidth]{figures/pollen_sage-088.png}
 \includegraphics[width=0.3\textwidth]{figures/pollen_sage_R1-088.png}
 \includegraphics[width=0.3\textwidth]{figures/pollen_sage_gam20-088.png}
-\caption{Snapshots of the same projection from the sage tour on the pollen data, illustrating the different tuning options. Left: using the default settings for the transformation results in a similar view as found in projections without the sage transformation. Middle: using the tuning parameter $R$ for better resolution near the center reveals the word "EUREKA". Right: using the $\gamma$ tuning parameter can also reveal the structure. Adapted from \cite{Laa2020-uv}, Figure 9.}
+\caption{Snapshots of the same projection of the classical pollen data during a sage tour, where two parameters control a radial transformation of the projected data. Three tuning options are used: (left) default resulting in a similar view as seen in a regular tour; (middle, right) changing the radius and scale parameters, respectively provides better resolution for seeing the hidden word "EUREKA". Adapted from \cite{Laa2020-uv}, Figure 9.}
 \label{fig:pollen}
 \end{figure}
 
@@ -318,7 +318,7 @@ A Python implementation of the tour written by @Nguyen2020 is also available, an
     \includegraphics[width=0.32\textwidth]{figures/svm-radial-orange.png}
     \includegraphics[width=0.32\textwidth]{figures/svm-radial-green.png}
     \includegraphics[width=0.32\textwidth]{figures/svm-radial-purple.png}
-  \caption{A grand tour run on the prediction boundaries of a radial support vector machine. (Left) The prediction region for points classified as orange produces a slice of a cube. (Middle) The predicition region for points classified as green produces another slice of the cube. (Right) The complete prediction region shows the points classified as purple are embedded within the green slice. Adapted from \cite{Wickham2015-do}, Figure 6.}
+  \caption{A grand tour run on the prediction boundaries of a radial support vector machine. (Left) The prediction region for points classified as orange produces a slice of a cube. (Middle) The prediction region for points classified as green produces another slice of the cube. (Right) The complete prediction region shows the points classified as purple are embedded within the green slice. Adapted from \cite{Wickham2015-do}, Figure 6.}
   \label{fig:svm-tour}
 \end{figure*}
 
