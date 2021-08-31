@@ -310,14 +310,24 @@ https://apps.dtic.mil/sti/pdfs/ADA313999.pdf
 
 - fig 14 make sure to indicate which software has been used for each tour figure; as before, provide more details about the underlying data; Be consistent how to introduce multiple plots in the same figures; you use (left), (Left), Left: etc.
 
+   - **done**
+
 - p16 l31 3D (for consistency)
+
+   - **done**
 
 - p16 l32 add ","
 
+   - **done**
+
 - p16 l32 period here; then start a new sentence: "By touring..."
+
+   - **done**
 
 - p16 l35 you mix present tense and past tense when you summarize the content of references; here, you use past tense, elsewhere, you use present tense; at least, be consistent; personally, I prefer past tense as authors did something in the past (and not in the present)
 
+   - **fixed**
+   
 - p16 l37 perhaps "running the" ?
 
 - p16 l38 add "the"
