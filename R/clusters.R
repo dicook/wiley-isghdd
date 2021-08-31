@@ -1,10 +1,11 @@
 # adapted from Holmes and Ngyuen, 2019
-# Simple Gaussian 10-d
+# Simple Gaussian 10D
 library(ggplot2)
 library(tourr)
 library(Rtsne)
 library(dplyr)
 library(readr)
+library(ggthemes)
 
 tidy_tsne <- function(model, data) {
   enframe <- as.data.frame(model[["Y"]])
@@ -67,10 +68,11 @@ tsne_multi_df <- tibble(tsneX = tsne_multi$Y[,1],
 ggplot(tsne_multi_df, aes(x=tsneX, y=tsneY, colour=cluster)) +
   geom_point() + coord_equal() +
   scale_colour_brewer("", palette="Dark2") +
-  ggtitle("A. t-SNE") + 
+  #ggtitle("A. t-SNE") + 
+  annotate("text", x=-17, y=18.5, label="A. t-SNE", size=5) +
   theme_solid() + 
   theme(legend.position = "none",
-        plot.title = element_text(colour = "black", size = 12),
+        #plot.title = element_text(colour = "black", size = 12),
 #        legend.text = element_text(colour="black", size = 12),
         panel.background = element_rect(fill = "white"),
         panel.border = element_rect(fill = NA, colour="black", size=1,
@@ -93,5 +95,17 @@ render_gif(multi[,2:11],
            frames = 200,
            "figures/cluster_example_zoom.gif")
 
+render_gif(multi[,2:11], 
+           grand_tour(),
+           display_xy(col=clrs, axes="off", half_range = 1, center = TRUE), 
+           frames = 500,
+           width = 200, height = 200,
+           "figures/cluster_example_zoom2.gif")
 
+render_gif(multi[,2:11], 
+           grand_tour(),
+           display_xy(col=clrs, axes="off", half_range = 0.3, center = FALSE), 
+           frames = 500,
+           width = 200, height = 200,
+           "figures/cluster_example_zoom3.gif")
 

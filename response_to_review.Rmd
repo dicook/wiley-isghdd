@@ -131,9 +131,15 @@ Stable URL: https://www.jstor.org/stable/25051404
 
 - p5 l38 add "a"
 
+    - **Done**
+
 - p5 l40 perhaps "all columns are..."
 
+    - **Done**
+
 - p5 2.2 header these are rarely used; briefly explain what a Huber plot is and how it can be interpreted
+
+    - **Done**
 
 - p5 l43 as for the two previous data examples, briefly explain the data set, source, variables, and other information; what are the dimensions of this data set?
 
