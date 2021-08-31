@@ -492,9 +492,15 @@ I anticipate that the readers would benefit from a highlight of key differences 
 
 - Section 2.3: "contains all the rotation to be between planes, not a particular basis in any plane". It maybe worth mentioning the difference between "interpolating frames" (interpolating projection frame A and B directly, which involves particular bases) vs. "interpolating planes" (between span(A) and span(B) ), and briefly discuss how the motion can be decomposed to motion of planes and within plane spin.
 
+    - **done**
+    
 - Section 2.3: "The space of all tour *paths* is a high-dimensional torus..." --- All paths, all k-planes or all orthogonal k-frames? 
 From the context it's not clear to me whether the space of all tour paths is a high-D torus. 
 Consider giving some contexts/explanations to this statement?
 
+    - **cited the original buja and asimov paper that states this, and you can see it from the torus shapes in Figure 18, too.**
+    
 - Section 3: Li et al. 2020 seems to propose a different way to control the projection, via brushing and dragging data points as opposed to moving individual variables in manual tour (what they call ``the data point mode'' direct manipulation). 
 Perhaps it is worth mentioning it as a way of manual control in Section 3.
+
+    - **done**

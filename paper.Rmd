@@ -181,7 +181,7 @@ The recently developed slice tour [@Laa2020-js] can be applied to any of the abo
 
 The smooth progression in the tour path is due to geodesic interpolation between the target planes. This takes into consideration two important aspects: (1) it maintains the orthonormality of the projection bases, (2) contains all the rotation to be between planes, not a particular basis in any plane. The first is clearly important because it ensures that we are looking at low-dimensional projections of the data always. The latter is harder to explain, but really important from a visual perspective. It stops any within-plane spin, and could be considered stabilizing the view. A geodesic interpolation between two planes is obtained by (1) using singular value decomposition of $A_1^T A_2$ to compute the $d$ smallest angles between the two planes, (2) dividing these angles into small intervals, (3) generating intermediate projection planes by rotating the initial basis $A_1$ by these angle increments. A more detailed explanation of this can be found in @Buja2005-cx.
 
-Figure \ref{fig:interpolation-2d} shows tour paths of 2D projections of 6D data. The space of all tour paths is a high-dimensional torus, as represented by the gray points. The tour paths are shown in green and orange, and each dot indicates a projection in the sequence.  The plots in this figure could be considered to be a tour looking at itself, because each plot is a selected view from a tour of the torus with the paths overlaid. 
+Figure \ref{fig:interpolation-2d} shows tour paths of 2D projections of 6D data. The space of all tour paths is a high-dimensional torus [@Buja1986-sw], as represented by the gray points. (Note that the shape of the grey points matches that of the torus shapes discussed later and shown in Figure \ref{fig:geozoo}.) The tour paths are shown in green and orange, and each dot indicates a projection in the sequence.  The plots in this figure could be considered to be a tour looking at itself, because each plot is a selected view from a tour of the torus with the paths overlaid. 
 
 \begin{figure*}[ht]
 \centerline{\includegraphics[width=0.3\textwidth]{figures/notation-torus-frames/torus001.png}
@@ -263,7 +263,7 @@ Due to the dynamic nature of the tour, user interfaces can enhance the interpret
 
 ## Manual tours {#tours}
 
-Manual tours [@cook_manual_1997; @spyrison_spinifex_2020] offer a means to interactively control the contribution of a single variable on the projection plane. This is particularly useful for exploring a projection once a feature of interest has been identified. Manual tours can then be employed to test the structure of the feature, with respect to a selected variable. For instance, Figure \ref{fig:manual-tour}, starts from the orthonormal linear discriminant and explores the sensitivity of class separation as the contribution of a single variable is altered.
+Manual tours [@cook_manual_1997; @spyrison_spinifex_2020] offer a means to interactively control the contribution of a single variable on the projection plane. This is particularly useful for exploring a projection once a feature of interest has been identified. Manual tours can then be employed to test the structure of the feature, with respect to a selected variable. For instance, Figure \ref{fig:manual-tour}, starts from the orthonormal linear discriminant and explores the sensitivity of class separation as the contribution of a single variable is altered. 
 
 \begin{figure*}[!ht]
    \centering
@@ -273,6 +273,8 @@ Manual tours [@cook_manual_1997; @spyrison_spinifex_2020] offer a means to inter
 \caption{Three projections from a manual tour where variable bill length (bl) (shown in orange) from the palmer penguins data is being rotated out of the projection. When this variable is removed, the two light green clusters merge, which informs us that bill length is an important variable for distinguishing between these two species of penguins.}
 \label{fig:manual-tour}
 \end{figure*}
+
+Note that, in the application of tours to understanding neural networks by @Li2020-kg} in Section \@ref(models) also has a manually controlled tour based on selecting and dragging individual points that they call the "the data point mode". 
 
 ## Spin-and-brush {#sec:spin}
 
@@ -310,7 +312,7 @@ A Python implementation of the tour written by @Nguyen2020 is also available, an
 # Applications {#applications}
 
 
-## Model visualization
+## Model visualization {#models}
 
 
 \begin{figure*}
