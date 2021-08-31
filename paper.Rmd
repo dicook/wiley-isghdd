@@ -337,13 +337,13 @@ The grand tour along with direct interaction techniques has been proposed as a t
 
 ## Physics 
 
-Physics models often consider $\mathcal{O}(10)$ free parameters and are compared to a much larger number of experimental observables ($\mathcal{O}(100)$). The comparison typically relies on numeric computation of the model predictions for all observables, potentially obscuring the nature of their dependence on the model parameters. Here, multivariate visualization methods can provide new insights. This was demonstrated in @Cook2018-jm. For example, we explored grouping of experiments based on how they constrain the parameter space and we also identified an interesting multivariate outlier that pointed to potential issues with the data point. For illustration we show static views from the tour showing the orthogonal structure of the three groups (indicated by color), and a display which highlights the "outlyingness" of the data point marked with an asterisk symbol in Figure \ref{fig:physics}.
+Physics models often consider dozens of free parameters and are compared to hundreds of experimental observables. The comparison typically relies on numeric computation of the model predictions for all observables, potentially obscuring the nature of their dependence on the model parameters. Here, multivariate visualization methods can provide new insights. This was demonstrated in @Cook2018-jm. For example, they explore grouping of experiments based on how they constrain the parameter space. They also identify an interesting multivariate outlier that points to a potential error with that observation. Figure \ref{fig:physics} shows these findings using a selection of projections from a tour. You can see the orthogonal nature of the three groups (indicated by color), and the outlier is marked by an asterisk (grey).
 
 \begin{figure*}
   \centering
            \includegraphics[width=0.45\textwidth]{figures/allcenter-301.png}
          \includegraphics[width=0.45\textwidth]{figures/jetCluster-027.png}
-\caption{Selected frames from using a grand tour of the physics data. Left: the three different types of measurements (shown in different colors) are aligned along different directions in parameter space. Right: an outlying point is marked with an asterisk symbol in the ATLAS7new facet. Adapted from \cite{Cook2018-jm}, Figures 6 and 7.}
+\caption{Selected frames from using a grand tour of the physics experiments data. The three different types of measurements (shown in different colors) are aligned along different directions in parameter space (left). An outlying point is marked with an asterisk symbol (grey) in the ATLAS7new facet (right). Adapted from \cite{Cook2018-jm}, Figures 6 and 7.}
 \label{fig:physics}
 \end{figure*}
 

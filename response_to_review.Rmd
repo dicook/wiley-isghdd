@@ -330,11 +330,19 @@ https://apps.dtic.mil/sti/pdfs/ADA313999.pdf
    
 - p16 l37 perhaps "running the" ?
 
+   - **done**
+
 - p16 l38 add "the"
+
+   - **done**
 
 - p16 l47 do you need the O notation here? what about dozens and hundreds instead?
 
+   - **done**
+
 - p16 l50 "we" or "they" (several times)? [and note that this is past tense again]
+
+   - **done**
 
 - fig 15 as always, much more details about the underlying data needed
 
