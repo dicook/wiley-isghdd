@@ -346,38 +346,72 @@ https://apps.dtic.mil/sti/pdfs/ADA313999.pdf
 
 - fig 15 as always, much more details about the underlying data needed
 
+   - **done**
+
 - p17 l36 add ","
+
+   - **done**
 
 - p17 l41 again "we"; perhaps "the authors"
 
+   - **done**
+
 - p17 l41 mention Figure 17 here in the text
+
+   - **done**
 
 - p17 add "5.5 Historical applications" and briefly review other examples from the literature here; e.g., Koschat and Swayne seem to have used the tour for telecommunication data (see below)
 
+    - **Phew! Tall order. Added a few examples to illustrate the range of applicability**
+    
 - fig 16 as always. more details about the data needed
+
+    - **done**
 
 - fig 16 what is ATLAS7new facet ? explain in main text
 
+    - **this was a typo - fixed**
+    
 - fig 18 perhaps "subset... illustrates ... shape"
+
+   - **done**
 
 - p19 l10 remove "be"
 
+   - **done**
+
 - p19 l12 add "R" (as you mentioned Python and other software before)
+
+   - **done**
 
 - p19 l12 "it" ? - perhaps "supporting software" ?
 
+   - **done**
+
 - p19 l13 add ","
+
+   - **done**
 
 - p19 add a paragraph about success of the various tour methods; Cook et al (1995) stated this (p.163): 
 "but it is important to statisticians for the reason that the inherent structure has never been completely described. The combination of the grand tour and projection pursuit contributes significantly to revealing the nature of the variable relationships in seven dimensions. Recently, Koschat and Swayne (1992, in press) have used the projection pursuit guided tour in XGobi to explore telecommunications data, and indeed found previously undetected structure. "
 
+   - **done**
+
 - p19 l18 add "to perform"
+
+   - **done**
 
 - p19 l19 add ","
 
+   - **done**
+
 - p19 l19 be specific what is missing in current software, i.e., continue with "(such as ...)."
 
+   - **done**
+
 - p19 l23 perhaps "spaces" (there could be more than just one?)
+
+   - **done**
 
 - References
     - video library url needed - done
@@ -420,15 +454,16 @@ https://apps.dtic.mil/sti/pdfs/ADA313999.pdf
     - xie lower case - fixed
     - you "R" - fixed
     - zhang extend reference as for other R packages; incomplete - fixed
+ 
+    - **Fixed. Some of the problems are related to the template,. The bibtex files are complete so we hope that the typesetter can suitably make the complete citations.**
     
-    
-
 - I am curious: Why do you not cite https://doi.org/10.1051/epjconf/202024506018
 
     - **This was a conference presentation and summarised work in other papers. It looks like a paper, which is the physics approach, but it cannot be considered a paper in its own right.**
     
 - as you cite R packages, reference R as well
 
+    - **done**
 
 # Reviewer 2
 
