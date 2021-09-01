@@ -417,17 +417,17 @@ https://apps.dtic.mil/sti/pdfs/ADA313999.pdf
     - video library url needed - done
     - buja et al in wegman & solka add city - done
     - buja et al (1986) this is a conference proceedings series; capitalize similar to a journal, add page numbers - this probably needs to be fixed via bibstyle (no page numbers showing for proceeding entries)
-    - chambers et al list the editors - I don't think there was any 'scientific' editor on this book, didn't find any relevant person to list here ...
-    - coleman add when accessed - this was taken from animation package so I got the date when the rda file was added to its github repo and added it here...
+    - chambers et al list the editors - it seems there was no relevant editor to list here
+    - coleman add when accessed - date added based on animation package (data was accessed through the package)
     - cook et al (1995) adjust style (compare with previous reference) - done
     - cook et al (2018) remove the ArXiv information for an article that has been published - done
     - cook, swayne (2007) reference is wrong add add city of publication (New York, Berlin, Heidelberg?) - done
     - diaconis as above - either full journal names or abbreviations (adjust other references in a similar way, according to WIREs specifications) - done
     - fisher remove the first URL and just keep the one with the DOI - done
     - friedman is there a DOI? - added
-    - horst capitalize both "A" as these seem to be geographic names; just "R package" once - fixed capitalization, but repetition needs to be fixed in bibstyle
+    - horst capitalize both "A" as these seem to be geographic names; just "R package" once - fixed capitalization, but repetition needs to be fixed via bibstyle
     - hotelling should be "417-441" - fixed (plus full journal name instead of abbreviation)
-    - huber is there a URL where this can be obtained? - could not find it via google at least...
+    - huber is there a URL where this can be obtained? - unfortunately not
     - laa et al (2020) section pursuit incomplete - fixed
     - laa et al (2021) burning sage incomplete - fixed
     - laa et al (2020) slice tour update reference (it is published now) and remove the arXiv information - fixed
@@ -443,12 +443,12 @@ https://apps.dtic.mil/sti/pdfs/ADA313999.pdf
     - sievert city?; should be "Chapman and Hall/CRC" (several times) - fixed
     - spyrison change to lower case (except R); 243-257 (again!) - fixed
     - sutherland et al DOI - added
-    - swayne DOI - I have no idea why it is not printing the DOI for the XGobi reference...
+    - swayne DOI - information is in the bib file but not showing (maybe bibstyle issue?)
     - swayne et al DOI; XGobi (as a software name); issue ? -fixed
-    - tukey editors? - added something based on web search, but not sure I got the right names..
-    - tukey pages, city, publisher ?; city? - as above ..
+    - tukey editors? - added
+    - tukey pages, city, publisher ?; city? - added
     - van der maaten they list this as 9(86) on their web page - fixed
-    - wegman list editors only once; page numbers; is there a volume ? - these are Interface (conference proceedings) - problem with showing these information for proceedings entry, again bibstyle issue?
+    - wegman list editors only once; page numbers; is there a volume ? - these are Interface (conference proceedings) - problem with showing these information for proceedings entry, again this appears to be a bibstyle issue
     - wilkinson capital "S" - fixed
     - xie lower case - fixed
     - you "R" - fixed
