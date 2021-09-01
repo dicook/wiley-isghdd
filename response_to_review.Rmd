@@ -316,8 +316,7 @@ https://apps.dtic.mil/sti/pdfs/ADA313999.pdf
 - References
     - video library url needed - done
     - buja et al in wegman & solka add city - done
-    - buja et al (1986) this is a conference proceedings series; capitalize similar to a journal - I think this needs to be fixed via bibstyle
-    - carr add page numbers (or is this the previous ref) - I think this is for the previous reference, again it is there in the bib file, to show it the bibstyle should be formatted accordingly for proceeding entries
+    - buja et al (1986) this is a conference proceedings series; capitalize similar to a journal, add page numbers - this probably needs to be fixed via bibstyle (no page numbers showing for proceeding entries)
     - chambers et al list the editors - I don't think there was any 'scientific' editor on this book, didn't find any relevant person to list here ...
     - coleman add when accessed - this was taken from animation package so I got the date when the rda file was added to its github repo and added it here...
     - cook et al (1995) adjust style (compare with previous reference) - done
