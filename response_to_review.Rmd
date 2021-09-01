@@ -205,42 +205,76 @@ https://onlinelibrary.wiley.com/doi/10.1002/wics.101
 
 - fig 6 caption "paths", "The guided...", "the grand..."
 
+    - **done**
+
 - p8 l30 Cook worked with 3D tours in VRGobi; ideally cite one of those original references where the 3D tour is introduced or cite this chapter (in particular Section 10.5.2) from a book chapter by Symanzik as a secondary reference:
 http://sfb649.wiwi.hu-berlin.de/fedc_homepage/xplore/ebooks/html/csa/node83.html
 This is from 
 Handbook of Computational Statistics by	 
 J.E. Gentle, W. Härdle, Y. Mori, Editors, ISBN-10: 3540404643
 
+    - **done**
+
 - fig 7 caption remind the reader that small points are identical start points while large points are different end points AND emphasize that each of these 6 views shows exactly the same tour, just under a different projection in 2D space
+
+    - **done**
 
 - p9 l36 change order; perhaps "Transformations of data (such as ..) are often useful prior to touring.
 
+    - **done**
+
 - p9 l45 as before, briefly summarize this data set (dimensions, number of points, and the text that magically occurs with the proper methods are being applied)
+
+    - **done**
 
 - fig 9 caption how many dimensions does this have?; add ","; "6D"
 
+    - **done**
+
 - fig 10 caption what do R and gamma tune? can you verbally explain their purpose?
+
+    - **done**
 
 - section 3 header be consistent with capitalizations of headings, e.g., lower case "i" here but upper case in the subheading below (check and adjust elsewhere)
 
+    - **done**
+
 - p12 l11 add "to"
+
+    - **done**
 
 - p12 l12 which software is this? and which options for tour interactions are commonly available in other software with tour functionality such as XGobi, RGobi, tourr ?
 
+    - **This has been done as much as possible, and the reference to rggobi is added**
+
 - p12 l25 "or it can be used"
+
+    - **done**
 
 - p12 l30 add "set"
 
+    - **done**
+
 - fig 12 caption perhaps "variable "bl" (shown as an orange line) is being..."; as before, describe the data set, source, dimensions, variables (what is bl), etc.?; add ","
+
+    - **done**
 
 - fig 13 what is hidden (and why)?; what is the purpose of "connect dots"? how are they connected (this does not look like the convex hull in the projection plane); which software has been used here?
 
+    - **done**
+
 - p15 l11 add ","
+
+    - **done**
 
 - p15 l11 add "that"
 
+    - **done**
+
 - p15 l21 indicate the names of the software, i.e., XplorN and (X)Lisp-Stat; in particular, XplorN deserves some further description as it was one of the first software implementations that provided a PCP grand tour; here is a suitable technical report (follow the cite references for more):
 https://apps.dtic.mil/sti/pdfs/ADA313999.pdf
+
+    - **done**
 
 - p15 l22 this paragraph doesn't seem to belong here as it doesn't seem to relate to software; I suggested earlier on that Andrews curves should be introduced earlier in this review; this paragraph can be used there
 
@@ -248,70 +282,136 @@ https://apps.dtic.mil/sti/pdfs/ADA313999.pdf
 
 - p15 l26 explain in one sentence what the image grand tour is and cite one original article for it (likely something from Wegman et al); by the way, here, you cite the WIREs review article, but an original article is missing; for several of my previous comments, you cited the original article, but not the WIREs review article; ideally, both (original and review article where it exists) should be cited in a review like this
 
+    - **done**
+
 - p15 l28 also cite rggobi as it seemed to support some tour as well - see https://vita.had.co.nz/papers/rggobi-rnews.pdf
+
+    - **done**
 
 - p15 l33 write as "three"
 
+    - **done**
+
 - p15 l36 sentence structure is too complex; break at least into 2 sentences and avoid the double parentheses for (software (author))
+
+    - **done**
 
 - p15 l44 remove "a"
 
+    - **done**
+
 - p15 l46 perhaps "structures such as .. separations"
+
+    - **done**
 
 - p15 l48 perhaps "from further extensions" ?
 
+    - **done**
+
 - fig 14 make sure to indicate which software has been used for each tour figure; as before, provide more details about the underlying data; Be consistent how to introduce multiple plots in the same figures; you use (left), (Left), Left: etc.
+
+   - **done**
 
 - p16 l31 3D (for consistency)
 
+   - **done**
+
 - p16 l32 add ","
+
+   - **done**
 
 - p16 l32 period here; then start a new sentence: "By touring..."
 
+   - **done**
+
 - p16 l35 you mix present tense and past tense when you summarize the content of references; here, you use past tense, elsewhere, you use present tense; at least, be consistent; personally, I prefer past tense as authors did something in the past (and not in the present)
 
+   - **fixed**
+   
 - p16 l37 perhaps "running the" ?
+
+   - **done**
 
 - p16 l38 add "the"
 
+   - **done**
+
 - p16 l47 do you need the O notation here? what about dozens and hundreds instead?
+
+   - **done**
 
 - p16 l50 "we" or "they" (several times)? [and note that this is past tense again]
 
+   - **done**
+
 - fig 15 as always, much more details about the underlying data needed
+
+   - **done**
 
 - p17 l36 add ","
 
+   - **done**
+
 - p17 l41 again "we"; perhaps "the authors"
+
+   - **done**
 
 - p17 l41 mention Figure 17 here in the text
 
+   - **done**
+
 - p17 add "5.5 Historical applications" and briefly review other examples from the literature here; e.g., Koschat and Swayne seem to have used the tour for telecommunication data (see below)
 
+    - **Phew! Tall order. Added a few examples to illustrate the range of applicability**
+    
 - fig 16 as always. more details about the data needed
+
+    - **done**
 
 - fig 16 what is ATLAS7new facet ? explain in main text
 
+    - **this was a typo - fixed**
+    
 - fig 18 perhaps "subset... illustrates ... shape"
+
+   - **done**
 
 - p19 l10 remove "be"
 
+   - **done**
+
 - p19 l12 add "R" (as you mentioned Python and other software before)
+
+   - **done**
 
 - p19 l12 "it" ? - perhaps "supporting software" ?
 
+   - **done**
+
 - p19 l13 add ","
+
+   - **done**
 
 - p19 add a paragraph about success of the various tour methods; Cook et al (1995) stated this (p.163): 
 "but it is important to statisticians for the reason that the inherent structure has never been completely described. The combination of the grand tour and projection pursuit contributes significantly to revealing the nature of the variable relationships in seven dimensions. Recently, Koschat and Swayne (1992, in press) have used the projection pursuit guided tour in XGobi to explore telecommunications data, and indeed found previously undetected structure. "
 
+   - **done**
+
 - p19 l18 add "to perform"
+
+   - **done**
 
 - p19 l19 add ","
 
+   - **done**
+
 - p19 l19 be specific what is missing in current software, i.e., continue with "(such as ...)."
 
+   - **done**
+
 - p19 l23 perhaps "spaces" (there could be more than just one?)
+
+   - **done**
 
 - References
     - video library url needed - done
@@ -353,15 +453,16 @@ https://apps.dtic.mil/sti/pdfs/ADA313999.pdf
     - xie lower case - fixed
     - you "R" - fixed
     - zhang extend reference as for other R packages; incomplete - fixed
+ 
+    - **Fixed. Some of the problems are related to the template,. The bibtex files are complete so we hope that the typesetter can suitably make the complete citations.**
     
-    
-
 - I am curious: Why do you not cite https://doi.org/10.1051/epjconf/202024506018
 
     - **This was a conference presentation and summarised work in other papers. It looks like a paper, which is the physics approach, but it cannot be considered a paper in its own right.**
     
 - as you cite R packages, reference R as well
 
+    - **done**
 
 # Reviewer 2
 
@@ -390,9 +491,15 @@ I anticipate that the readers would benefit from a highlight of key differences 
 
 - Section 2.3: "contains all the rotation to be between planes, not a particular basis in any plane". It maybe worth mentioning the difference between "interpolating frames" (interpolating projection frame A and B directly, which involves particular bases) vs. "interpolating planes" (between span(A) and span(B) ), and briefly discuss how the motion can be decomposed to motion of planes and within plane spin.
 
+    - **done**
+    
 - Section 2.3: "The space of all tour *paths* is a high-dimensional torus..." --- All paths, all k-planes or all orthogonal k-frames? 
 From the context it's not clear to me whether the space of all tour paths is a high-D torus. 
 Consider giving some contexts/explanations to this statement?
 
+    - **cited the original buja and asimov paper that states this, and you can see it from the torus shapes in Figure 18, too.**
+    
 - Section 3: Li et al. 2020 seems to propose a different way to control the projection, via brushing and dragging data points as opposed to moving individual variables in manual tour (what they call ``the data point mode'' direct manipulation). 
 Perhaps it is worth mentioning it as a way of manual control in Section 3.
+
+    - **done**
