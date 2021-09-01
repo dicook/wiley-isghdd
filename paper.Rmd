@@ -5,7 +5,7 @@ author:
     # use this syntax to add text on several lines
     address: |
       | Department of Econometrics and Business Statistics, Monash University
-    email: stuart.a.lee@monash.edu
+    email: stuart.andrew.lee@gmail.com
     orcid: 0000-0003-1179-8436
   - name: Dianne Cook*
     address: |
