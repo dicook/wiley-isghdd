@@ -18,6 +18,7 @@ The materials required to reproduce figures we have made are available in the R 
 
 # Citation
 
+```
 @article{tours2022,
   author = {Lee, Stuart and Cook, Dianne and da Silva, Natalia and Laa, Ursula and Spyrison, Nicholas and Wang, Earo and Zhang, H. Sherry},
   year = {2022},
@@ -30,3 +31,4 @@ The materials required to reproduce figures we have made are available in the R 
   doi = {https://doi.org/10.1002/wics.1573},
   url = {https://github.com/dicook/wiley-isghdd}
 }
+```
