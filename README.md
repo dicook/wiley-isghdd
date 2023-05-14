@@ -16,3 +16,17 @@ Github Actions as an artifact, just click on a commit and look for the manuscrip
 
 The materials required to reproduce figures we have made are available in the R directory.
 
+# Citation
+
+@article{tours2022,
+  author = {Lee, Stuart and Cook, Dianne and da Silva, Natalia and Laa, Ursula and Spyrison, Nicholas and Wang, Earo and Zhang, H. Sherry},
+  year = {2022},
+  title = {The state-of-the-art on tours for dynamic visualization of high-dimensional data},
+  journal = {WIREs Computational Statistics},
+  volume = {14},
+  number = {4},
+  pages = {e1573},
+  keywords = {data science, data visualization, exploratory data analysis, high-dimensional data, tours},
+  doi = {https://doi.org/10.1002/wics.1573},
+  url = {https://github.com/dicook/wiley-isghdd}
+}
